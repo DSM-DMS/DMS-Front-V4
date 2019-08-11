@@ -33,3 +33,5 @@ button:focus {
   outline: none;
 }
 `;
+
+export const globalColor = '#6C00FF';
