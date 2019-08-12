@@ -1,4 +1,4 @@
-// import AContainer from './A/A
-import NoticeContainer from './Notice/Notice.tsx';
+// import AContainer from './AContainer/AContainer
+import NavigationContainer from './Navigation/Navigation.tsx';
 
-export default { NoticeContainer };
+export { NavigationContainer };
