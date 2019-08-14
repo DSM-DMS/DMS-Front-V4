@@ -32,6 +32,12 @@ textarea:focus,
 button:focus {
   outline: none;
 }
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 11.383px;
+  }
+}
 `;
 
 export const globalColor = '#6C00FF';
