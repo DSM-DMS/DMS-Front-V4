@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
-
+import { Navigation } from '../../components';
 import * as S from './styles';
 
 interface NavigationProps {}
 
-const Navigation = () => {
-  const [onOpen, setOpen] = useState('');
-  return (
-    <S.NavigationContainer onOpen={onOpen}>
-      <button onClick={() => setOpen('te')}>test</button>
-      <S.MypageOrChatting>
-        <button onClick={() => setOpen('')}>close</button>
-      </S.MypageOrChatting>
-    </S.NavigationContainer>
-  );
+const NavigationContainer: React.FC<NavigationProps> = ({}) => {
+  const [isOpen, setOpen] = useState('');
+  return <Navigation isOpen={isOpen} setOpen={setOpen} />;
 };
 
-export default Navigation;
+export default NavigationContainer;
