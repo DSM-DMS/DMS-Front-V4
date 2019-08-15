@@ -17,14 +17,14 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, setOpen }) => {
     <S.NavigationContainer isOpen={isOpen}>
       <S.NavigationButtonWrapper>
         <S.NavigationButton
-          onClick={setOpen.bind(null, 'mypage')}
+          onClick={() => setOpen('mypage')}
           backColor="#ffffff"
         >
 
           mypage
         </S.NavigationButton>
         <S.NavigationButton
-          onClick={setOpen.bind(null, 'chatting')}
+          onClick={() => setOpen('chatting')}
           backColor={globalColor}
         >
           <S.NavigationButtonImg src={ChattingImg} />
@@ -33,8 +33,13 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, setOpen }) => {
       <S.MypageOrChatting>
         <S.MypageOrChattingCloseBtn
           src={crossMarkImg}
-          onClick={setOpen.bind(null, '')}
+          onClick={() => setOpen('')}
         />
+        {isOpen && isOpen === 'mypage' ? (
+          <MypageContainer />
+        ) : (
+          <ChattingContainer />
+        )}
       </S.MypageOrChatting>
     </S.NavigationContainer>
   );
