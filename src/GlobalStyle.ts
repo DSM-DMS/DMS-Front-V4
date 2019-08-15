@@ -26,6 +26,12 @@ time, mark, audio, video {
   border: 0;
 }
 
+body {
+  
+  @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+  font-family: 'NanumSquare', sans-serif;
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -38,6 +44,8 @@ button:focus {
     font-size: 11.383px;
   }
 }
+
+
 `;
 
-export const globalColor = '#6C00FF';
+export const globalColor = '#8200a1';
