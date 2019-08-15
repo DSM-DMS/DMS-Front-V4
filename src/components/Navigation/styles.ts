@@ -50,4 +50,5 @@ export const MypageOrChattingCloseBtn = styled.img`
   right: 1.70625rem;
   width: 1.2875rem;
   height: 1.2875rem;
+  cursor: pointer;
 `;
