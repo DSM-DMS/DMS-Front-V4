@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 
-// import MypageImg from '../../assets/icon/mypage.png'
+import MypageImg from '../../assets/icon/person.png'
 import ChattingImg from '../../assets/icon/chat.png';
 import crossMarkImg from '../../assets/icon/cross-mark.png';
 import { MypageContainer, ChattingContainer } from '../../containers';
@@ -21,7 +21,7 @@ const Navigation: React.FC<NavigationProps> = ({ isOpen, setOpen }) => {
           backColor="#ffffff"
         >
 
-          mypage
+          <S.NavigationButtonImg src={MypageImg}/>
         </S.NavigationButton>
         <S.NavigationButton
           onClick={() => setOpen('chatting')}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { MypageStatus } from '..';
+import { MypageStatusContainer, MypagePointContainer } from '../../containers';
 import * as S from './styles';
 
 interface MypageProps {
@@ -14,7 +14,11 @@ const Mypage: React.FC<MypageProps> = ({ isPointPage, setPointPage }) => {
         <S.MypagePersonalDataName>정지우</S.MypagePersonalDataName>
         <S.MypagePersonalDataNumber>3학년 4반 17번</S.MypagePersonalDataNumber>
       </S.MypagePersonalDataWrapper>
-      {isPointPage ? null : <MypageStatus setPointPage={setPointPage} />}
+      {isPointPage ? (
+        <MypagePointContainer setPointPage={setPointPage} />
+      ) : (
+        <MypageStatusContainer setPointPage={setPointPage} />
+      )}
     </>
   );
 };
