@@ -9,8 +9,8 @@ const MypageStatus: React.FC<MypageStatusProps> = ({ setPointPage }) => {
   return (
     <S.MypageStatusWrapper>
       <S.MypageStatusToPoint onClick={() => setPointPage(true)}>
-
-        상점 : 18점&nbsp;&nbsp;&nbsp;벌점 : 1점
+        <S.MypageStatusToPointValue>상점 : 18점</S.MypageStatusToPointValue>
+        <S.MypageStatusToPointValue>벌점 : 1점</S.MypageStatusToPointValue>
       </S.MypageStatusToPoint>
       <S.MypageStatusItem>토요귀가</S.MypageStatusItem>
       <S.MypageStatusItem>11시 : 가온실 | 12시 : 가온실</S.MypageStatusItem>

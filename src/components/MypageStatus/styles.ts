@@ -9,12 +9,16 @@ export const MypageStatusWrapper = styled.div`
 export const MypageStatusToPoint = styled.button`
   height: 5.375rem;
   width: 100%;
-  font-weight: bold;
   background-color: white;
   border: none;
   border-bottom: 1.6px solid rgba(0, 0, 0, 0.11);
-  font-size: 1.375rem;
   margin-bottom: calc(0.1375rem + 1.6px);
+`;
+
+export const MypageStatusToPointValue = styled.span`
+  font-size: 1.375rem;
+  font-weight: bold;
+  margin: 0 0.625rem;
 `;
 
 export const MypageStatusItem = styled.button`
