@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { GlobalStyle } from './GlobalStyle';
-import { NavigationContainer } from './containers';
+import { NavigationContainer, NoticeContainer } from './containers';
 
 const Test = styled.div`
   background: red;
@@ -13,6 +13,7 @@ function App() {
       <GlobalStyle />
       <NavigationContainer />
       <Test>test</Test>
+      <NoticeContainer />
     </>
   );
 }
