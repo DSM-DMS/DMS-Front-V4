@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const MypageContainer = () => {
-  return <div>2</div>;
+import { Mypage } from '../../components';
+
+interface MypageProps {}
+
+const MypageContainer: React.FC<MypageProps> = () => {
+  const [isPointPage, setPointPage] = useState(false);
+  return <Mypage isPointPage={isPointPage} setPointPage={setPointPage} />;
 };
 
 export default MypageContainer;

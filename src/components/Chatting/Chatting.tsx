@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Chatting = () => {
-  return <div>1</div>;
+interface ChattingProps {}
+
+const Chatting: React.FC<ChattingProps> = () => {
+  return <div>2</div>;
 };
 
 export default Chatting;

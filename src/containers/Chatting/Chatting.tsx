@@ -1,7 +1,11 @@
 import React from 'react';
 
-const ChattingContainer = () => {
-  return <div>1</div>;
+import { Chatting } from '../../components';
+
+interface ChattingProps {}
+
+const ChattingContainer: React.FC<ChattingProps> = () => {
+  return <Chatting />;
 };
 
 export default ChattingContainer;
