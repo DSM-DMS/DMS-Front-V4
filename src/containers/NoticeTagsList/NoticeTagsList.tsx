@@ -22,16 +22,16 @@ const NoticeTags = [
 ];
 
 const NoticeTagsListContainer: React.FC<NoticeTagsListProps> = ({}) => {
-  const [nowClickedTag, setNowClickedTag] = useState('안내사항');
+  const [selectedTag, setSelectedTag] = useState('안내사항');
   const NoticeTagItems = NoticeTags.map(data => (
     <NoticeTagItem
-      tagTitle={data}
-      nowClickedTag={nowClickedTag}
-      onClickTag={setNowClickedTag}
+      tagId={data}
+      selectedTag={selectedTag}
+      onClickTag={setSelectedTag}
       key={`notice tag - ${data}`}
     />
   ));
-  return <NoticeTagsList NoticeTagItems={NoticeTagItems} />;
+  return <NoticeTagsList>{NoticeTagItems}</NoticeTagsList>
 };
 
 export default NoticeTagsListContainer;

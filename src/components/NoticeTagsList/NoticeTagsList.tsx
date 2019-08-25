@@ -2,11 +2,11 @@ import React from 'react';
 import * as S from './styles';
 
 interface NoticeTagsListProps {
-  NoticeTagItems: Array<React.FC>;
+  children: React.ReactNode;
 }
 
-const NoticeTagsList: React.FC<NoticeTagsListProps> = ({ NoticeTagItems }) => {
-  return <S.NoticeTagsListWrapper>{NoticeTagItems}</S.NoticeTagsListWrapper>;
+const NoticeTagsList: React.FC<NoticeTagsListProps> = ({ children }) => {
+  return <S.NoticeTagsListWrapper>{children}</S.NoticeTagsListWrapper>;
 };
 
 export default NoticeTagsList;
