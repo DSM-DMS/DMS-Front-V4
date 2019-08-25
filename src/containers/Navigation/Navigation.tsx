@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Navigation } from '../../components';
-import * as S from './styles';
 
 interface NavigationProps {}
 
