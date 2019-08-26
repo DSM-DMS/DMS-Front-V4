@@ -10,7 +10,7 @@ export const NoticeTagItem = styled.li`
   border-radius: 0.25rem;
   background-color: ${props => (props.isSelected ? '#8200a1' : 'white')};
   cursor: pointer;
-  color: ${props => (props.isSelected ? 'white' : 'black')}
+  color: ${props => (props.isSelected ? 'white' : '#59545d')}
   font-size: 1.375rem;
 
   ${props =>
