@@ -4,7 +4,7 @@ import { NoticeWrapper } from '../../components';
 interface NoticeProps {}
 
 const Notice: React.FC<NoticeProps> = () => {
-  return <NoticeWrapper>2</NoticeWrapper>;
+  return <NoticeWrapper />;
 };
 
 export default Notice;
