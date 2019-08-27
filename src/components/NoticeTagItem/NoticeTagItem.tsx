@@ -8,7 +8,7 @@ interface NoticeTagItemProps {
   selectedTag: string;
 }
 
-const NoticeTagItem: React.FC<NoticeTagItemProps> = ({
+const NoticeTagItem: React.StatelessComponent<NoticeTagItemProps> = ({
   onClickTag,
   tagId,
   selectedTag,

@@ -5,7 +5,9 @@ interface NoticeTagsListProps {
   children: React.ReactNode;
 }
 
-const NoticeTagsList: React.FC<NoticeTagsListProps> = ({ children }) => {
+const NoticeTagsList: React.StatelessComponent<NoticeTagsListProps> = ({
+  children,
+}) => {
   return <S.NoticeTagsListWrapper>{children}</S.NoticeTagsListWrapper>;
 };
 

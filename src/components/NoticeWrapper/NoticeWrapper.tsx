@@ -1,14 +1,22 @@
 import React from 'react';
-import { NoticeTagsListContainer } from '../../containers';
+import {
+  NoticeTagsListContainer,
+  NoticePostsTableContainer,
+} from '../../containers';
 
 import * as S from './styles';
 
-interface NoticeWrapperProps {}
+interface NoticeWrapperProps {
+  selectedTag: string;
+}
 
-const NoticeWrapper: React.FC<NoticeWrapperProps> = ({}) => {
+const NoticeWrapper: React.StatelessComponent<NoticeWrapperProps> = ({
+  selectedTag,
+}) => {
   return (
     <S.NoticeOuterWrapper>
       <NoticeTagsListContainer />
+      {selectedTag === '안내사항' ? <NoticePostsTableContainer /> : null}
     </S.NoticeOuterWrapper>
   );
 };

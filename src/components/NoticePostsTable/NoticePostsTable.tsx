@@ -1,9 +1,17 @@
 import React from 'react';
+import { NoticePostsTableHeader } from "..";
+import * as S from './styles';
 
-interface NoticeRulesTableProps {}
+interface NoticePostsTableProps {}
 
-const NoticeRulesTable: React.FC<NoticeRulesTableProps> = ({}) => {
-  return <>1</>;
+const NoticePostsTable: React.StatelessComponent<
+  NoticePostsTableProps
+> = ({}) => {
+  return (
+    <S.NoticePostsTableWrapper>
+      <NoticePostsTableHeader />
+    </S.NoticePostsTableWrapper>
+  );
 };
 
-export default NoticeRulesTable;
+export default NoticePostsTable;
