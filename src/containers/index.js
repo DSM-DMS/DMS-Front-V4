@@ -6,7 +6,7 @@ import MypagePointContainer from './MypagePoint/MypagePoint.tsx';
 import ChattingContainer from './Chatting/Chatting.tsx';
 import NoticeContainer from './Notice/Notice.tsx';
 import NoticeTagsListContainer from './NoticeTagsList/NoticeTagsList.tsx';
-import NoticeRulesTableContainer from './NoticeRulesTable/NoticeRulesTable.tsx';
+import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
 
 export {
   NavigationContainer,
@@ -16,5 +16,5 @@ export {
   ChattingContainer,
   NoticeContainer,
   NoticeTagsListContainer,
-  NoticeRulesTableContainer,
+  NoticePostsTableContainer,
 };

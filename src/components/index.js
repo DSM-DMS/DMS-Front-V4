@@ -7,7 +7,7 @@ import Chatting from './Chatting/Chatting.tsx';
 import NoticeWrapper from './NoticeWrapper/NoticeWrapper.tsx';
 import NoticeTagsList from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticeTagItem from './NoticeTagItem/NoticeTagItem.tsx';
-import NoticeRulesTable from './NoticeRulesTable/NoticeRulesTable.tsx';
+import NoticePostsTable from './NoticePostsTable/NoticePostsTable.tsx';
 
 export {
   Navigation,
@@ -19,5 +19,5 @@ export {
   NoticeWrapper,
   NoticeTagsList,
   NoticeTagItem,
-  NoticeRulesTable,
+  NoticePostsTable,
 };
