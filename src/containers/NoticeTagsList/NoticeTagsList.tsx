@@ -33,7 +33,7 @@ const NoticeTagsListContainer: React.FC<NoticeTagsListProps> = ({
 }) => {
   const NoticeTagItems = NoticeTags.map(data => (
     <NoticeTagItem
-      tagId={data}
+      tagContent={data}
       selectedTag={selectedTag}
       onClickTag={NoticeActions.setSelectedTag}
       key={`notice tag - ${data}`}

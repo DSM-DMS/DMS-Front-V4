@@ -4,21 +4,21 @@ import * as S from './styles';
 
 interface NoticeTagItemProps {
   onClickTag: (tagId: string) => void;
-  tagId: string;
+  tagContent: string;
   selectedTag: string;
 }
 
 const NoticeTagItem: React.StatelessComponent<NoticeTagItemProps> = ({
   onClickTag,
-  tagId,
+  tagContent,
   selectedTag,
 }) => {
   return (
     <S.NoticeTagItem
-      onClick={() => onClickTag(tagId)}
-      isSelected={selectedTag === tagId}
+      onClick={() => onClickTag(tagContent)}
+      isSelected={selectedTag === tagContent}
     >
-      {tagId}
+      {tagContent}
     </S.NoticeTagItem>
   );
 };
