@@ -6,7 +6,7 @@ import { noticeActions } from '../../modules/notice';
 import { NoticeTagsList, NoticeTagItem } from '../../components';
 
 interface NoticeTagsListProps {
-  selectedTag: string;
+  selectedTag: String;
   NoticeActions: typeof noticeActions;
 }
 

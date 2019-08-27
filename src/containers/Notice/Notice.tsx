@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { NoticeWrapper } from '../../components';
 
 interface NoticeProps {
-  selectedTag: string;
+  selectedTag: String;
 }
 
 const Notice: React.StatelessComponent<NoticeProps> = ({ selectedTag }) => {

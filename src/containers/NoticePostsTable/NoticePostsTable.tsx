@@ -1,11 +1,32 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { NoticePostsTable, NoticePostsTableRow } from '../../components';
+import { PostsTable } from '../../modules/notice';
 
-import { NoticePostsTable } from '../../components';
+interface NoticePostsTableProps {
+  tableItems: Array<PostsTable>;
+}
 
-interface NoticePostsTableProps {}
-
-const NoticePostsTableContainer: React.FC<NoticePostsTableProps> = ({}) => {
-  return <NoticePostsTable />;
+const NoticePostsTableContainer: React.FC<NoticePostsTableProps> = ({
+  tableItems,
+}) => {
+  const postsRows = tableItems.map((data, index) => (
+    <NoticePostsTableRow
+      date={data.date}
+      title={data.title}
+      views={data.views}
+      contents={data.contents}
+      key={`post-row-${data.title}-${index}`}
+    />
+  ));
+  return <NoticePostsTable postsRows={postsRows} />;
 };
 
-export default NoticePostsTableContainer;
+const mapStateToProps = state => ({
+  tableItems: state.notice.tableItems,
+});
+
+export default connect(
+  mapStateToProps,
+  null,
+)(NoticePostsTableContainer);

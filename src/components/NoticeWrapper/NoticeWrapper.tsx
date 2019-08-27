@@ -7,7 +7,7 @@ import {
 import * as S from './styles';
 
 interface NoticeWrapperProps {
-  selectedTag: string;
+  selectedTag: String;
 }
 
 const NoticeWrapper: React.StatelessComponent<NoticeWrapperProps> = ({

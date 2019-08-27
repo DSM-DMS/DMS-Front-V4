@@ -3,9 +3,9 @@ import React from 'react';
 import * as S from './styles';
 
 interface NoticeTagItemProps {
-  onClickTag: (tagId: string) => void;
-  tagContent: string;
-  selectedTag: string;
+  onClickTag: (tagId: String) => void;
+  tagContent: String;
+  selectedTag: String;
 }
 
 const NoticeTagItem: React.StatelessComponent<NoticeTagItemProps> = ({

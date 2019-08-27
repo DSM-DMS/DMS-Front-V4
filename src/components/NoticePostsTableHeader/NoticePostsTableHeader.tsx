@@ -7,7 +7,22 @@ interface NoticePostsTableHeaderProps {}
 const NoticePostsTableHeader: React.StatelessComponent<
   NoticePostsTableHeaderProps
 > = ({}) => {
-  return <S.NoticePostsHeaderWrapper>1</S.NoticePostsHeaderWrapper>;
+  return (
+    <S.NoticePostsTableHeaderWrapper>
+      <S.NoticePostsTableHeaderItem itemSize="9.375">
+
+        날짜
+      </S.NoticePostsTableHeaderItem>
+      <S.NoticePostsTableHeaderItem itemSize="60.875">
+
+        게시글
+      </S.NoticePostsTableHeaderItem>
+      <S.NoticePostsTableHeaderItem itemSize="4.0625">
+
+        조회수
+      </S.NoticePostsTableHeaderItem>
+    </S.NoticePostsTableHeaderWrapper>
+  );
 };
 
 export default NoticePostsTableHeader;

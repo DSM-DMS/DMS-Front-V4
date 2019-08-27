@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
-export const NoticePostsHeaderWrapper = styled.div`
+export const NoticePostsTableHeaderWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
   height: 3.75rem;
+  padding: 1.125rem 1.875rem;
+  box-sizing: border-box;
   background-color: #e1e1e1;
-  align-items: center;
+`;
+
+export const NoticePostsTableHeaderItem = styled.span`
+  width: ${props => props.itemSize}rem;
+  color: #59545d;
+  font-size: 1.375rem;
 `;
