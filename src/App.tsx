@@ -1,20 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Provider } from 'react-redux';
 import { GlobalStyle } from './GlobalStyle';
 import { NavigationContainer, NoticeContainer } from './containers';
+import configureStore from './store/configureStore';
 
-const Test = styled.div`
-  background: red;
-`;
+const store = configureStore();
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <GlobalStyle />
       <NavigationContainer />
-      <Test>test</Test>
       <NoticeContainer />
-    </>
+    </Provider>
   );
 }
 
