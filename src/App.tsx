@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Provider } from 'react-redux';
 import { GlobalStyle } from './GlobalStyle';
 import { NavigationContainer } from './containers';
