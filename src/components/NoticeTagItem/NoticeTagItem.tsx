@@ -3,10 +3,15 @@ import React from 'react';
 import * as S from './styles';
 
 interface NoticeTagItemProps {
-  onClickTag: (tagId: String, tableType: String) => void;
+  onClickTag: (
+    tagId: String,
+    tableType: String,
+    staticTableIndex: Number,
+  ) => void;
   tagContent: String;
   selectedTag: String;
   tableType: String;
+  staticTableIndex: Number;
 }
 
 const NoticeTagItem: React.StatelessComponent<NoticeTagItemProps> = ({
@@ -14,10 +19,11 @@ const NoticeTagItem: React.StatelessComponent<NoticeTagItemProps> = ({
   tagContent,
   selectedTag,
   tableType,
+  staticTableIndex,
 }) => {
   return (
     <S.NoticeTagItem
-      onClick={() => onClickTag(tagContent, tableType)}
+      onClick={() => onClickTag(tagContent, tableType, staticTableIndex)}
       isSelected={selectedTag === tagContent}
     >
       {tagContent}

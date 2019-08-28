@@ -9,6 +9,7 @@ import NoticeTagsList from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticeTagItem from './NoticeTagItem/NoticeTagItem.tsx';
 import NoticePostsTableHeader from './NoticePostsTableHeader/NoticePostsTableHeader.tsx';
 import NoticePostsTableRow from './NoticePostsTableRow/NoticePostsTableRow.tsx';
+import NoticeRulesTableItem from './NoticeRulesTableItem/NoticeRulesTableItem.tsx';
 
 export {
   Navigation,
@@ -22,4 +23,5 @@ export {
   NoticeTagItem,
   NoticePostsTableHeader,
   NoticePostsTableRow,
+  NoticeRulesTableItem
 };

@@ -7,6 +7,7 @@ import ChattingContainer from './Chatting/Chatting.tsx';
 import NoticeContainer from './Notice/Notice.tsx';
 import NoticeTagsListContainer from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
+import NoticeRulesTableContainer from './NoticeRulesTable/NoticeRulesTable.tsx';
 
 export {
   NavigationContainer,
@@ -17,4 +18,5 @@ export {
   NoticeContainer,
   NoticeTagsListContainer,
   NoticePostsTableContainer,
+  NoticeRulesTableContainer,
 };
