@@ -38,6 +38,12 @@ button:focus {
   outline: none;
 }
 
+button {
+  cursor: pointer;
+  font: none;
+  font-family: 'NanumSquare', sans-serif;
+}
+
 @media screen and (max-width: 1440px) {
   html {
     font-size: 11.383px;

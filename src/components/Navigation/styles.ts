@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const NavigationContainer = styled.div`
   display: flex;
   position: fixed;
-  right: ${props => (props.isOpen ? '3.1875rem' : '-29.95875rem')};
+  right: ${props => (props.isOpen ? '3.1875rem' : '-28.95875rem')};
   bottom: 2.375rem;
   transition: 0.7s;
   z-index: 800;
   align-items: flex-end;
   justify-content: space-between;
-  width: 38.15625rem;
+  width: 37.15625rem;
 `;
 
 export const NavigationButtonWrapper = styled.div`
@@ -28,7 +28,6 @@ export const NavigationButton = styled.button`
   margin-top: 1.625rem;
   background-color: ${props => props.backColor};
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.49);
-  cursor: pointer;
 `;
 
 export const NavigationButtonImg = styled.img`
@@ -38,11 +37,12 @@ export const NavigationButtonImg = styled.img`
 
 export const MypageOrChatting = styled.div`
   display: inline-block;
-  position: static;
   width: 28.09375rem;
+  background-color: white;
   height: 41.6875rem;
   border-radius: 1.875rem;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.21);
+  overflow: hidden;
 `;
 
 export const MypageOrChattingCloseBtn = styled.img`

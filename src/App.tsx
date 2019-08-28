@@ -1,16 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Provider } from 'react-redux';
 import { GlobalStyle } from './GlobalStyle';
-import { NavigationContainer } from './containers';
-import { HeaderContainer } from './containers'
+import { NavigationContainer, ApplyContainer } from './containers';
+import configureStore from './store/configureStore';
+import { HashRouter, Route } from 'react-router-dom';
+
+const store = configureStore();
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <GlobalStyle />
       <NavigationContainer />
-      <HeaderContainer />
-    </>
+      <HashRouter>
+        <Route exact path = "/apply" component = {ApplyContainer}/>
+      </HashRouter>
+    </Provider>
   );
 }
 
