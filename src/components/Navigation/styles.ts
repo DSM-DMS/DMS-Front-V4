@@ -38,6 +38,7 @@ export const NavigationButtonImg = styled.img`
 export const MypageOrChatting = styled.div`
   display: inline-block;
   width: 28.09375rem;
+  background-color: white;
   height: 41.6875rem;
   border-radius: 1.875rem;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.21);
