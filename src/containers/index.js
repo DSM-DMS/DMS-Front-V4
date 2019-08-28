@@ -8,6 +8,7 @@ import NoticeContainer from './Notice/Notice.tsx';
 import NoticeTagsListContainer from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
 import NoticeRulesTableContainer from './NoticeRulesTable/NoticeRulesTable.tsx';
+import NoticeVolunteerTableContainer from './NoticeVolunteerTable/NoticeVolunteerTable.tsx';
 
 export {
   NavigationContainer,
@@ -19,4 +20,5 @@ export {
   NoticeTagsListContainer,
   NoticePostsTableContainer,
   NoticeRulesTableContainer,
+  NoticeVolunteerTableContainer,
 };

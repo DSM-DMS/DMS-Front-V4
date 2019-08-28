@@ -3,6 +3,7 @@ import {
   NoticeTagsListContainer,
   NoticePostsTableContainer,
   NoticeRulesTableContainer,
+  NoticeVolunteerTableContainer,
 } from '../../containers';
 
 import * as S from './styles';
@@ -17,7 +18,7 @@ const NoticeWrapper: React.StatelessComponent<NoticeWrapperProps> = ({
   function renderTable(tableType) {
     if (tableType === 'posts') return <NoticePostsTableContainer />;
     if (tableType === 'rules') return <NoticeRulesTableContainer />;
-    if (tableType === 'volunteer') return <></>;
+    if (tableType === 'volunteer') return <NoticeVolunteerTableContainer />;
   }
   return (
     <S.NoticeOuterWrapper>

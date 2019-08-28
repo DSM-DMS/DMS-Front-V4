@@ -80,6 +80,26 @@ const tableStaticData: Array<Array<RulesTable | VolunteerTable>> = [
         '기숙사 봉사활동, 천자 반성문, 등교시간 캠페인 등 1주간 총 5회',
       volunteerPoint: '15~19점',
     },
+    {
+      volunteerGrade: '2단계',
+      volunteerTitle: '1주 간 주말잔류 및 외부긴간 봉사활동(4시간 이상)',
+      volunteerPoint: '20~24점',
+    },
+    {
+      volunteerGrade: '1OUT',
+      volunteerTitle: '1주간 명령퇴사',
+      volunteerPoint: '25~29점',
+    },
+    {
+      volunteerGrade: '2OUT',
+      volunteerTitle: '2주간 명령퇴사',
+      volunteerPoint: '30~34점',
+    },
+    {
+      volunteerGrade: '3OUT',
+      volunteerTitle: '3주간 명령퇴사',
+      volunteerPoint: '35~39점',
+    },
   ],
 ];
 
