@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { NoticePostsTable, NoticePostsTableRow } from '../../components';
+import { NoticePostsTableHeader, NoticePostsTableRow } from '../../components';
 import { PostsTable } from '../../modules/notice';
 
 interface NoticePostsTableProps {
@@ -19,7 +19,12 @@ const NoticePostsTableContainer: React.FC<NoticePostsTableProps> = ({
       key={`post-row-${data.title}-${index}`}
     />
   ));
-  return <NoticePostsTable postsRows={postsRows} />;
+  return (
+    <>
+      <NoticePostsTableHeader />
+      {postsRows}
+    </>
+  );
 };
 
 const mapStateToProps = state => ({

@@ -21,7 +21,7 @@ const NoticeWrapper: React.StatelessComponent<NoticeWrapperProps> = ({
   return (
     <S.NoticeOuterWrapper>
       <NoticeTagsListContainer />
-      {renderTable(tableType)}
+      <S.NoticeTableWrapper>{renderTable(tableType)}</S.NoticeTableWrapper>
     </S.NoticeOuterWrapper>
   );
 };

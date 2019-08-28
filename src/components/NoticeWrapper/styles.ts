@@ -5,3 +5,8 @@ export const NoticeOuterWrapper = styled.div`
   box-sizing: border-box;
   height: 100vh;
 `;
+
+export const NoticeTableWrapper = styled.div`
+  max-height: 26.15625rem;
+  overflow-y: auto;
+`;
