@@ -7,16 +7,21 @@ import {
 import * as S from './styles';
 
 interface NoticeWrapperProps {
-  selectedTag: String;
+  tableType: String;
 }
 
 const NoticeWrapper: React.StatelessComponent<NoticeWrapperProps> = ({
-  selectedTag,
+  tableType,
 }) => {
+  function renderTable(tableType) {
+    if (tableType === 'posts') return <NoticePostsTableContainer />;
+    if (tableType === 'rules') return <></>;
+    if (tableType === 'volunteer') return <></>;
+  }
   return (
     <S.NoticeOuterWrapper>
       <NoticeTagsListContainer />
-      {selectedTag === '안내사항' ? <NoticePostsTableContainer /> : null}
+      {renderTable(tableType)}
     </S.NoticeOuterWrapper>
   );
 };

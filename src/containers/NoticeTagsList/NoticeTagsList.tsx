@@ -11,20 +11,20 @@ interface NoticeTagsListProps {
 }
 
 const NoticeTags = [
-  '안내사항',
-  'DMS 사용법',
-  '공동생활',
-  '생활태도',
-  '복장/위생',
-  '지도불응',
-  '무단이탈',
-  '기물파손',
-  '반입금지 물품',
-  '위험행동',
-  '태도불량',
-  '기타',
-  '상점',
-  '다벌점 봉사',
+  { tagContent: '안내사항', tableType: 'posts' },
+  { tagContent: 'DMS 사용법', tableType: 'posts' },
+  { tagContent: '공동생활', tableType: 'rules' },
+  { tagContent: '생활태도', tableType: 'rules' },
+  { tagContent: '복장/위생', tableType: 'rules' },
+  { tagContent: '지도불응', tableType: 'rules' },
+  { tagContent: '무단이탈', tableType: 'rules' },
+  { tagContent: '기물파손', tableType: 'rules' },
+  { tagContent: '반입금지 물품', tableType: 'rules' },
+  { tagContent: '위험행동', tableType: 'rules' },
+  { tagContent: '태도불량', tableType: 'rules' },
+  { tagContent: '기타', tableType: 'rules' },
+  { tagContent: '상점', tableType: 'rules' },
+  { tagContent: '다벌점 봉사', tableType: 'rules' },
 ];
 
 const NoticeTagsListContainer: React.FC<NoticeTagsListProps> = ({
@@ -33,7 +33,8 @@ const NoticeTagsListContainer: React.FC<NoticeTagsListProps> = ({
 }) => {
   const NoticeTagItems = NoticeTags.map(data => (
     <NoticeTagItem
-      tagContent={data}
+      tagContent={data.tagContent}
+      tableType={data.tableType}
       selectedTag={selectedTag}
       onClickTag={NoticeActions.setSelectedTag}
       key={`notice tag - ${data}`}

@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import { NoticeWrapper } from '../../components';
 
 interface NoticeProps {
-  selectedTag: String;
+  tableType: String;
 }
 
-const Notice: React.StatelessComponent<NoticeProps> = ({ selectedTag }) => {
-  return <NoticeWrapper selectedTag={selectedTag} />;
+const Notice: React.StatelessComponent<NoticeProps> = ({ tableType }) => {
+  return <NoticeWrapper tableType={tableType} />;
 };
 
 const mapStateToProps = state => ({
-  selectedTag: state.notice.selectedTag,
+  tableType: state.notice.tableType,
 });
 
 export default connect(
