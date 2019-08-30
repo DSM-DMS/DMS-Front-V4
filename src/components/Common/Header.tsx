@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './styles.ts'
+import * as S from './styles'
 import Logo from '../../assets/logo/logo.png'
 import { Link } from 'react-router-dom'; 
 
