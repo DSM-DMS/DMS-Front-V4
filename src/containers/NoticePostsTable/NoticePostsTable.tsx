@@ -4,7 +4,7 @@ import { NoticePostsTableHeader, NoticePostsTableRow } from '../../components';
 import { PostsTable } from '../../modules/notice';
 
 interface NoticePostsTableProps {
-  tableItems: Array<PostsTable>;
+  tableItems: PostsTable[];
 }
 
 const NoticePostsTableContainer: React.FC<NoticePostsTableProps> = ({

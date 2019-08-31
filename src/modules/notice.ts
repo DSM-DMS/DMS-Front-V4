@@ -6,35 +6,35 @@ const SET_SELECTED_TAG = 'SET_SELECTED_TAG';
 
 export interface SetSelectedTag {
   type: 'SET_SELECTED_TAG';
-  selectedTag: String;
-  tableType: String;
+  selectedTag: string;
+  tableType: string;
   tableItems: Array<PostsTable | RulesTable | VolunteerTable>;
 }
 
 export type Action = SetSelectedTag;
 
 export interface PostsTable {
-  date: String;
-  title: String;
-  views: Number;
-  contents: String;
+  date: string;
+  title: string;
+  views: number;
+  contents: string;
 }
 
 export interface RulesTable {
-  ruleTitle: String;
-  rulePoint: Number;
+  ruleTitle: string;
+  rulePoint: number;
 }
 
 export interface VolunteerTable {
-  volunteerGrade: String;
-  volunteerTitle: String;
-  volunteerPoint: String;
+  volunteerGrade: string;
+  volunteerTitle: string;
+  volunteerPoint: string;
 }
 
 export interface NoticeState {
-  selectedTag: String;
+  selectedTag: string;
   tableItems: Array<PostsTable | RulesTable | VolunteerTable>;
-  tableType: String;
+  tableType: string;
 }
 
 const initalState: NoticeState = {
@@ -66,8 +66,8 @@ const initalState: NoticeState = {
 };
 
 export const setSelectedTag = (
-  selectedTag: String,
-  tableType: String,
+  selectedTag: string,
+  tableType: string,
   tableItems: Array<PostsTable | RulesTable | VolunteerTable>,
 ): SetSelectedTag => ({
   type: SET_SELECTED_TAG,
@@ -79,8 +79,8 @@ export const setSelectedTag = (
 export const setSelectedTagThunk: ActionCreator<
   ThunkAction<Action, NoticeState, void, any>
 > = (
-  selectedTag: String,
-  tableType: String,
+  selectedTag: string,
+  tableType: string,
   staticTableIndex: number,
 ) => dispatch => {
   if (tableType !== 'posts') {
