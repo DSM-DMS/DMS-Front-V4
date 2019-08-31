@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { GlobalStyle } from './GlobalStyle';
-import { NavigationContainer } from './containers';
+import { NavigationContainer, NoticeContainer } from './containers';
 import configureStore from './store/configureStore';
 
 
@@ -12,6 +12,7 @@ function App() {
     <Provider store={store}>
       <GlobalStyle />
       <NavigationContainer />
+      <NoticeContainer />
     </Provider>
   );
 }

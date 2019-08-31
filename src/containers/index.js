@@ -4,6 +4,11 @@ import MypageContainer from './Mypage/Mypage.tsx';
 import MypageStatusContainer from './MypageStatus/MypageStatus.tsx';
 import MypagePointContainer from './MypagePoint/MypagePoint.tsx';
 import ChattingContainer from './Chatting/Chatting.tsx';
+import NoticeContainer from './Notice/Notice.tsx';
+import NoticeTagsListContainer from './NoticeTagsList/NoticeTagsList.tsx';
+import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
+import NoticeRulesTableContainer from './NoticeRulesTable/NoticeRulesTable.tsx';
+import NoticeVolunteerTableContainer from './NoticeVolunteerTable/NoticeVolunteerTable.tsx';
 import HeaderContainer from './Common/Header.tsx';
 
 export {
@@ -12,5 +17,10 @@ export {
   MypageStatusContainer,
   MypagePointContainer,
   ChattingContainer,
+  NoticeContainer,
+  NoticeTagsListContainer,
+  NoticePostsTableContainer,
+  NoticeRulesTableContainer,
+  NoticeVolunteerTableContainer,
   HeaderContainer,
 };
