@@ -32,7 +32,7 @@ const ApplyStayContainer: React.FC<ApplyStayProps> = () => {
     ]
 
     const ButtonsList: React.ReactElement[] = Buttons.map(data => (
-            <ApplyStayButton data = {data} key = {data.kind}/>
+            <ApplyStayButton {...data} key = {data.kind}/>
         )
     )
 

@@ -6,6 +6,7 @@ import MypagePointContainer from './MypagePoint/MypagePoint.tsx';
 import ChattingContainer from './Chatting/Chatting.tsx';
 import ApplyContainer from './Apply/Apply.tsx'
 import ApplyStayContainer from './ApplyStay/ApplyStay.tsx'
+import ApplyStateContainer from './ApplyState/ApplyState.tsx'
 
 export {
   NavigationContainer,
@@ -15,4 +16,5 @@ export {
   ChattingContainer,
   ApplyContainer,
   ApplyStayContainer,
+  ApplyStateContainer,
 };

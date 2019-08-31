@@ -1,24 +1,27 @@
 import React from 'react'
 import * as S from './style'
 
-import { ApplyStayContainer } from '../../containers'
+import { ApplyStayContainer, ApplyStateContainer } from '../../containers'
 
 interface ApplyProps {
-    state: string
+    currentView: string
 }
 
-const Apply: React.FC<ApplyProps> = ({state}) => {
+const Apply: React.FC<ApplyProps> = ({currentView}) => {
 
     let ApplySection = <ApplyStayContainer />;
 
-    switch(state) {
+    switch(currentView) {
         case 'stay':
             ApplySection = <ApplyStayContainer />;
     }
 
+    console.log(ApplyStateContainer)
+
     return (
         <S.ApplyWrapper>
             { ApplySection }
+            <ApplyStateContainer />
         </S.ApplyWrapper>
     )
 }

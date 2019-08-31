@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
 
-interface Data {
+interface ApplyButtonProps {
     kind: string,
     title : string,
     gohome_time: string | undefined,
@@ -9,32 +9,29 @@ interface Data {
     description: string | undefined
 }
 
-interface ApplyButtonProps {
-    data: Data
-}
 
-const ApplyStayButton: React.FC<ApplyButtonProps> = ({data}) => {
+const ApplyStayButton: React.FC<ApplyButtonProps> = ({kind, title, description, gohome_time, comeback_time}) => {
     return (
         <S.ApplyButtonWrapper>
             <S.ApplyButtonTitleWrapper>
-                <S.ApplyButtonIcon alt = {data.kind}/>
+                <S.ApplyButtonIcon alt = {kind}/>
                 <S.ApplyButtonTitle>
-                    { data.title }
+                    { title }
                 </S.ApplyButtonTitle>
             </S.ApplyButtonTitleWrapper>
             <S.ApplyDescriptionWrapper>
                 {                    
-                    data.description ? 
+                    description ? 
                     <S.ApplyDescription>
-                        {data.description}
+                        {description}
                     </S.ApplyDescription>
                     :
                     <>
                         <S.ApplyDescription>
-                            {data.gohome_time}
+                            {gohome_time}
                         </S.ApplyDescription>
                         <S.ApplyDescription>
-                            {data.comeback_time}
+                            {comeback_time}
                         </S.ApplyDescription>
                     </>
                 }
