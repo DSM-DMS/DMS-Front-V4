@@ -2,8 +2,8 @@ import React from 'react';
 import * as S from './styles';
 
 interface FooterTeamColumnProps {
-  teamName: String;
-  peoplesList: Array<String>;
+  teamName: string;
+  peoplesList: Array<string>;
 }
 
 const FooterTeamColumn: React.StatelessComponent<FooterTeamColumnProps> = ({
