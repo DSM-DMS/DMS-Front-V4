@@ -42,13 +42,15 @@ export const ApplyButtonIcon = styled.img`
 `
 
 export const ApplyDescriptionWrapper = styled.div`
+    height: 3.625rem;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 export const ApplyDescription = styled.div`
-    padding: 0.5rem 0 0;
+    padding: 0.35rem 0;
     width: 100%;
     font-size: 1.125rem;
     display: flex;
