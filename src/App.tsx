@@ -5,6 +5,7 @@ import { NavigationContainer, ApplyContainer } from './containers';
 import configureStore from './store/configureStore';
 import { HashRouter, Route } from 'react-router-dom';
 
+
 const store = configureStore();
 
 function App() {

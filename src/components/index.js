@@ -7,6 +7,7 @@ import Chatting from './Chatting/Chatting.tsx';
 import Apply from './Apply/Apply.tsx';
 import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
+import Header from './Common/Header.tsx'
 
 export {
   Navigation,
@@ -18,4 +19,5 @@ export {
   Apply,
   ApplyStay,
   ApplyStayButton,
+  Header,
 };
