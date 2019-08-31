@@ -9,7 +9,7 @@ interface ApplyProps {
 
 const Apply: React.FC<ApplyProps> = ({currentView}) => {
 
-    let ApplySection = <ApplyStayContainer />;
+    let ApplySection;
 
     switch(currentView) {
         case 'stay':
