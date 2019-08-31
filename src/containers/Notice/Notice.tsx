@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { NoticeWrapper } from '../../components';
 
 interface NoticeProps {
-  tableType: String;
+  tableType: string;
 }
 
 const Notice: React.StatelessComponent<NoticeProps> = ({ tableType }) => {

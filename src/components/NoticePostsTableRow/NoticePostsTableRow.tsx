@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import * as S from './styles';
 
 interface NoticePostsTableRowProps {
-  date: String;
-  title: String;
-  views: Number;
-  contents: String;
+  date: string;
+  title: string;
+  views: number;
+  contents: string;
 }
 
 const NoticePostsTableRow: React.FC<NoticePostsTableRowProps> = ({

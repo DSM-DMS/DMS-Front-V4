@@ -4,7 +4,7 @@ import { VolunteerTable } from '../../modules/notice';
 import { NoticeVolunteerTableItem } from '../../components';
 
 interface NoticeVolunteerTableProps {
-  tableItems: Array<VolunteerTable>;
+  tableItems: VolunteerTable[];
 }
 
 const NoticeVolunteerTableContainer: React.FC<NoticeVolunteerTableProps> = ({

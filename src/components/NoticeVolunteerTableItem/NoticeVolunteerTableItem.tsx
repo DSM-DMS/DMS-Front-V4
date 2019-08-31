@@ -3,9 +3,9 @@ import React from 'react';
 import * as S from './styles';
 
 interface NoticeVolunteerTableItemProps {
-  volunteerGrade: String;
-  volunteerTitle: String;
-  volunteerPoint: String;
+  volunteerGrade: string;
+  volunteerTitle: string;
+  volunteerPoint: string;
 }
 
 const NoticeVolunteerTableItemContainer: React.StatelessComponent<

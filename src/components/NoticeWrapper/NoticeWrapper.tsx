@@ -9,16 +9,23 @@ import {
 import * as S from './styles';
 
 interface NoticeWrapperProps {
-  tableType: String;
+  tableType: string;
 }
 
 const NoticeWrapper: React.StatelessComponent<NoticeWrapperProps> = ({
   tableType,
 }) => {
   function renderTable(tableType) {
-    if (tableType === 'posts') return <NoticePostsTableContainer />;
-    if (tableType === 'rules') return <NoticeRulesTableContainer />;
-    if (tableType === 'volunteer') return <NoticeVolunteerTableContainer />;
+    switch (tableType) {
+      case 'posts':
+        return <NoticePostsTableContainer />;
+      case 'rules':
+        return <NoticeRulesTableContainer />;
+      case 'volunteer':
+        return <NoticeVolunteerTableContainer />;
+      default:
+        return null;
+    }
   }
   return (
     <S.NoticeOuterWrapper>
