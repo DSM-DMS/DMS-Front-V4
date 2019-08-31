@@ -10,6 +10,11 @@ export const ApplyButtonWrapper = styled.div`
     padding: 4.375rem 1.375rem 3.75rem;
     box-sizing: border-box;
     color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
 
     &:hover {
         background-color: #8200a1;
@@ -26,3 +31,26 @@ export const ApplyButtonTitleWrapper = styled.div`
     justify-content: space-between;
 `
 
+export const ApplyButtonTitle = styled.span`
+    font-size: 1.875rem;
+    font-weight: 800;
+`
+
+export const ApplyButtonIcon = styled.img`
+    weight: 4.6875rem;
+    height: 4.6875rem;
+`
+
+export const ApplyDescriptionWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+`
+
+export const ApplyDescription = styled.div`
+    padding: 0.5rem 0 0;
+    width: 100%;
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: center;
+`
