@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 interface HeaderProps {}
 
-const Header : React.FC<HeaderProps> = () => {
+const Header : React.StatelessComponent<HeaderProps> = () => {
     return (
         <>
             <S.HeaderWrapper>
