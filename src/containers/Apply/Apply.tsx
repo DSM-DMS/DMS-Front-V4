@@ -7,7 +7,7 @@ interface ApplyProps {}
 const ApplyContainer : React.FC<ApplyProps> = () => {
     const [apply, setApply] = useState('stay');
     return (
-        <Apply />
+        <Apply state = {apply}/>
     )
 };
 

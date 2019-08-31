@@ -1,32 +1,40 @@
 import React from 'react';
 
+import { ApplyStay, ApplyStayButton } from '../../components'
+
 interface ApplyStayProps {}
 
 const ApplyStayContainer: React.FC<ApplyStayProps> = () => {
     const Buttons = [
         {
             kind : 'friday',
-            description : ''
+            title : '금요귀가',
+            description : '씹씹상타치'
         }, 
         {
             kind : 'saturday',
-            description : ''
+            title : '토요귀가',
+            description : '하타치'
         }, 
         {
-            kind : 'saturday_back',
-            description : ''
+            kind : 'ret_at_saturday',
+            title : '토요귀사',
+            description : '씹상타치'
         }, 
         {
             kind : 'stay',
-            description : ''
+            title : '잔류',
+            description : '상타치'
         }
     ]
 
-    Buttons.map
+    const ButtonsList: React.ReactElement[] = Buttons.map(data => (
+            <ApplyStayButton data = {data} key = {data.kind}/>
+        )
+    )
 
     return (
-        <>
-        </>
+        <ApplyStay button = {ButtonsList} />
     )
 }
 

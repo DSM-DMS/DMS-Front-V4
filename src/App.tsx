@@ -12,9 +12,7 @@ function App() {
     <Provider store={store}>
       <GlobalStyle />
       <NavigationContainer />
-      <HashRouter>
-        <Route exact path = "/apply" component = {ApplyContainer}/>
-      </HashRouter>
+      <ApplyContainer />
     </Provider>
   );
 }

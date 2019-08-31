@@ -2,11 +2,16 @@ import React from 'react'
 
 import * as S from './styles'
 
-interface ApplyStayProps {}
+interface ApplyStayProps {
+    button: React.ReactElement[]
+}
 
-const ApplyStay: React.FC<ApplyStayProps> = () => {
+const ApplyStay: React.FC<ApplyStayProps> = ({ button }) => {
+    console.log(button)
     return (
-        <>네모네모로직</>
+        <S.ApplyStayWrapper>
+            { button }
+        </S.ApplyStayWrapper>
     )
 };
 
