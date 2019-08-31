@@ -4,6 +4,7 @@ import MypageStatus from './MypageStatus/MypageStatus.tsx';
 import MypagePoint from './MypagePoint/MypagePoint.tsx';
 import MypagePointItem from './MypagePointItem/MypagePointItem.tsx';
 import Chatting from './Chatting/Chatting.tsx';
+import Header from './Common/Header.tsx'
 
 export {
   Navigation,
@@ -12,4 +13,5 @@ export {
   MypagePoint,
   MypagePointItem,
   Chatting,
+  Header,
 };

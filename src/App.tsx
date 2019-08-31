@@ -4,6 +4,7 @@ import { GlobalStyle } from './GlobalStyle';
 import { NavigationContainer } from './containers';
 import configureStore from './store/configureStore';
 
+
 const store = configureStore();
 
 function App() {

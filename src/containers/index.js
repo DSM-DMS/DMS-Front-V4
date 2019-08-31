@@ -4,6 +4,7 @@ import MypageContainer from './Mypage/Mypage.tsx';
 import MypageStatusContainer from './MypageStatus/MypageStatus.tsx';
 import MypagePointContainer from './MypagePoint/MypagePoint.tsx';
 import ChattingContainer from './Chatting/Chatting.tsx';
+import HeaderContainer from './Common/Header.tsx';
 
 export {
   NavigationContainer,
@@ -11,4 +12,5 @@ export {
   MypageStatusContainer,
   MypagePointContainer,
   ChattingContainer,
+  HeaderContainer,
 };
