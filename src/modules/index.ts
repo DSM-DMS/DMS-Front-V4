@@ -1,5 +1,8 @@
 import { combineReducers } from 'redux';
+import notice, { NoticeState } from './notice';
 
-export interface StoreState {}
+export interface StoreState {
+  notice: NoticeState;
+}
 
-export default combineReducers<StoreState>({});
+export default combineReducers<StoreState>({ notice });

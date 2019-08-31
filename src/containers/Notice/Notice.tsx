@@ -1,7 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { NoticeWrapper } from '../../components';
 
-function Notice() {
-  return <>1</>;
+interface NoticeProps {
+  tableType: string;
 }
 
-export default Notice;
+const Notice: React.StatelessComponent<NoticeProps> = ({ tableType }) => {
+  return <NoticeWrapper tableType={tableType} />;
+};
+
+const mapStateToProps = state => ({
+  tableType: state.notice.tableType,
+});
+
+export default connect(
+  mapStateToProps,
+  null,
+)(Notice);

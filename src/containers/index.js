@@ -7,6 +7,11 @@ import ChattingContainer from './Chatting/Chatting.tsx';
 import ApplyContainer from './Apply/Apply.tsx'
 import ApplyStayContainer from './ApplyStay/ApplyStay.tsx'
 import ApplyStateContainer from './ApplyState/ApplyState.tsx'
+import NoticeContainer from './Notice/Notice.tsx';
+import NoticeTagsListContainer from './NoticeTagsList/NoticeTagsList.tsx';
+import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
+import NoticeRulesTableContainer from './NoticeRulesTable/NoticeRulesTable.tsx';
+import NoticeVolunteerTableContainer from './NoticeVolunteerTable/NoticeVolunteerTable.tsx';
 import HeaderContainer from './Common/Header.tsx';
 
 export {
@@ -18,5 +23,10 @@ export {
   ApplyContainer,
   ApplyStayContainer,
   ApplyStateContainer,
+  NoticeContainer,
+  NoticeTagsListContainer,
+  NoticePostsTableContainer,
+  NoticeRulesTableContainer,
+  NoticeVolunteerTableContainer,
   HeaderContainer,
 };

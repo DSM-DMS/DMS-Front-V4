@@ -8,6 +8,13 @@ import Apply from './Apply/Apply.tsx';
 import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
 import ApplyState from './ApplyState/ApplyState.tsx'
+import NoticeWrapper from './NoticeWrapper/NoticeWrapper.tsx';
+import NoticeTagsList from './NoticeTagsList/NoticeTagsList.tsx';
+import NoticeTagItem from './NoticeTagItem/NoticeTagItem.tsx';
+import NoticePostsTableHeader from './NoticePostsTableHeader/NoticePostsTableHeader.tsx';
+import NoticePostsTableRow from './NoticePostsTableRow/NoticePostsTableRow.tsx';
+import NoticeRulesTableItem from './NoticeRulesTableItem/NoticeRulesTableItem.tsx';
+import NoticeVolunteerTableItem from './NoticeVolunteerTableItem/NoticeVolunteerTableItem.tsx';
 import Header from './Common/Header.tsx'
 
 export {
@@ -21,5 +28,12 @@ export {
   ApplyStay,
   ApplyStayButton,
   ApplyState,
+  NoticeWrapper,
+  NoticeTagsList,
+  NoticeTagItem,
+  NoticePostsTableHeader,
+  NoticePostsTableRow,
+  NoticeRulesTableItem,
+  NoticeVolunteerTableItem,
   Header,
 };
