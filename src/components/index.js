@@ -8,6 +8,7 @@ import Apply from './Apply/Apply.tsx';
 import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
 import ApplyState from './ApplyState/ApplyState.tsx'
+import Header from './Common/Header.tsx'
 
 export {
   Navigation,
@@ -19,5 +20,6 @@ export {
   Apply,
   ApplyStay,
   ApplyStayButton,
-  ApplyState
+  ApplyState,
+  Header,
 };
