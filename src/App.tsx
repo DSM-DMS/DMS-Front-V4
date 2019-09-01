@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { GlobalStyle } from './GlobalStyle';
-import { NavigationContainer, NoticeContainer, ApplyContainer } from './containers';
+import { NavigationContainer, NoticeContainer, ApplyContainer, FooterContainer } from './containers';
 import configureStore from './store/configureStore';
 import { HashRouter, Route } from 'react-router-dom';
 
@@ -15,6 +15,7 @@ function App() {
       <NavigationContainer />
       <ApplyContainer />
       <NoticeContainer />
+      <FooterContainer />
     </Provider>
   );
 }

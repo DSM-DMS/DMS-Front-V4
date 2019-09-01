@@ -15,6 +15,8 @@ import NoticePostsTableHeader from './NoticePostsTableHeader/NoticePostsTableHea
 import NoticePostsTableRow from './NoticePostsTableRow/NoticePostsTableRow.tsx';
 import NoticeRulesTableItem from './NoticeRulesTableItem/NoticeRulesTableItem.tsx';
 import NoticeVolunteerTableItem from './NoticeVolunteerTableItem/NoticeVolunteerTableItem.tsx';
+import Footer from './Footer/Footer.tsx';
+import FooterTeamColumn from './FooterTeamColumn/FooterTeamColumn.tsx';
 import Header from './Common/Header.tsx'
 
 export {
@@ -35,5 +37,7 @@ export {
   NoticePostsTableRow,
   NoticeRulesTableItem,
   NoticeVolunteerTableItem,
+  Footer,
+  FooterTeamColumn,
   Header,
 };
