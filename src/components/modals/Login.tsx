@@ -23,23 +23,23 @@ const Login: React.FC<Props> = () => {
           type="password"/>
         <S.LoginBottom>
           
-          <S.AutoLoginWrepper>
+          <S.AutoLoginWrapper>
             <S.AutoLoginCheckbtn 
               type="checkbox"
             />
             <span>자동 로그인</span>
-          </S.AutoLoginWrepper>
+          </S.AutoLoginWrapper>
           <S.ForgetPWLink>비밀번호 찾기</S.ForgetPWLink>
         </S.LoginBottom>
       </S.ModalContnetWrapper>
       
-      <S.ModalBottomWrepper>
+      <S.ModalBottomWrapper>
         <S.button>로그인</S.button>
-          <S.SigninLinkWrepper>
+          <S.SigninLinkWrapper>
             <span>아직 DMS 회원이 아니시라면?</span>
             <S.SigninLink>회원가입</S.SigninLink>
-          </S.SigninLinkWrepper> 
-        </S.ModalBottomWrepper>
+          </S.SigninLinkWrapper> 
+        </S.ModalBottomWrapper>
     </div>
   )
 }

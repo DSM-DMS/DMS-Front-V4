@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { globalColor } from '../../GlobalStyle';
 import ModalCloseImg from '../assets/icon/cross-mark.png';
-import { symbol } from 'prop-types';
 
 export const Modal_overlay = styled.div`
   position: fixed;
@@ -70,7 +69,7 @@ export const LoginBottom = styled.div`
   justify-content:space-between;
   align-items: center;
 `
-export const AutoLoginWrepper = styled.div`
+export const AutoLoginWrapper = styled.div`
   display: flex;
   align-items: center;
 
@@ -110,7 +109,7 @@ export const ForgetPWLink = styled.span`
   cursor: pointer;
 `
 
-export const ModalBottomWrepper = styled.div`
+export const ModalBottomWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 14.69rem;
@@ -136,7 +135,7 @@ export const button = styled.button`
   }
 `
 
-export const SigninLinkWrepper = styled.div`
+export const SigninLinkWrapper = styled.div`
   font-size: 0.875rem;
 `
 
