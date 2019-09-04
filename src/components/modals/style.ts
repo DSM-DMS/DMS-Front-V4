@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { globalColor } from '../../GlobalStyle';
 import ModalCloseImg from '../assets/icon/cross-mark.png';
 
-export const Modal_overlay = styled.div`
+export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -45,7 +45,7 @@ export const ModalClosebtn = styled.img`
   cursor: pointer;
   
 `
-export const ModalContnetWrapper = styled.div`
+export const ModalContentWrapper = styled.div`
   display : flex;
   width: 24.75rem;
   height: 10.5rem;
