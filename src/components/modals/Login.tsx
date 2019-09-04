@@ -8,14 +8,14 @@ interface Props {
 
 const Login: React.FC<Props> = () => {
   return(
-    <div>
+    <>
       <S.ModalNameWrapper>
         <S.ModalName>로그인</S.ModalName>
         <S.ModalClosebtn 
           src={ModalCloseImg}/>
       </S.ModalNameWrapper>
 
-      <S.ModalContnetWrapper>
+      <S.ModalContentWrapper>
         <S.ModalInput 
           placeholder="아이디"/>
         <S.ModalInput
@@ -31,7 +31,7 @@ const Login: React.FC<Props> = () => {
           </S.AutoLoginWrapper>
           <S.ForgetPWLink>비밀번호 찾기</S.ForgetPWLink>
         </S.LoginBottom>
-      </S.ModalContnetWrapper>
+      </S.ModalContentWrapper>
       
       <S.ModalBottomWrapper>
         <S.button>로그인</S.button>
@@ -40,7 +40,7 @@ const Login: React.FC<Props> = () => {
             <S.SigninLink>회원가입</S.SigninLink>
           </S.SigninLinkWrapper> 
         </S.ModalBottomWrapper>
-    </div>
+    </>
   )
 }
 

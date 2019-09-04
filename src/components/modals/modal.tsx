@@ -9,12 +9,12 @@ interface Props {
 
 const Modal: React.FC<Props> = () => {
   return(
-    <div>
-        <S.ModalContainer>
-          <Login />
-        </S.ModalContainer>
-        
-    </div>
+    <>
+      <S.ModalOverlay/>
+      <S.ModalContainer>
+        <Login />
+      </S.ModalContainer>
+    </>
   )
 }
 
