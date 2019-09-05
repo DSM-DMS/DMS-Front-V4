@@ -1,112 +1,40 @@
 import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { AnyAction, ActionCreator } from 'redux';
+import { noticeTableStaticData } from '../static/notice';
 
 const SET_SELECTED_TAG = 'SET_SELECTED_TAG';
 
 export interface SetSelectedTag {
   type: 'SET_SELECTED_TAG';
-  selectedTag: String;
-  tableType: String;
+  selectedTag: string;
+  tableType: string;
   tableItems: Array<PostsTable | RulesTable | VolunteerTable>;
 }
 
 export type Action = SetSelectedTag;
 
 export interface PostsTable {
-  date: String;
-  title: String;
-  views: Number;
-  contents: String;
+  date: string;
+  title: string;
+  views: number;
+  contents: string;
 }
 
 export interface RulesTable {
-  ruleTitle: String;
-  rulePoint: Number;
+  ruleTitle: string;
+  rulePoint: number;
 }
 
 export interface VolunteerTable {
-  volunteerGrade: String;
-  volunteerTitle: String;
-  volunteerPoint: String;
+  volunteerGrade: string;
+  volunteerTitle: string;
+  volunteerPoint: string;
 }
 
-const tableStaticData: Array<Array<RulesTable | VolunteerTable>> = [
-  [
-    {
-      ruleTitle: '기숙사 기본예절 위반(심한 장난, 욕설, 소란행위',
-      rulePoint: 1,
-    },
-  ],
-  [
-    {
-      ruleTitle:
-        '공용시설 사용 규정위반(공용실 개인 물건 방치, 세탁기 세탁물 방치 등)',
-      rulePoint: 1,
-    },
-  ],
-  [{ ruleTitle: '복장불량(지정된 복장규정 위반)', rulePoint: 1 }],
-  [{ ruleTitle: '지정시간 외 기숙사 출입', rulePoint: 1 }],
-  [{ ruleTitle: '소등시간(23:00) 위반 및 이동', rulePoint: 1 }],
-  [{ ruleTitle: '신청기간 이후 잔류·외박 사항 변경 시', rulePoint: 1 }],
-  [
-    {
-      ruleTitle: '귀가 시 사감실에 신고(귀가서명)하지 않은 경우',
-      rulePoint: 1,
-    },
-  ],
-  [
-    {
-      ruleTitle: '부착된 게시물을 훼손하거나 낙서 등을 한 경우 3점',
-      rulePoint: 1,
-    },
-  ],
-  [
-    {
-      ruleTitle: '지정시간 외 기숙사 출입(기숙사 폐쇄시간 중 무단출입)',
-      rulePoint: 1,
-    },
-  ],
-  [
-    {
-      ruleTitle: '소등시간 이후 다른 호실 출입 및 취침(호실전원에게 부과)',
-      rulePoint: 1,
-    },
-  ],
-  [{ ruleTitle: '착한 어린이', rulePoint: 3 }],
-  [
-    {
-      volunteerGrade: '1단계',
-      volunteerTitle:
-        '기숙사 봉사활동, 천자 반성문, 등교시간 캠페인 등 1주간 총 5회',
-      volunteerPoint: '15~19점',
-    },
-    {
-      volunteerGrade: '2단계',
-      volunteerTitle: '1주 간 주말잔류 및 외부긴간 봉사활동(4시간 이상)',
-      volunteerPoint: '20~24점',
-    },
-    {
-      volunteerGrade: '1OUT',
-      volunteerTitle: '1주간 명령퇴사',
-      volunteerPoint: '25~29점',
-    },
-    {
-      volunteerGrade: '2OUT',
-      volunteerTitle: '2주간 명령퇴사',
-      volunteerPoint: '30~34점',
-    },
-    {
-      volunteerGrade: '3OUT',
-      volunteerTitle: '3주간 명령퇴사',
-      volunteerPoint: '35~39점',
-    },
-  ],
-];
-
 export interface NoticeState {
-  selectedTag: String;
+  selectedTag: string;
   tableItems: Array<PostsTable | RulesTable | VolunteerTable>;
-  tableType: String;
+  tableType: string;
 }
 
 const initalState: NoticeState = {
@@ -138,8 +66,8 @@ const initalState: NoticeState = {
 };
 
 export const setSelectedTag = (
-  selectedTag: String,
-  tableType: String,
+  selectedTag: string,
+  tableType: string,
   tableItems: Array<PostsTable | RulesTable | VolunteerTable>,
 ): SetSelectedTag => ({
   type: SET_SELECTED_TAG,
@@ -151,13 +79,17 @@ export const setSelectedTag = (
 export const setSelectedTagThunk: ActionCreator<
   ThunkAction<Action, NoticeState, void, any>
 > = (
-  selectedTag: String,
-  tableType: String,
+  selectedTag: string,
+  tableType: string,
   staticTableIndex: number,
 ) => dispatch => {
   if (tableType !== 'posts') {
     return dispatch(
-      setSelectedTag(selectedTag, tableType, tableStaticData[staticTableIndex]),
+      setSelectedTag(
+        selectedTag,
+        tableType,
+        noticeTableStaticData[staticTableIndex],
+      ),
     );
   }
   const postsList = [

@@ -4,8 +4,8 @@ import { RulesTable } from '../../modules/notice';
 import { NoticeRulesTableItem } from '../../components';
 
 interface NoticeRulesTableProps {
-  tableItems: Array<RulesTable>;
-  selectedTag: String;
+  tableItems: RulesTable[];
+  selectedTag: string;
 }
 
 const NoticeRulesTableContainer: React.FC<NoticeRulesTableProps> = ({

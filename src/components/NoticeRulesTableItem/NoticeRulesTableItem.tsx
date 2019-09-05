@@ -2,9 +2,9 @@ import React from 'react';
 import * as S from './styles';
 
 interface NoticeRulesTableItemProps {
-  ruleTitle: String;
-  rulePoint: Number;
-  selectedTag: String;
+  ruleTitle: string;
+  rulePoint: number;
+  selectedTag: string;
 }
 
 const NoticeRulesTableItem: React.StatelessComponent<

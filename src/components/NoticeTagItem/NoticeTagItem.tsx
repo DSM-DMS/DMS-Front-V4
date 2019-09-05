@@ -4,14 +4,14 @@ import * as S from './styles';
 
 interface NoticeTagItemProps {
   onClickTag: (
-    tagId: String,
-    tableType: String,
-    staticTableIndex: Number,
+    tagId: string,
+    tableType: string,
+    staticTableIndex: number,
   ) => void;
-  tagContent: String;
-  selectedTag: String;
-  tableType: String;
-  staticTableIndex: Number;
+  tagContent: string;
+  selectedTag: string;
+  tableType: string;
+  staticTableIndex: number;
 }
 
 const NoticeTagItem: React.StatelessComponent<NoticeTagItemProps> = ({
