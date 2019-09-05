@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { globalColor } from '../../GlobalStyle';
 import ModalCloseImg from '../assets/icon/cross-mark.png';
 
+
 export const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -24,6 +25,9 @@ export const ModalContainer = styled.div`
   box-shadow: 0 0.1875rem 0.625rem 0 rgba(0, 0, 0, 0.15);
   background: #fff; 
   z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+}
 `
 
 export const ModalNameWrapper = styled.div`
@@ -80,13 +84,13 @@ export const AutoLoginCheckbtn = styled.input`
   width:  2.25rem;
   height: 1.188rem;
   appearance: none;
-  background-color: #fff;
+  background-color:#DCDCDC ;
   box-shadow: 0 0.1875rem 0.375rem 0 rgba(0, 0, 0, 0.16);
   border-radius: 1rem;
   cursor: pointer;
 
   &:checked{
-    background-color: #7e7e7e;
+    background-color: ${globalColor} ;
     &::after{
       margin-left:1.25rem;
     } 
@@ -115,7 +119,6 @@ export const ModalBottomWrapper = styled.div`
   width: 14.69rem;
   height: 6.563rem;
   margin-top: 3rem;
-  margin-left: 4.688rem;
   justify-content: space-between;
 `
 
