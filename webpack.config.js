@@ -1,6 +1,10 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const ManifestConfig = require('./public/manifest.json');
 
 module.exports = {
   entry: ['@babel/polyfill', `${__dirname}/src/index.tsx`],
@@ -51,11 +55,14 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      favicon: './public/favicon.ico',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+    new WebpackPwaManifest(ManifestConfig),
+    new CopyWebpackPlugin([{ from: 'public/service-worker.js' }]),
   ],
   devtool: 'inline-source-map',
 };
