@@ -13,11 +13,13 @@
         navigator.serviceWorker
           .register('service-worker.js')
           .then(function(registration) {
-            console
-              .log('Registration Successful, scope : ', registration.scope)
-              .catch(function(err) {
-                console.log('Registration failed : ', err);
-              });
+            console.log(
+              'Registration Successful, scope : ',
+              registration.scope,
+            );
+          })
+          .catch(function(err) {
+            console.log('Registration failed : ', err);
           });
       }
     </script>
