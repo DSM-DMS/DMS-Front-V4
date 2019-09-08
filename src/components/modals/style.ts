@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { globalColor } from '../../GlobalStyle';
-import ModalCloseImg from '../assets/icon/cross-mark.png';
-
+import ModalCloseImg from '../assets/icon/cross-mark.png'
 
 export const ModalOverlay = styled.div`
   position: fixed;
@@ -27,7 +26,7 @@ export const ModalContainer = styled.div`
   z-index: 1000;
   flex-direction: column;
   align-items: center;
-}
+
 `
 
 export const ModalNameWrapper = styled.div`
@@ -58,7 +57,6 @@ export const ModalContentWrapper = styled.div`
 `
 
 export const ModalInput = styled.input`
-  {/*width: 24.75rem;  */}
   height: 3.063rem;
   border-radius: 0.375rem;  
   background-color: #fff;
@@ -76,7 +74,6 @@ export const LoginBottom = styled.div`
 export const AutoLoginWrapper = styled.div`
   display: flex;
   align-items: center;
-
   justify-content: space-between;
 `
 
@@ -88,7 +85,6 @@ export const AutoLoginCheckbtn = styled.input`
   box-shadow: 0 0.1875rem 0.375rem 0 rgba(0, 0, 0, 0.16);
   border-radius: 1rem;
   cursor: pointer;
-
   &:checked{
     background-color: ${globalColor} ;
     &::after{
@@ -132,9 +128,10 @@ export const button = styled.button`
   font-size:  0.9375rem;
   color: #fff;
   cursor: pointer;
-
   &:active {
-    background-color: #63039A;
+    width: 14.5rem;
+    height: 2.5rem;
+
   }
 `
 
@@ -145,5 +142,4 @@ export const SigninLinkWrapper = styled.div`
 export const SigninLink = styled.span`
   font-weight: bold;
   cursor: pointer;
-
 `

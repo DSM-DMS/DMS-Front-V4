@@ -1,8 +1,6 @@
 import * as React from 'react';
-import * as S from './style'
-import ModalCloseImg from '../../assets/icon/blue_close-mark.png';
+import * as S from './style';
 import Login from "./Login";
-
 
 interface Props {
 }
@@ -15,7 +13,7 @@ const Modal: React.FC<Props> = () => {
         <Login />
       </S.ModalContainer>
     </>
-  )
+  );
 }
 
 export default Modal;
