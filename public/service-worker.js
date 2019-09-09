@@ -1,34 +1,35 @@
 const CACHE_NAME = 'dms-cache-v1';
-const urlsToCache = ['/'];
+const urlsToCache = ['CACHE-FILES'];
 
-self.addEventListener('activate', function(event) {
+this.addEventListener('activate', event => {
   const currentCacheList = [CACHE_NAME];
   event.waitUntil(
-    caches.keys().then(function(keyList) {
+    caches.keys().then(keyList => {
       Promise.all(
         keyList.map(key => {
           if (!currentCacheList.includes(key)) {
             return caches.delete(key);
           }
+          return null;
         }),
       );
     }),
   );
 });
 
-self.addEventListener('install', function(event) {
+this.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function(cache) {
+    caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(urlsToCache);
     }),
   );
 });
 
-self.addEventListener('fetch', function(event) {
+this.addEventListener('fetch', event => {
   console.log(event.request.url);
-  event.responsdWith(
-    caches.match(event.request).then(function(response) {
-      return response || event.request;
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
     }),
   );
 });
