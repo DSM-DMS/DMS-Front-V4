@@ -54,4 +54,4 @@ button {
 
 `;
 
-export const globalColor = '#8200a1';
+export const globalColor = '#00be91';
