@@ -1,24 +1,26 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { GlobalStyle } from './GlobalStyle';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { GlobalStyle, ContentWrapper, MainWrapper } from './GlobalStyle';
 import {
   NavigationContainer,
   NoticeContainer,
   FooterContainer,
+  HeaderContainer,
 } from './containers';
-import configureStore from './store/configureStore';
-
-
-const store = configureStore();
 
 function App() {
   return (
-    <Provider store={store}>
+    <BrowserRouter>
       <GlobalStyle />
       <NavigationContainer />
-      <NoticeContainer />
-      <FooterContainer />
-    </Provider>
+      <MainWrapper>
+        <HeaderContainer />
+        <ContentWrapper>
+          <Route path="/" component={() => <div>1</div>} exact />
+          <Route path="/notice" component={NoticeContainer} exact />
+        </ContentWrapper>
+      </MainWrapper>
+    </BrowserRouter>
   );
 }
 

@@ -1,4 +1,4 @@
-import {
+import styled, {
   createGlobalStyle,
   GlobalStyleComponent,
   DefaultTheme,
@@ -55,3 +55,13 @@ button {
 `;
 
 export const globalColor = '#8200a1';
+
+export const MainWrapper = styled.div`
+  display: flex;
+`;
+
+export const ContentWrapper = styled.div`
+  display: inline-block;
+  width: calc(100% - 19rem);
+  height: 100vh;
+`;

@@ -58,4 +58,9 @@ module.exports = {
     }),
   ],
   devtool: 'inline-source-map',
+  devServer: {
+    inline: true,
+    port: 7777,
+    historyApiFallback: true,
+  },
 };
