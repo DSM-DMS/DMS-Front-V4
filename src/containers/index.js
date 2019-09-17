@@ -10,7 +10,7 @@ import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
 import NoticeRulesTableContainer from './NoticeRulesTable/NoticeRulesTable.tsx';
 import NoticeVolunteerTableContainer from './NoticeVolunteerTable/NoticeVolunteerTable.tsx';
 import FooterContainer from './Footer/Footer.tsx';
-import HeaderContainer from './Common/Header.tsx';
+import SideBarContainer from './SideBar/SideBar.tsx';
 
 export {
   NavigationContainer,
@@ -24,5 +24,5 @@ export {
   NoticeRulesTableContainer,
   NoticeVolunteerTableContainer,
   FooterContainer,
-  HeaderContainer,
+  SideBarContainer,
 };
