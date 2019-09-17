@@ -28,8 +28,9 @@ time, mark, audio, video {
 
 body {
   
-  @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-  font-family: 'NanumSquare', sans-serif;
+  @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap')
+  font-family: 'NanumSquare','Noto Sans', sans-serif;
 }
 
 input:focus,
@@ -42,7 +43,11 @@ button:focus {
 button {
   cursor: pointer;
   font: none;
-  font-family: 'NanumSquare', sans-serif;
+  font-family: 'NanumSquare','Noto Sans', sans-serif;
+}
+
+a {
+  font-family: 'NanumSquare','Noto Sans', sans-serif;
 }
 
 @media screen and (max-width: 1440px) {
