@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyle, ContentWrapper, MainWrapper } from './GlobalStyle';
 import {
   NavigationContainer,
-  NoticeContainer,
   FooterContainer,
   HeaderContainer,
 } from './containers';
+import Routing from './Routing';
 
 function App() {
   return (
@@ -16,8 +16,7 @@ function App() {
       <MainWrapper>
         <HeaderContainer />
         <ContentWrapper>
-          <Route path="/" component={() => <div>1</div>} exact />
-          <Route path="/notice" component={NoticeContainer} exact />
+          <Routing />
         </ContentWrapper>
       </MainWrapper>
     </BrowserRouter>
