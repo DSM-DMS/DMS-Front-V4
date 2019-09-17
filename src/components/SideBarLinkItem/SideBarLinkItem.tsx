@@ -2,7 +2,7 @@ import React from 'react';
 
 import * as S from './styles';
 
-interface SideBarLinkItemProps {
+export interface SideBarLinkItemProps {
   path: string;
   iconImg: React.ReactNode;
   linkTitle: string;

@@ -46,7 +46,7 @@ button {
   font-family: 'NanumSquare','Noto Sans', sans-serif;
 }
 
-a {
+a, p {
   font-family: 'NanumSquare','Noto Sans', sans-serif;
 }
 

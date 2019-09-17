@@ -12,6 +12,7 @@ export const SideBarLink = styled(Link)`
   text-decoration: none;
   font-size: 1.125rem;
   font-weight: bold;
+  font-family: 'Noto Sans';
 
   &:hover {
     background-color: white;

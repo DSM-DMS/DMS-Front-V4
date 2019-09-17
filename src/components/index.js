@@ -14,6 +14,8 @@ import NoticeVolunteerTableItem from './NoticeVolunteerTableItem/NoticeVolunteer
 import Footer from './Footer/Footer.tsx';
 import FooterTeamColumn from './FooterTeamColumn/FooterTeamColumn.tsx';
 import SideBar from './SideBar/SideBar.tsx';
+import SideBarLinkItem from './SideBarLinkItem/SideBarLinkItem.tsx';
+import SideBarLinksList from './SideBarLinksList/SideBarLinksList.tsx';
 
 export {
   Navigation,
@@ -32,4 +34,6 @@ export {
   Footer,
   FooterTeamColumn,
   SideBar,
+  SideBarLinkItem,
+  SideBarLinksList,
 };
