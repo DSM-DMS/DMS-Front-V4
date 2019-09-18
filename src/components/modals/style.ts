@@ -51,7 +51,6 @@ export const ModalClosebtn = styled.img`
 export const ModalContentWrapper = styled.div`
   display : flex;
   width: 24.75rem;
-  {/*height: 10.5rem;*/}
   flex-direction: column;
   justify-content: space-between;
 `
@@ -67,8 +66,6 @@ export const ModalInput = styled.input`
   line-height: normal;
   padding-left: 1.125rem;
   font-size: 1rem;
-
-  {/*margin-bottom:1rem;*/}
 ` 
 
 export const LoginBottom = styled.div`
@@ -141,7 +138,7 @@ export const button = styled.button`
 `
 
 export const SignInLinkWrapper = styled.div`
-  font-size:s  0.875rem;
+  font-size: 0.875rem;
 `
 
 export const SignInLink = styled.span`
