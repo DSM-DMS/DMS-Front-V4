@@ -1,7 +1,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyle, ContentWrapper, MainWrapper } from './GlobalStyle';
-import { NavigationContainer, SideBarContainer } from './containers';
+import {
+  NavigationContainer,
+  SideBarContainer,
+  HeaderContainer,
+} from './containers';
 import Routing from './Routing';
 
 function App() {
@@ -12,6 +16,7 @@ function App() {
       <MainWrapper>
         <SideBarContainer />
         <ContentWrapper>
+          <HeaderContainer />
           <Routing />
         </ContentWrapper>
       </MainWrapper>

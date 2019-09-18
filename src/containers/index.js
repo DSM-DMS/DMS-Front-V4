@@ -11,6 +11,7 @@ import NoticeRulesTableContainer from './NoticeRulesTable/NoticeRulesTable.tsx';
 import NoticeVolunteerTableContainer from './NoticeVolunteerTable/NoticeVolunteerTable.tsx';
 import FooterContainer from './Footer/Footer.tsx';
 import SideBarContainer from './SideBar/SideBar.tsx';
+import HeaderContainer from './Header/Header.tsx';
 
 export {
   NavigationContainer,
@@ -25,4 +26,5 @@ export {
   NoticeVolunteerTableContainer,
   FooterContainer,
   SideBarContainer,
+  HeaderContainer,
 };

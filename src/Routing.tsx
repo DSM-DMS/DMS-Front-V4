@@ -8,7 +8,7 @@ const Routing: React.StatelessComponent<RoutingProps> = () => {
   return (
     <>
       <Route path="/" component={() => <div>1</div>} exact />
-      <Route path="/notice" component={NoticeContainer} exact />
+      <Route path="/etc/notice" component={NoticeContainer} exact />
     </>
   );
 };

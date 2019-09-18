@@ -20,12 +20,11 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
 }
-
 body {
   
   @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
@@ -46,8 +45,8 @@ button {
   font-family: 'NanumSquare','Noto Sans', sans-serif;
 }
 
-a, p {
-  font-family: 'NanumSquare','Noto Sans', sans-serif;
+* {
+  font-family: 'Noto Sans','NanumSquare', sans-serif;
 }
 
 @media screen and (max-width: 1440px) {

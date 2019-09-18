@@ -16,6 +16,7 @@ import FooterTeamColumn from './FooterTeamColumn/FooterTeamColumn.tsx';
 import SideBar from './SideBar/SideBar.tsx';
 import SideBarLinkItem from './SideBarLinkItem/SideBarLinkItem.tsx';
 import SideBarLinksList from './SideBarLinksList/SideBarLinksList.tsx';
+import Header from './Header/Header.tsx';
 
 export {
   Navigation,
@@ -36,4 +37,5 @@ export {
   SideBar,
   SideBarLinkItem,
   SideBarLinksList,
+  Header,
 };
