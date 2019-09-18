@@ -26,7 +26,6 @@ time, mark, audio, video, button {
   border: 0;
 }
 body {
-  
   @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
   @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap')
   font-family: 'NanumSquare','Noto Sans', sans-serif;
