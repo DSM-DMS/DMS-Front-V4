@@ -55,7 +55,7 @@ export const ModalContentWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `
-export const SigninContentWrapper = styled(ModalContentWrapper)`
+export const SignInContentWrapper = styled(ModalContentWrapper)`
   height: 16.5rem;
 `
 
@@ -140,11 +140,11 @@ export const button = styled.button`
   }
 `
 
-export const SigninLinkWrapper = styled.div`
+export const SignInLinkWrapper = styled.div`
   font-size:s  0.875rem;
 `
 
-export const SigninLink = styled.span`
+export const SignInLink = styled.span`
   font-weight: bold;
   cursor: pointer;
 `

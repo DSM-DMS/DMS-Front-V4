@@ -6,7 +6,7 @@ interface Props{
 }
 
 const SignIn: React.FC<Props> =()=> {
-  return(
+  return( 
     <>
       <S.ModalNameWrapper>
         <S.ModalName>회원가입</S.ModalName>
@@ -14,7 +14,7 @@ const SignIn: React.FC<Props> =()=> {
           src={ModalCloseImg}/>
       </S.ModalNameWrapper>
 
-      <S.SigninContentWrapper>
+      <S.SignInContentWrapper>
         <S.ModalInput
           placeholder="확인코드"/>
         <S.ModalInput 
@@ -25,7 +25,7 @@ const SignIn: React.FC<Props> =()=> {
         <S.ModalInput
           placeholder="비밀번호 확인"
           type="password"/>
-      </S.SigninContentWrapper>
+      </S.SignInContentWrapper>
 
 
       <S.button>회원가입</S.button>
