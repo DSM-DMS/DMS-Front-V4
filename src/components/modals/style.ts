@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'components/Modals/node_modules/styled-components';
 import { globalColor } from '../../GlobalStyle';
 import ModalCloseImg from '../assets/icon/cross-mark.png'
 
@@ -120,7 +120,7 @@ export const ModalBottomWrapper = styled.div`
   justify-content: space-between;
 `
 
-export const button = styled.button`
+export const Button = styled.button`
   width: 14.69rem;
   height: 2.625rem;
   background-color: ${globalColor};

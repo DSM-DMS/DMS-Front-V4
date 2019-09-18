@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import ModalCloseImg from '../../assets/icon/black-close-button.png';
 import * as S from './style';
 
@@ -28,7 +28,7 @@ const SignIn: React.FC<Props> =()=> {
       </S.SignInContentWrapper>
 
 
-      <S.button>회원가입</S.button>
+      <S.Button>회원가입</S.Button>
     </>
   );
 }
