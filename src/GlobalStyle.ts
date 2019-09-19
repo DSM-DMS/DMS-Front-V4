@@ -57,7 +57,7 @@ button {
 
 `;
 
-export const globalColor = '#8200a1';
+export const globalColor = '#00be91';
 
 export const MainWrapper = styled.div`
   display: flex;
