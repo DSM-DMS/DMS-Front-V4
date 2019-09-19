@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './styles'
-import Logo from '../../assets/logo/logo.png'
+// import Logo from '../../assets/logo/logo.png'
 import { Link } from 'react-router-dom'; 
 
 interface HeaderProps {}
@@ -10,7 +10,7 @@ const Header : React.StatelessComponent<HeaderProps> = () => {
         <>
             <S.HeaderWrapper>
                 <S.TitleWrapper>
-                    <S.LogoImage alt="DMS LOGO" title="DMS LOGO" src={Logo}/>
+                    {/* <S.LogoImage alt="DMS LOGO" title="DMS LOGO" src={Logo}/> */}
                     <S.Title>DMS</S.Title>
                 </S.TitleWrapper>
                 <S.ListWrapper>

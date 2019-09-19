@@ -7,7 +7,7 @@ export const NoticeTagItem = styled.li`
   justify-content: center;
   align-items: center;
   border: 1px solid ${props => (props.isSelected ? '#8200a1' : '#bbbbbb')};
-  border-radius: 0.25rem;
+  border-radius: 0.9375rem;
   background-color: ${props => (props.isSelected ? '#8200a1' : 'white')};
   cursor: pointer;
   color: ${props => (props.isSelected ? 'white' : '#59545d')}
