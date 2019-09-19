@@ -5,7 +5,7 @@ import * as S from './style';
 interface Props{
 }
 
-const SignIn: React.FC<Props> =()=> {
+const SignIn: React.SFC<Props> =()=> {
   return( 
     <>
       <S.ModalNameWrapper>
@@ -28,7 +28,7 @@ const SignIn: React.FC<Props> =()=> {
       </S.SignInContentWrapper>
 
 
-      <S.Button>회원가입</S.Button>
+      <S.ModalSubmitBtn>회원가입</S.ModalSubmitBtn>
     </>
   );
 }
