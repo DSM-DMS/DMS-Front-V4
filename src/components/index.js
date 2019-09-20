@@ -11,7 +11,6 @@ import NoticePostsTableHeader from './NoticePostsTableHeader/NoticePostsTableHea
 import NoticePostsTableRow from './NoticePostsTableRow/NoticePostsTableRow.tsx';
 import NoticeRulesTableItem from './NoticeRulesTableItem/NoticeRulesTableItem.tsx';
 import NoticeVolunteerTableItem from './NoticeVolunteerTableItem/NoticeVolunteerTableItem.tsx';
-import Header from './Common/Header.tsx'
 
 export {
   Navigation,
@@ -27,5 +26,4 @@ export {
   NoticePostsTableRow,
   NoticeRulesTableItem,
   NoticeVolunteerTableItem,
-  Header,
 };
