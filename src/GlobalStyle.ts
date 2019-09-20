@@ -27,7 +27,7 @@ time, mark, audio, video, button {
 }
 body {
   @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap')
-  font-family: Noto Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 input:focus,
