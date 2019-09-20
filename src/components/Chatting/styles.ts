@@ -31,3 +31,13 @@ export const ChattingCloseBtn = styled.img`
   height: 1.2875rem;
   cursor: pointer;
 `;
+
+export const ChattingHeader = styled.p`
+  height: 5.425rem;
+  padding: 1.525rem 1.8375rem;
+  font-size: 1.875rem;
+  color: #59545d;
+  box-sizing: border-box;
+  box-shadow: 0 0.5px 3px 0 rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid #e9e9e9;
+`;

@@ -14,6 +14,7 @@ const Chatting: React.FC<ChattingProps> = ({ isChatOpen, setIsChatOpen }) => {
         src={crossMarkImg}
         onClick={() => setIsChatOpen(false)}
       />
+      <S.ChattingHeader>사감실</S.ChattingHeader>
     </S.ChattingWrapper>
   );
 };
