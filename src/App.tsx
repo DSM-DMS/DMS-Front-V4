@@ -7,7 +7,6 @@ import {
   HeaderContainer,
 } from './containers';
 import Routing from './Routing';
-import { GlobalStyle } from './GlobalStyle';
 
 function App() {
   return (
