@@ -13,9 +13,12 @@ const ChattingContainer: React.FC<ChattingProps> = ({
   isChatOpen,
   ChatActions,
 }) => {
-  return isChatOpen ? (
-    <Chatting setIsChatOpen={chatActions.setIsChatOpen} />
-  ) : null;
+  return (
+    <Chatting
+      setIsChatOpen={ChatActions.setIsChatOpen}
+      isChatOpen={isChatOpen}
+    />
+  );
 };
 
 const mapStateToProps = state => ({
