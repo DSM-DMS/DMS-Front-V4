@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SideBarWrapper = styled.header`
+export const SideBarWrapper = styled.aside`
   display: flex;
   height: 100vh;
   width: 19rem;
