@@ -17,7 +17,10 @@ import NoticeRulesTableItem from './NoticeRulesTableItem/NoticeRulesTableItem.ts
 import NoticeVolunteerTableItem from './NoticeVolunteerTableItem/NoticeVolunteerTableItem.tsx';
 import Footer from './Footer/Footer.tsx';
 import FooterTeamColumn from './FooterTeamColumn/FooterTeamColumn.tsx';
-import Header from './Common/Header.tsx'
+import SideBar from './SideBar/SideBar.tsx';
+import SideBarLinkItem from './SideBarLinkItem/SideBarLinkItem.tsx';
+import SideBarLinksList from './SideBarLinksList/SideBarLinksList.tsx';
+import Header from './Header/Header.tsx';
 
 export {
   Navigation,
@@ -39,5 +42,8 @@ export {
   NoticeVolunteerTableItem,
   Footer,
   FooterTeamColumn,
+  SideBar,
+  SideBarLinkItem,
+  SideBarLinksList,
   Header,
 };

@@ -1,4 +1,4 @@
-import {
+import styled, {
   createGlobalStyle,
   GlobalStyleComponent,
   DefaultTheme,
@@ -20,16 +20,15 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
 }
-
 body {
-  @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-  font-family: 'NanumSquare', sans-serif;
-  overflow: hidden;
+  @import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap')
+  font-family: 'NanumSquare','Noto Sans', sans-serif;
 }
 
 input:focus,
@@ -42,7 +41,11 @@ button:focus {
 button {
   cursor: pointer;
   font: none;
-  font-family: 'NanumSquare', sans-serif;
+  font-family: 'NanumSquare','Noto Sans', sans-serif;
+}
+
+* {
+  font-family: 'Noto Sans','NanumSquare', sans-serif;
 }
 
 @media screen and (max-width: 1440px) {
@@ -55,3 +58,13 @@ button {
 `;
 
 export const globalColor = '#00be91';
+
+export const MainWrapper = styled.div`
+  display: flex;
+`;
+
+export const ContentWrapper = styled.div`
+  display: inline-block;
+  width: calc(100% - 19rem);
+  height: 100vh;
+`;
