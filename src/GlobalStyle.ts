@@ -45,7 +45,7 @@ button {
 }
 
 * {
-  font-family: 'Noto Sans','NanumSquare', sans-serif;
+  font-family: 'Noto Sans', 'NanumSquare, sans-serif;
 }
 
 @media screen and (max-width: 1440px) {
