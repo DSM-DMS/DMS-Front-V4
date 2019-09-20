@@ -10,6 +10,7 @@ export const SideBarWrapper = styled.header`
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
+  z-index: 3;
 `;
 
 export const SideBarButton = styled.button`
