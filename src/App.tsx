@@ -12,7 +12,6 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <NavigationContainer />
       <MainWrapper>
         <SideBarContainer />
         <ContentWrapper>
