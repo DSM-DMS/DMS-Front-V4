@@ -1,11 +1,11 @@
 import * as React from 'react';
-import ModalCloseImg from '../../assets/icon/blue_close-mark.png';
+import ModalCloseImg from '../../assets/icon/black-close-button.png';
 import * as S from './style';
 
 interface Props {
 }
 
-const Login: React.FC<Props> = () => {
+const LogIn: React.FC<Props> = () => {
   return(
     <>
       <S.ModalNameWrapper>
@@ -14,7 +14,7 @@ const Login: React.FC<Props> = () => {
           src={ModalCloseImg}/>
       </S.ModalNameWrapper>
 
-      <S.ModalContentWrapper>
+      <S.LogInContnetWrapper>
         <S.ModalInput 
           placeholder="아이디"/>
         <S.ModalInput
@@ -30,17 +30,15 @@ const Login: React.FC<Props> = () => {
           </S.AutoLoginWrapper>
           <S.ForgetPWLink>비밀번호 찾기</S.ForgetPWLink>
         </S.LoginBottom>
-      </S.ModalContentWrapper>
+      </S.LogInContnetWrapper>
       
-      <S.ModalBottomWrapper>
-        <S.ModalSubmitBtn>로그인</S.ModalSubmitBtn>
-          <S.SignInLinkWrapper>
-            <span>아직 DMS 회원이 아니시라면?</span>
-            <S.SignInLink>회원가입</S.SignInLink>
-          </S.SignInLinkWrapper> 
-        </S.ModalBottomWrapper>
+      <S.ModalSubmitBtn>로그인</S.ModalSubmitBtn>
+        <S.SignInLinkWrapper>
+          <span>아직 DMS 회원이 아니시라면?</span>
+          <S.SignInLink>회원가입</S.SignInLink>
+      </S.SignInLinkWrapper>
     </>
   );
 }
 
-export default Login;
+export default LogIn;
