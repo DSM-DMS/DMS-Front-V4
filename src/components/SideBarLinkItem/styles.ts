@@ -17,7 +17,7 @@ export const SideBarLink = styled(Link)`
   &:hover {
     background-color: white;
   }
-  ${props => (props.isCurrentPath ? 'background-color: white' : 'null')}
+  ${props => (props.isNowPath ? 'background-color: white' : 'null')}
 `;
 
 export const SideBarLinkImg = styled.img`

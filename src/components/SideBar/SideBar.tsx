@@ -43,6 +43,7 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
         linkItemLists={sectionData.linkItemsList}
         currentPath={currentPath}
         setCurrentPath={setCurrentPath}
+        key={`sidebar-${sectionData.sectionName}`}
       />
     );
   });

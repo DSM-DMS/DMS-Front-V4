@@ -20,7 +20,7 @@ const SideBarLinkItem: React.StatelessComponent<SideBarLinkItemProps> = ({
   return (
     <S.SideBarLink
       to={path}
-      isCurrentPath={currentPath === path}
+      isNowPath={currentPath === path}
       onClick={() => setCurrentPath(path)}
     >
       <S.SideBarLinkImg src={iconImg} />

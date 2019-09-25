@@ -23,6 +23,7 @@ const SideBarLinksList: React.StatelessComponent<SideBarLinksListProps> = ({
       linkTitle={data.linkTitle}
       currentPath={currentPath}
       setCurrentPath={setCurrentPath}
+      key={`sidebar-link-${data.path}`}
     />
   ));
   return (
