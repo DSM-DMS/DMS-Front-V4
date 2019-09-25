@@ -6,7 +6,7 @@ import mypageLogoutIcon from '../../assets/icon/logout.png';
 
 interface MypagePeopleInfoProp {
   name: string;
-  schoolNumber: string;
+  studentNumber: string;
 }
 
 const MypagePeopleInfo: React.StatelessComponent<MypagePeopleInfoProp> = ({name, schoolNumber}) => {
