@@ -9,22 +9,30 @@ interface MypageApplyStateListItemData {
 interface MypageApplyStateListItemProps {
     title: string;
     imgSrc: React.ReactNode;
-    state: MypageApplyStateListItemData;
+    state: MypageApplyStateListItemData[];
 }
 
 const MypageApplyStateListItem: React.StatelessComponent<MypageApplyStateListItemProps> = ({title, imgSrc, state}) => {
-  return <S.MypageApplyStateListItemWrapper>
-      <S.MypageApplyStateListItemTitle>{title}</S.MypageApplyStateListItemTitle>
+  const stateDataList = state.map(d => 
+  <S.MypageApplyStateListItemDataItem>
+    <S.MypageApplyStateListItemDataTitle>
+      {d.type}
+    </S.MypageApplyStateListItemDataTitle>
+    <S.MypageApplyStateListItemDataValue>
+      {d.value}
+    </S.MypageApplyStateListItemDataValue>
+  </S.MypageApplyStateListItemDataItem>)
+  return (
+    <S.MypageApplyStateListItemWrapper>
+      <S.MypageApplyStateListItemTitle>
+        <S.MypageApplyStateListItemDataImg src={imgSrc}/>
+        {title}
+      </S.MypageApplyStateListItemTitle>
       <S.MypageApplyStateListItemDataWrapper>
-          <S.MypageApplyStateListItemDataTitle>
-            {state.type}
-          </S.MypageApplyStateListItemDataTitle>
-          <S.MypageApplyStateListItemDataValue>
-            {state.value}
-          </S.MypageApplyStateListItemDataValue>
+        {stateDataList}
       </S.MypageApplyStateListItemDataWrapper>
-      
-  </S.MypageApplyStateListItemWrapper>
+    </S.MypageApplyStateListItemWrapper>
+  )
 }
 
 export default MypageApplyStateListItem;

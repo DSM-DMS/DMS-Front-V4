@@ -4,6 +4,7 @@ import MypagePeopleInfo from './MypagePeopleInfo/MypagePeopleInfo.tsx';
 import MypagePoint from './MypagePoint/MypagePoint.tsx';
 import MypagePointItem from './MypagePointItem/MypagePointItem.tsx';
 import MypageApplyState from './MypageApplyState/MypageApplyState.tsx';
+import MypageApplyStateListItem from './MypageApplyStateListItem/MypageApplyStateListItem.tsx';
 import Chatting from './Chatting/Chatting.tsx';
 import Apply from './Apply/Apply.tsx';
 import ApplyStay from './ApplyStay/ApplyStay.tsx';
@@ -30,6 +31,7 @@ export {
   MypagePoint,
   MypagePointItem,
   MypageApplyState,
+  MypageApplyStateListItem,
   Chatting,
   Apply,
   ApplyStay,
