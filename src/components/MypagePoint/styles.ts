@@ -14,7 +14,7 @@ export const MypagePointLookUpBtn = styled.button`
   width: 11.625rem;
   height: 3.9375rem;
   box-sizing: border-box;
-  border: 1px solid #f3dc0e;
+  border: 0.1875rem solid #f3dc0e;
   border-radius: 1.1875rem;
   position: absolute;
   right: 0;
