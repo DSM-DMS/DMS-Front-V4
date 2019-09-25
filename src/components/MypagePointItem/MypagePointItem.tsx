@@ -6,10 +6,10 @@ export interface MypagePointItemProps {
   point: number;
 }
 
-const MypagePointItem: React.FC<MypagePointItemProps> = ({isGood, point}) => {
+const MypagePointItem: React.FC<MypagePointItemProps> = ({isGoodPoint, point}) => {
   return (
   <div>
-    <S.MypagePointTitle>{isGood ? 
+    <S.MypagePointTitle>{isGoodPoint ? 
     '상점 : ' + point: '벌점 : ' + point}</S.MypagePointTitle>
     <S.MypagePointBar>
       <S.MypageCurrentPointBar point={point}/>

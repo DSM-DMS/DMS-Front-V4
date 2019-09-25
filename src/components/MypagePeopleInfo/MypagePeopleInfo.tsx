@@ -9,13 +9,13 @@ interface MypagePeopleInfoProp {
   studentNumber: string;
 }
 
-const MypagePeopleInfo: React.StatelessComponent<MypagePeopleInfoProp> = ({name, schoolNumber}) => {
+const MypagePeopleInfo: React.StatelessComponent<MypagePeopleInfoProp> = ({name, studentNumber}) => {
   return (
   <S.MypagePeopleWrapper>
     <S.MypagePeopleImg src={mypageIcon}/>
     <S.MypagePeopleData>
       <S.MypagePeopleName>{name}</S.MypagePeopleName>
-      <S.MypagePeopleSchoolNumber>{schoolNumber}</S.MypagePeopleSchoolNumber>
+      <S.MypagePeoplestudentNumber>{studentNumber}</S.MypagePeoplestudentNumber>
     </S.MypagePeopleData>
     <S.MypagePeopleButtonList>
       <S.MypagePeopleButton>

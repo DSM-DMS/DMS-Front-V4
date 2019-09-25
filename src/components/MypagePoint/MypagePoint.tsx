@@ -7,8 +7,8 @@ const MypagePoint: React.FC<MypagePointProps> = ({
 }) => {
   return (
     <S.MypagePointWrapper>
-      <MypagePointItem isGood={true} point={22}/>
-      <MypagePointItem isGood={false} point={17}/>
+      <MypagePointItem isGoodPoint={true} point={22}/>
+      <MypagePointItem isGoodPoint={false} point={17}/>
       <S.MypagePointLookUpBtn>조회</S.MypagePointLookUpBtn>
     </S.MypagePointWrapper>
   );

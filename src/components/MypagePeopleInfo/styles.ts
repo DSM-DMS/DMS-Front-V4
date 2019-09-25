@@ -25,7 +25,7 @@ export const MypagePeopleName = styled.span`
   color: #59545d;
 `
 
-export const MypagePeopleSchoolNumber = styled.span`
+export const MypagePeoplestudentNumber = styled.span`
   font-size: 1.3125rem;
   opacity: .51;
   color: #59545d;
