@@ -14,7 +14,7 @@ interface MypageApplyStateListItemProps {
 
 const MypageApplyStateListItem: React.StatelessComponent<MypageApplyStateListItemProps> = ({title, imgSrc, state}) => {
   const stateDataList = state.map(d => 
-  <S.MypageApplyStateListItemDataItem>
+  <S.MypageApplyStateListItemDataItem key={`apply-${d.type}-${d.value}`}>
     <S.MypageApplyStateListItemDataTitle>
       {d.type}
     </S.MypageApplyStateListItemDataTitle>

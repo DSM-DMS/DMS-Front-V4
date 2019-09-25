@@ -41,7 +41,7 @@ const MypageApplyStateContainer: React.FC<MypageApplyStateProps> = ({}) => {
       ]
       setApplyStateData(applyState)
     }, []);
-  const mypageApplyStateCardList =  applyStateData.map(data => <MypageApplyStateListItem imgSrc={data.imgSrc} title={data.title} state={data.state}/>)
+  const mypageApplyStateCardList =  applyStateData.map(data => <MypageApplyStateListItem imgSrc={data.imgSrc} title={data.title} state={data.state} key={`apply-${data.title}`}/>)
   return <MypageApplyState mypageApplyStateCardList={mypageApplyStateCardList}/>
 }
 

@@ -16,7 +16,7 @@ export const MypagePointBar = styled.p`
   background-color: rgba(252, 220, 14, 0.35);
 `
 
-export const MypageCurrentPointBar = styled.p`
+export const MypageCurrentPointBar = styled.span`
   position: absolute;
   display: inline-block;
   height: 1.5rem;
