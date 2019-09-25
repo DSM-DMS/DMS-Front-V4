@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styles';
 
 export interface MypagePointItemProps {
-  isGood: boolean;
+  isGoodPoint: boolean;
   point: number;
 }
 
