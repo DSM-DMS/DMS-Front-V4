@@ -1,27 +1,27 @@
-const SET_IS_SELECTED_OPEN = 'SET_IS_CHAT_OPEN';
+const SET_IS_CHAT_OPENED = 'SET_IS_CHAT_OPENED';
 
-export interface SetIsChatOpen {
-  type: 'SET_IS_CHAT_OPEN';
-  isChatOpen: boolean;
+export interface SetIsChatOpened {
+  type: 'SET_IS_CHAT_OPENED';
+  isChatOpened: boolean;
 }
 
-export type Action = SetIsChatOpen;
+export type Action = SetIsChatOpened;
 
 export interface ChatState {
-  isChatOpen: boolean;
+  isChatOpened: boolean;
 }
 
 const initalState: ChatState = {
-  isChatOpen: false,
+  isChatOpened: false,
 };
 
-export const setIsChatOpen = (isChatOpen: boolean): SetIsChatOpen => ({
-  type: SET_IS_SELECTED_OPEN,
-  isChatOpen,
+export const setIsChatOpened = (isChatOpened: boolean): SetIsChatOpened => ({
+  type: SET_IS_CHAT_OPENED,
+  isChatOpened,
 });
 
 export const chatActions = {
-  setIsChatOpen,
+  setIsChatOpened,
 };
 
 export default function reducer(
@@ -29,10 +29,10 @@ export default function reducer(
   action: Action,
 ): ChatState {
   switch (action.type) {
-    case SET_IS_SELECTED_OPEN:
+    case SET_IS_CHAT_OPENED:
       return {
         ...state,
-        isChatOpen: action.isChatOpen,
+        isChatOpened: action.isChatOpened,
       };
     default:
       return state;

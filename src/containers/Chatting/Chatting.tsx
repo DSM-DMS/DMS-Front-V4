@@ -5,24 +5,24 @@ import { Chatting } from '../../components';
 import { chatActions } from '../../modules/chat';
 
 interface ChattingProps {
-  isChatOpen: boolean;
+  isChatOpened: boolean;
   ChatActions: typeof chatActions;
 }
 
 const ChattingContainer: React.FC<ChattingProps> = ({
-  isChatOpen,
+  isChatOpened,
   ChatActions,
 }) => {
   return (
     <Chatting
-      setIsChatOpen={ChatActions.setIsChatOpen}
-      isChatOpen={isChatOpen}
+      setIsChatOpened={ChatActions.setIsChatOpened}
+      isChatOpened={isChatOpened}
     />
   );
 };
 
 const mapStateToProps = state => ({
-  isChatOpen: state.chat.isChatOpen,
+  isChatOpened: state.chat.isChatOpened,
 });
 
 const mapDispatchToProps = dispatch => ({

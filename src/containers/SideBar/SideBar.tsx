@@ -5,22 +5,22 @@ import { SideBar } from '../../components';
 import { chatActions } from '../../modules/chat';
 
 interface SideBarProps {
-  isChatOpen: boolean;
+  isChatOpened: boolean;
   ChatActions: typeof chatActions;
 }
 
 const SideBarContainer: React.FC<SideBarProps> = ({
-  isChatOpen,
+  isChatOpened,
   ChatActions,
 }) => {
-  const setChattingToggle = () => {
-    ChatActions.setIsChatOpen(!isChatOpen);
+  const setIsChatOpened = () => {
+    ChatActions.setIsChatOpened(!isChatOpened);
   };
-  return <SideBar setChattingToggle={setChattingToggle} />;
+  return <SideBar setIsChatOpened={setIsChatOpened} />;
 };
 
 const mapStateToProps = state => ({
-  isChatOpen: state.chat.isChatOpen,
+  isChatOpened: state.chat.isChatOpened,
 });
 
 const mapDispatchToProps = dispatch => ({
