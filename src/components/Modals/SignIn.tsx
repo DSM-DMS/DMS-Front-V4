@@ -26,8 +26,7 @@ const SignIn: React.FC<Props> =()=> {
           placeholder="비밀번호 확인"
           type="password"/>
       </S.SignInContentWrapper>
-
-
+      
       <S.ModalSubmitBtn>회원가입</S.ModalSubmitBtn>
     </>
   );
