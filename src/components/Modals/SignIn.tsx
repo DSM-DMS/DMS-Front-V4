@@ -1,17 +1,17 @@
 import * as React from 'react'
-import ModalCloseImg from '../../assets/icon/black-close-button.png';
+import CloseImg from '../../assets/icon/black-close-button.png';
 import * as S from './style';
 
 interface Props{
 }
 
-const SignIn: React.SFC<Props> =()=> {
+const SignIn: React.FC<Props> =()=> {
   return( 
     <>
       <S.ModalNameWrapper>
         <S.ModalName>회원가입</S.ModalName>
         <S.ModalClosebtn 
-          src={ModalCloseImg}/>
+          src={CloseImg}/>
       </S.ModalNameWrapper>
 
       <S.SignInContentWrapper>

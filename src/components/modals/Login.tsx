@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ModalCloseImg from '../../assets/icon/black-close-button.png';
+import CloseImg from '../../assets/icon/black-close-button.png';
 import * as S from './style';
 
 interface Props {
@@ -11,7 +11,7 @@ const LogIn: React.FC<Props> = () => {
       <S.ModalNameWrapper>
         <S.ModalName>로그인</S.ModalName>
         <S.ModalClosebtn 
-          src={ModalCloseImg}/>
+          src={CloseImg}/>
       </S.ModalNameWrapper>
 
       <S.LogInContnetWrapper>
