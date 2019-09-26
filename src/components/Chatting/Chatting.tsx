@@ -4,7 +4,7 @@ import crossMarkImg from '../../assets/icon/cross-mark.png';
 
 interface ChattingProps {
   isChatOpen: string;
-  setIsChatOpen: (isChatOpen: boolean) => void;
+  openChat: (isChatOpened: boolean) => void;
 }
 
 const Chatting: React.FC<ChattingProps> = ({ isChatOpen, setIsChatOpen }) => {
