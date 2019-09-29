@@ -12,14 +12,14 @@ export const HeaderWrapper = styled.header`
 
 export const HeaderLeftWrapper = styled.div`
   display: flex;
-  width: 17rem;
+  width: 15rem;
   justify-content: space-between;
   align-items: center;
   font-size: 0.63125rem;
 `;
 
 export const HeaderLeftFont = styled.span`
-  font-size: 1.8125rem;
+  font-size: 1.25rem;
 `;
 
 export const HeaderRightButton = styled.button`
