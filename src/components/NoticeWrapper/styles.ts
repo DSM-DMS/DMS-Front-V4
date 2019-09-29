@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const NoticeOuterWrapper = styled.div`
   padding: 7.8125rem 5.1875rem 0 5.1875rem;
   box-sizing: border-box;
-  height: 100vh;
 `;
 
 export const NoticeTableWrapper = styled.div`

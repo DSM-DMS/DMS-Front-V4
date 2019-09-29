@@ -1,15 +1,8 @@
-import Navigation from './Navigation/Navigation.tsx';
-import Mypage from './Mypage/Mypage.tsx';
-import MypagePeopleInfo from './MypagePeopleInfo/MypagePeopleInfo.tsx';
-import MypagePoint from './MypagePoint/MypagePoint.tsx';
-import MypagePointItem from './MypagePointItem/MypagePointItem.tsx';
-import MypageApplyState from './MypageApplyState/MypageApplyState.tsx';
-import MypageApplyStateListItem from './MypageApplyStateListItem/MypageApplyStateListItem.tsx';
 import Chatting from './Chatting/Chatting.tsx';
 import Apply from './Apply/Apply.tsx';
 import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
-import ApplyState from './ApplyState/ApplyState.tsx'
+import ApplyState from './ApplyState/ApplyState.tsx';
 import NoticeWrapper from './NoticeWrapper/NoticeWrapper.tsx';
 import NoticeTagsList from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticeTagItem from './NoticeTagItem/NoticeTagItem.tsx';
@@ -25,13 +18,6 @@ import SideBarLinksList from './SideBarLinksList/SideBarLinksList.tsx';
 import Header from './Header/Header.tsx';
 
 export {
-  Navigation,
-  Mypage,
-  MypagePeopleInfo,
-  MypagePoint,
-  MypagePointItem,
-  MypageApplyState,
-  MypageApplyStateListItem,
   Chatting,
   Apply,
   ApplyStay,

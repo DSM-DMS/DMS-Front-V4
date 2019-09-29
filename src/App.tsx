@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { GlobalStyle, ContentWrapper, MainWrapper } from './GlobalStyle';
 import {
-  NavigationContainer,
+  ChattingContainer,
   SideBarContainer,
   HeaderContainer,
 } from './containers';
@@ -14,6 +14,7 @@ function App() {
       <GlobalStyle />
       <MainWrapper>
         <SideBarContainer />
+        <ChattingContainer />
         <ContentWrapper>
           <HeaderContainer />
           <Routing />
