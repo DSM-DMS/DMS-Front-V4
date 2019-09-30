@@ -15,7 +15,7 @@ const ChangePW: React.StatelessComponent<Props>=()=>{
       </S.ModalNameWrapper>
       <S.FindPWContentWrapper>
         <S.ModalInput
-          placeholder="현재비밀번호"
+          placeholder="현재 비밀번호"
           type="password"/>
         <S.ModalInput
           placeholder="새로운 비밀번호"
