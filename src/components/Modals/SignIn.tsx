@@ -5,7 +5,7 @@ import * as S from './style';
 interface Props{
 }
 
-const SignIn: React.FC<Props> =()=> {
+const SignIn: React.StatelessComponent<Props> =()=> {
   return( 
     <>
       <S.ModalNameWrapper>

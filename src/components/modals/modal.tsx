@@ -8,7 +8,7 @@ import SignIn from "./SignIn"
 interface Props {
 }
 
-const Modal: React.FC<Props> = () => {
+const Modal: React.StatelessComponent<Props> = () => {
   return(
     <>
       <S.ModalOverlay/>

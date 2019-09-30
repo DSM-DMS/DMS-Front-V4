@@ -6,7 +6,7 @@ import * as S from './style';
 interface Props{
 }
 
-const BugReport: React.FC<Props>=()=>{
+const BugReport: React.StatelessComponent<Props>=()=>{
   return(
     <>
        <S.ModalNameWrapper>
