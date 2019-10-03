@@ -40,7 +40,7 @@ button {
 }
 
 * {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
 }
 
 @media screen and (max-width: 1440px) {
