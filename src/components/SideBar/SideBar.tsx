@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
 import { SideBarLinkItem, SideBarLinksList } from '..';
 import HomeIcon from '../../assets/icon/home.png';
@@ -36,20 +36,23 @@ const sideBarLinkSectionsData = [
   },
 ];
 
-const SideBar: React.StatelessComponent<SideBarProps> = ({
-  toggleIsChatOpened,
-}) => {
+const SideBar: React.FC<SideBarProps> = ({ toggleIsChatOpened }) => {
+  const [currentPath, setCurrentPath] = useState('/');
+ 
   const sideBarLinkSections = sideBarLinkSectionsData.map(sectionData => {
     return (
       <SideBarLinksList
         sectionName={sectionData.sectionName}
         linkItemLists={sectionData.linkItemsList}
+        currentPath={currentPath}
+        setCurrentPath={setCurrentPath}
+        key={`sidebar-${sectionData.sectionName}`}
       />
     );
   });
   return (
     <S.SideBarWrapper>
-      <SideBarLinkItem path="/" iconImg={HomeIcon} linkTitle="HOME" />
+      <SideBarLinkItem path="/" iconImg={HomeIcon} linkTitle="HOME" currentPath={currentPath} setCurrentPath={setCurrentPath}/>
       {sideBarLinkSections}
       <S.SideBarButton onClick={toggleIsChatOpened}>
         <S.SideBarButtonImg src={chatIcon} />

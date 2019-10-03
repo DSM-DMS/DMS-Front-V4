@@ -33,11 +33,11 @@ const Login: React.FC<Props> = () => {
       </S.ModalContentWrapper>
       
       <S.ModalBottomWrapper>
-        <S.button>로그인</S.button>
-          <S.SigninLinkWrapper>
+        <S.ModalSubmitBtn>로그인</S.ModalSubmitBtn>
+          <S.SignInLinkWrapper>
             <span>아직 DMS 회원이 아니시라면?</span>
-            <S.SigninLink>회원가입</S.SigninLink>
-          </S.SigninLinkWrapper> 
+            <S.SignInLink>회원가입</S.SignInLink>
+          </S.SignInLinkWrapper> 
         </S.ModalBottomWrapper>
     </>
   );
