@@ -4,15 +4,18 @@ import crossMarkImg from '../../assets/icon/cross-mark.png';
 
 interface ChattingProps {
   isChatOpened: string;
-  setIsChatOpened: (isChatOpened: boolean) => void;
+  setCloseChatting: (isChatOpened: boolean) => void;
 }
 
-const Chatting: React.FC<ChattingProps> = ({ isChatOpened, setIsChatOpened }) => {
+const Chatting: React.FC<ChattingProps> = ({
+  isChatOpened,
+  setCloseChatting,
+}) => {
   return (
     <S.ChattingWrapper isChatOpened={isChatOpened}>
       <S.ChattingCloseBtn
         src={crossMarkImg}
-        onClick={() => setIsChatOpened(false)}
+        onClick={() => setCloseChatting(false)}
       />
       <S.ChattingHeader>사감실</S.ChattingHeader>
     </S.ChattingWrapper>

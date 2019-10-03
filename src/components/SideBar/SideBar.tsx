@@ -13,7 +13,7 @@ import noticeICon from '../../assets/icon/notice.png';
 import bugIcon from '../../assets/icon/bug.png';
 
 interface SideBarProps {
-  setIsChatOpened: () => void;
+  toggleIsChatOpened: () => void;
 }
 
 const sideBarLinkSectionsData = [
@@ -37,7 +37,7 @@ const sideBarLinkSectionsData = [
 ];
 
 const SideBar: React.StatelessComponent<SideBarProps> = ({
-  setIsChatOpened,
+  toggleIsChatOpened,
 }) => {
   const sideBarLinkSections = sideBarLinkSectionsData.map(sectionData => {
     return (
@@ -51,14 +51,12 @@ const SideBar: React.StatelessComponent<SideBarProps> = ({
     <S.SideBarWrapper>
       <SideBarLinkItem path="/" iconImg={HomeIcon} linkTitle="HOME" />
       {sideBarLinkSections}
-      <S.SideBarButton onClick={setIsChatOpened}>
+      <S.SideBarButton onClick={toggleIsChatOpened}>
         <S.SideBarButtonImg src={chatIcon} />
-
         1:1 채팅
       </S.SideBarButton>
       <S.SideBarButton>
         <S.SideBarButtonImg src={bugIcon} />
-
         버그신고
       </S.SideBarButton>
     </S.SideBarWrapper>

@@ -1,33 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { SideBar } from '../../components';
-import { chatActions } from '../../modules/chat';
+import { StoreState } from '../../modules';
+import { setIsChatOpened } from '../../modules/chat';
 
-interface SideBarProps {
-  isChatOpened: boolean;
-  ChatActions: typeof chatActions;
-}
+interface SideBarProps {}
 
-const SideBarContainer: React.FC<SideBarProps> = ({
-  isChatOpened,
-  ChatActions,
-}) => {
-  const setIsChatOpened = () => {
-    ChatActions.setIsChatOpened(!isChatOpened);
+const SideBarContainer: React.FC<SideBarProps> = ({}) => {
+  const dispatch = useDispatch();
+  const isChatOpened = useSelector(
+    (state: StoreState) => state.chat.isChatOpened,
+  );
+  const toggleIsChatOpened = () => {
+    dispatch(setIsChatOpened(!isChatOpened));
   };
-  return <SideBar setIsChatOpened={setIsChatOpened} />;
+  return <SideBar toggleIsChatOpened={toggleIsChatOpened} />;
 };
 
-const mapStateToProps = state => ({
-  isChatOpened: state.chat.isChatOpened,
-});
-
-const mapDispatchToProps = dispatch => ({
-  ChatActions: bindActionCreators(chatActions, dispatch),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(SideBarContainer);
+export default SideBarContainer;
