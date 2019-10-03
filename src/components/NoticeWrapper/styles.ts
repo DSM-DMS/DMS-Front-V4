@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { globalColor } from '../../GlobalStyle';
 
 export const NoticeOuterWrapper = styled.div`
   padding: 15.5625rem 15.8125rem 0 15.8125rem;
@@ -16,6 +17,6 @@ export const NoticeTableWrapper = styled.div`
 
   &::-webkit-scrollbar-thumb {
     border-radius: 0.1875rem;
-    background-color: #8200a1;
+    background-color: ${globalColor};
   }
 `;
