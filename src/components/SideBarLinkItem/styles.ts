@@ -12,13 +12,16 @@ export const SideBarLink = styled(Link)`
   color: #59545d;
   text-decoration: none;
   font-size: 1.125rem;
-  font-weight: bold;
 
   &:hover {
     background-color: white;
   }
   ${props =>
-    props.isNowPath ? `background-color: white; color: ${globalColor}` : 'null'}
+    props.isNowPath
+      ? `background-color: white; 
+    color: ${globalColor};
+    font-weight: bold;`
+      : 'null'}
 `;
 
 export const SideBarLinkImg = styled.img`

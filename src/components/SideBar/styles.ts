@@ -24,7 +24,6 @@ export const SideBarButton = styled.button`
   color: #59545d;
   text-decoration: none;
   font-size: 1.125rem;
-  font-weight: bold;
   background-color: #f8f8f8;
 
   &:hover {
