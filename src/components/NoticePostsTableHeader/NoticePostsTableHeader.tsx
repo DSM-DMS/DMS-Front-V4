@@ -17,7 +17,7 @@ const NoticePostsTableHeader: React.StatelessComponent<
 
         게시글
       </S.NoticePostsTableHeaderItem>
-      <S.NoticePostsTableHeaderItem itemSize="4.0625">
+      <S.NoticePostsTableHeaderItem itemSize="4.8">
 
         조회수
       </S.NoticePostsTableHeaderItem>

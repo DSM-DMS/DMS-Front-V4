@@ -17,27 +17,27 @@ export const ModalContainer = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  justify-content: center;
   width: 28.75rem;
-  height: 27.94rem;
+  height: 34.44rem;
   border-radius: 1.455rem;
   box-shadow: 0 0.1875rem 0.625rem 0 rgba(0, 0, 0, 0.15);
   background: #fff; 
   z-index: 1000;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-
 `
 
 export const ModalNameWrapper = styled.div`
   display: flex;
   width: 24.56rem;
-  height:6.438rem;
+  height:4.063rem;
   align-items: center;
   justify-content: space-between;
+  align-items: flex-end;
 `
 
-export const ModalName= styled.span`
+export const ModalName = styled.span`
   font-size: 1.875rem;
   font-weight: bold;
 `
@@ -51,14 +51,20 @@ export const ModalClosebtn = styled.img`
 export const ModalContentWrapper = styled.div`
   display : flex;
   width: 24.75rem;
-  height: 10.5rem;
   flex-direction: column;
   justify-content: space-between;
 `
+export const SignInContentWrapper = styled(ModalContentWrapper)`
+  height: 16.5rem;
+`
+export const FindPWContentWrapper = styled(ModalContentWrapper)`
+  margin-bottom: 5rem;
+  height: 12.38rem;
+`
 
 export const ModalInput = styled.input`
-  height: 3.063rem;
-  border-radius: 0.375rem;  
+  height: 3.125rem;
+  border-radius: 0.9375rem;  
   background-color: #fff;
   border:  0.0625rem solid #bbbbbb;
   line-height: normal;
@@ -118,28 +124,28 @@ export const ModalBottomWrapper = styled.div`
   justify-content: space-between;
 `
 
-export const button = styled.button`
+export const ModalSubmitBtn = styled.button`
   width: 14.69rem;
   height: 2.625rem;
   background-color: ${globalColor};
-  border-radius: 4rem;
+  border-radius: 1rem;
   border: none; 
   box-shadow: 0 0.1875rem 0.62rem 0 rgba(0, 0, 0, 0.27); 
   font-size:  0.9375rem;
   color: #fff;
   cursor: pointer;
+  margin-bottom: 2.063rem;
   &:active {
     width: 14.5rem;
     height: 2.5rem;
-
   }
 `
 
-export const SigninLinkWrapper = styled.div`
+export const SignInLinkWrapper = styled.div`
   font-size: 0.875rem;
 `
 
-export const SigninLink = styled.span`
+export const SignInLink = styled.span`
   font-weight: bold;
   cursor: pointer;
 `

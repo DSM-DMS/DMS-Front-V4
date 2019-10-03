@@ -24,7 +24,7 @@ const NoticePostsTableRow: React.FC<NoticePostsTableRowProps> = ({
         <S.NoticePostsTableRowItem itemSize="60.875">
           {title}
         </S.NoticePostsTableRowItem>
-        <S.NoticePostsTableRowItem itemSize="4.0625" isCenter>
+        <S.NoticePostsTableRowItem itemSize="4.8" isCenter>
           {views}
         </S.NoticePostsTableRowItem>
       </S.NoticePostsTableRowWrapper>
