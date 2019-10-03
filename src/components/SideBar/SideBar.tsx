@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import * as S from './styles';
 import { SideBarLinkItem, SideBarLinksList } from '..';
 import HomeIcon from '../../assets/icon/home.png';
@@ -14,30 +14,38 @@ import bugIcon from '../../assets/icon/bug.png';
 
 interface SideBarProps {}
 
-const sideBarLinkSectionsData = [
-  {
-    sectionName: 'Apply',
-    linkItemsList: [
-      { path: '/apply/extension', iconImg: pencilIcon, linkTitle: '연장신청' },
-      { path: '/apply/stay', iconImg: transferIcon, linkTitle: '잔류신청' },
-      { path: '/apply/goingOut', iconImg: bikeIcon, linkTitle: '외출신청' },
-      { path: '/apply/music', iconImg: alarmIcon, linkTitle: '기상음악' },
-      { path: '/apply/weekendRest', iconImg: bedIcon, linkTitle: '호실휴식' },
-    ],
-  },
-  {
-    sectionName: 'etc.',
-    linkItemsList: [
-      { path: '/etc/mypage', iconImg: personIcon, linkTitle: '내 정보' },
-      { path: '/etc/notice', iconImg: noticeICon, linkTitle: '공지사항' },
-    ],
-  },
-];
-
 const SideBar: React.FC<SideBarProps> = ({}) => {
   const [currentPath, setCurrentPath] = useState('/');
-  const sideBarLinkSections = sideBarLinkSectionsData.map(sectionData => {
-    return (
+  const sideBarLinkSections = useMemo(() => {
+    const sideBarLinkSectionsData = [
+      {
+        sectionName: 'Apply',
+        linkItemsList: [
+          {
+            path: '/apply/extension',
+            iconImg: pencilIcon,
+            linkTitle: '연장신청',
+          },
+          { path: '/apply/stay', iconImg: transferIcon, linkTitle: '잔류신청' },
+          { path: '/apply/goingOut', iconImg: bikeIcon, linkTitle: '외출신청' },
+          { path: '/apply/music', iconImg: alarmIcon, linkTitle: '기상음악' },
+          {
+            path: '/apply/weekendRest',
+            iconImg: bedIcon,
+            linkTitle: '호실휴식',
+          },
+        ],
+      },
+      {
+        sectionName: 'etc.',
+        linkItemsList: [
+          { path: '/etc/mypage', iconImg: personIcon, linkTitle: '내 정보' },
+          { path: '/etc/notice', iconImg: noticeICon, linkTitle: '공지사항' },
+        ],
+      },
+    ];
+
+    return sideBarLinkSectionsData.map(sectionData => (
       <SideBarLinksList
         sectionName={sectionData.sectionName}
         linkItemLists={sectionData.linkItemsList}
@@ -45,20 +53,25 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
         setCurrentPath={setCurrentPath}
         key={`sidebar-${sectionData.sectionName}`}
       />
-    );
-  });
+    ));
+  }, [currentPath]);
+
   return (
     <S.SideBarWrapper>
-      <SideBarLinkItem path="/" iconImg={HomeIcon} linkTitle="HOME" currentPath={currentPath} setCurrentPath={setCurrentPath}/>
+      <SideBarLinkItem
+        path="/"
+        iconImg={HomeIcon}
+        linkTitle="HOME"
+        currentPath={currentPath}
+        setCurrentPath={setCurrentPath}
+      />
       {sideBarLinkSections}
       <S.SideBarButton>
         <S.SideBarButtonImg src={chatIcon} />
-
         1:1 채팅
       </S.SideBarButton>
       <S.SideBarButton>
         <S.SideBarButtonImg src={bugIcon} />
-
         버그신고
       </S.SideBarButton>
     </S.SideBarWrapper>
