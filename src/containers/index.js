@@ -6,7 +6,8 @@ import MypagePointContainer from './MypagePoint/MypagePoint.tsx';
 import ChattingContainer from './Chatting/Chatting.tsx';
 import ApplyContainer from './Apply/Apply.tsx'
 import ApplyStayContainer from './ApplyStay/ApplyStay.tsx'
-import ApplyStateContainer from './ApplyState/ApplyState.tsx'
+import ApplyStateContainer from './ApplyState/ApplyState.tsx';
+import ApplyExtensionContainer from './ApplyExtension/ApplyExtension.tsx'
 import NoticeContainer from './Notice/Notice.tsx';
 import NoticeTagsListContainer from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
@@ -25,6 +26,7 @@ export {
   ApplyContainer,
   ApplyStayContainer,
   ApplyStateContainer,
+  ApplyExtensionContainer,
   NoticeContainer,
   NoticeTagsListContainer,
   NoticePostsTableContainer,

@@ -8,6 +8,7 @@ export const HeaderWrapper = styled.header`
   align-items: flex-end;
   justify-content: space-between;
   box-sizing: border-box;
+  font-family: 'Noto Sans Kr';
 `;
 
 export const HeaderLeftWrapper = styled.div`
@@ -20,6 +21,10 @@ export const HeaderLeftWrapper = styled.div`
 
 export const HeaderLeftFont = styled.span`
   font-size: 1.8125rem;
+
+  &.main {
+    color: #59545d;
+  }
 `;
 
 export const HeaderRightButton = styled.button`

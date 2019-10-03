@@ -8,11 +8,11 @@ export const SideBarLink = styled(Link)`
   border-radius: 0.9375rem;
   margin-bottom: 0.5rem;
   align-items: center;
-  color: black;
+  color: #59545d;
   text-decoration: none;
   font-size: 1.125rem;
-  font-weight: bold;
-  font-family: 'Noto Sans';
+  font-weight: normal;
+  font-family: 'Noto Sans KR';
 
   &:hover {
     background-color: white;

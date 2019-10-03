@@ -47,6 +47,24 @@ button {
   font-family: 'Noto Sans', sans-serif;
 }
 
+@media screen and (max-width: 1680px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   html {
     font-size: 11.383px;

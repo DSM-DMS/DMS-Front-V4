@@ -7,7 +7,8 @@ import Chatting from './Chatting/Chatting.tsx';
 import Apply from './Apply/Apply.tsx';
 import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
-import ApplyState from './ApplyState/ApplyState.tsx'
+import ApplyState from './ApplyState/ApplyState.tsx';
+import ApplyExtension from './ApplyExtension/ApplyExtension.tsx';
 import NoticeWrapper from './NoticeWrapper/NoticeWrapper.tsx';
 import NoticeTagsList from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticeTagItem from './NoticeTagItem/NoticeTagItem.tsx';
@@ -33,6 +34,7 @@ export {
   ApplyStay,
   ApplyStayButton,
   ApplyState,
+  ApplyExtension,
   NoticeWrapper,
   NoticeTagsList,
   NoticeTagItem,
