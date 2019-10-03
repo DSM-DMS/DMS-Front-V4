@@ -21,7 +21,7 @@ export const SideBarButton = styled.button`
   border-radius: 0.9375rem;
   margin-bottom: 0.5rem;
   align-items: center;
-  color: black;
+  color: #59545d;
   text-decoration: none;
   font-size: 1.125rem;
   font-weight: bold;
