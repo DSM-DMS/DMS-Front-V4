@@ -1,22 +1,26 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { GlobalStyle } from './GlobalStyle';
-import { NavigationContainer, NoticeContainer, ApplyContainer, FooterContainer } from './containers';
-import configureStore from './store/configureStore';
-import { HashRouter, Route } from 'react-router-dom';
-
-
-const store = configureStore();
+import { BrowserRouter } from 'react-router-dom';
+import { GlobalStyle, ContentWrapper, MainWrapper } from './GlobalStyle';
+import {
+  ChattingContainer,
+  SideBarContainer,
+  HeaderContainer,
+} from './containers';
+import Routing from './Routing';
 
 function App() {
   return (
-    <Provider store={store}>
+    <BrowserRouter>
       <GlobalStyle />
-      <NavigationContainer />
-      <ApplyContainer />
-      <NoticeContainer />
-      <FooterContainer />
-    </Provider>
+      <MainWrapper>
+        <SideBarContainer />
+        <ChattingContainer />
+        <ContentWrapper>
+          <HeaderContainer />
+          <Routing />
+        </ContentWrapper>
+      </MainWrapper>
+    </BrowserRouter>
   );
 }
 

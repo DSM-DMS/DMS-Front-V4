@@ -2,28 +2,19 @@ import React from 'react';
 import * as S from './styles';
 
 export interface MypagePointItemProps {
-  isGood: boolean;
-  point: Number;
-  reason: string;
-  date: string;
+  isGoodPoint: boolean;
+  point: number;
 }
 
-const MypagePointItem: React.FC<MypagePointItemProps> = ({
-  isGood,
-  point,
-  reason,
-  date,
-}) => {
+const MypagePointItem: React.FC<MypagePointItemProps> = ({isGoodPoint, point}) => {
   return (
-    <S.MypagePointItemWrapper>
-      <S.MypagePointItemLeftWrapper>
-        <S.MypagePointItemLeftReason>{reason}</S.MypagePointItemLeftReason>
-        <S.MypagePointItemLeftDate>{date}</S.MypagePointItemLeftDate>
-      </S.MypagePointItemLeftWrapper>
-      <S.MypagePointItemPoint isGood={isGood}>
-        {(isGood ? '+' : '-') + point}
-      </S.MypagePointItemPoint>
-    </S.MypagePointItemWrapper>
+  <div>
+    <S.MypagePointTitle>{isGoodPoint ? 
+    '상점 : ' + point: '벌점 : ' + point}</S.MypagePointTitle>
+    <S.MypagePointBar>
+      <S.MypageCurrentPointBar point={point}/>
+    </S.MypagePointBar>
+  </div>
   );
 };
 

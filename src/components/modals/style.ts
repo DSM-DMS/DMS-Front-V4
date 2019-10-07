@@ -67,6 +67,10 @@ export const LogInContnetWrapper = styled(ModalContentWrapper)`
 export const SignInContentWrapper = styled(ModalContentWrapper)`
   height: 16.5rem;
 `
+export const FindPWContentWrapper = styled(ModalContentWrapper)`
+  margin-bottom: 5rem;
+  height: 12.38rem;
+`
 
 export const ModalInput = styled.input`
   height: 3.125rem;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const NoticePostsTableHeaderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 3.75rem;
   padding: 1.125rem 1.875rem;
   box-sizing: border-box;
   background-color: #e1e1e1;
