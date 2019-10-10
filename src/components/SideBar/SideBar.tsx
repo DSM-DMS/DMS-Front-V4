@@ -13,7 +13,7 @@ import noticeICon from '../../assets/icon/notice.png';
 import bugIcon from '../../assets/icon/bug.png';
 
 interface SideBarProps {
-  setIsChatOpened: () => void;
+  toggleIsChatOpened: () => void;
 }
 
 const SideBar: React.FC<SideBarProps> = ({}) => {
@@ -68,7 +68,7 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
         setCurrentPath={setCurrentPath}
       />
       {sideBarLinkSections}
-      <S.SideBarButton onClick={setIsChatOpened}>
+      <S.SideBarButton onClick={toggleIsChatOpened}>
         <S.SideBarButtonImg src={chatIcon} />
         1:1 채팅
       </S.SideBarButton>
