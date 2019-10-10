@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { globalColor } from '../../GlobalStyle';
 
 export const SideBarLink = styled(Link)`
   display: flex;
@@ -8,16 +9,19 @@ export const SideBarLink = styled(Link)`
   border-radius: 0.9375rem;
   margin-bottom: 0.5rem;
   align-items: center;
-  color: black;
+  color: #59545d;
   text-decoration: none;
   font-size: 1.125rem;
-  font-weight: bold;
-  font-family: 'Noto Sans';
 
   &:hover {
     background-color: white;
   }
-  ${props => (props.isNowPath ? 'background-color: white' : 'null')}
+  ${props =>
+    props.isNowPath
+      ? `background-color: white; 
+    color: ${globalColor};
+    font-weight: bold;`
+      : 'null'}
 `;
 
 export const SideBarLinkImg = styled.img`

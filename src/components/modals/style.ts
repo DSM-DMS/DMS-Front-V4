@@ -46,8 +46,14 @@ export const ModalClosebtn = styled.img`
   width: 1.25rem;
   height: 1.25rem;
   cursor: pointer;
-  
 `
+
+export const BugIcon = styled.img`
+  width: 1.5rem;
+  height: 1.563rem;
+  margin-right: 1rem;
+`
+
 export const ModalContentWrapper = styled.div`
   display : flex;
   width: 24.75rem;
@@ -135,10 +141,6 @@ export const ModalSubmitBtn = styled.button`
   color: #fff;
   cursor: pointer;
   margin-bottom: 2.063rem;
-  &:active {
-    width: 14.5rem;
-    height: 2.5rem;
-  }
 `
 
 export const SignInLinkWrapper = styled.div`
@@ -148,4 +150,17 @@ export const SignInLinkWrapper = styled.div`
 export const SignInLink = styled.span`
   font-weight: bold;
   cursor: pointer;
+`
+
+export const BugreportInput = styled.textarea`
+  resize: none; 
+  width: 23rem;
+  height:19.94rem;
+  -webkit-appearance: none;
+  border: 0.0625rem solid #bbbbb;
+  border-radius: 0.9375rem;
+  font-family: inherit;
+  font-size: inherit;
+  padding-top: 1.5rem;
+  padding-left: 1.438rem; 
 `
