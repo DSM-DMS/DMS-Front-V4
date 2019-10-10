@@ -11,4 +11,5 @@ export const SideBarLinkSectionTitle = styled.p`
   font-weight: bold;
   margin-bottom: 0.5rem;
   margin-left: 1.7375rem;
+  color: #59545d;
 `;
