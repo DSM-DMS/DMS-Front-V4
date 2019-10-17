@@ -60,6 +60,10 @@ export const ModalContentWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `
+export const LogInContnetWrapper = styled(ModalContentWrapper)`
+  height: 11rem;
+`
+
 export const SignInContentWrapper = styled(ModalContentWrapper)`
   height: 16.5rem;
 `
@@ -90,10 +94,13 @@ export const AutoLoginWrapper = styled.div`
 `
 
 export const AutoLoginCheckbtn = styled.input`
-  width:  2.25rem;
+  display: flex
+  width: 2.25rem;
   height: 1.188rem;
+  margin-right: 0.4375rem;
   appearance: none;
-  background-color:#DCDCDC ;
+  align-items: center;
+  background-color:#DCDCDC;
   box-shadow: 0 0.1875rem 0.375rem 0 rgba(0, 0, 0, 0.16);
   border-radius: 1rem;
   cursor: pointer;
@@ -106,7 +113,6 @@ export const AutoLoginCheckbtn = styled.input`
   &::after{
     content: "";  
     margin-left: 0.1875rem;
-    margin-top: 0.125rem
     display: block;
     width: 0.8125rem;
     height: 0.8125rem;
@@ -119,15 +125,6 @@ export const AutoLoginCheckbtn = styled.input`
 
 export const ForgetPWLink = styled.span`
   cursor: pointer;
-`
-
-export const ModalBottomWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 14.69rem;
-  height: 6.563rem;
-  margin-top: 3rem;
-  justify-content: space-between;
 `
 
 export const ModalSubmitBtn = styled.button`
@@ -144,10 +141,18 @@ export const ModalSubmitBtn = styled.button`
 `
 
 export const SignInLinkWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  height: 3.75rem
+  border-radius: 0 0 1.455rem 1.455rem;
   font-size: 0.875rem;
+  background-color: #eeefe7;  
+  justify-content: center;
+  align-items: center;
 `
 
 export const SignInLink = styled.span`
+  margin-left: 0.7rem;
   font-weight: bold;
   cursor: pointer;
 `
