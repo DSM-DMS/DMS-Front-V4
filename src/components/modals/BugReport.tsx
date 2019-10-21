@@ -17,7 +17,7 @@ const BugReport: React.StatelessComponent<Props>=()=>{
           버그신고
           </S.ModalName>
         <S.ModalClosebtn 
-          src={CloseImg}/>
+          src={ModalCloseImg}/>
       </S.ModalNameWrapper>
       <S.BugreportInput
        placeholder="버그신고 내용을 입력해주세요"/>
