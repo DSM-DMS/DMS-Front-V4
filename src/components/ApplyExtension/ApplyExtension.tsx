@@ -2,11 +2,12 @@ import React from 'react'
 import * as S from './styles'
 
 interface ApplyExtensionProps {
+    classList: React.ReactElement[],
     selectedTime : number,
     onHandleSelectTime : Function
 }
 
-const ApplyExtension: React.FC<ApplyExtensionProps> = ({selectedTime, onHandleSelectTime}) => {
+const ApplyExtension: React.FC<ApplyExtensionProps> = ({classList, selectedTime, onHandleSelectTime}) => {
     return (
         <S.ApplyExtensionWrapper>
             <S.ApplyExtensionHeaderWrapper>
@@ -31,7 +32,7 @@ const ApplyExtension: React.FC<ApplyExtensionProps> = ({selectedTime, onHandleSe
             </S.ApplyExtensionHeaderWrapper>
             <S.ApplyExtensionContentWrapper>
                 <S.ApplyExtensionClassWrapper>
-                    a
+                    {classList}
                 </S.ApplyExtensionClassWrapper>
             </S.ApplyExtensionContentWrapper>
         </S.ApplyExtensionWrapper>

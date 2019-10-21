@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const ApplyExtensionWrapper = styled.div`
     display: flex;
-    height: calc(100% - 5.8125rem);
     justify-content: space-between;
+    height: calc(100% - 5.8125rem);
     padding: 4.375rem 7.8175rem 10rem; 
     box-sizing: border-box;
     flex-direction: column;
@@ -46,7 +46,6 @@ export const ApplyExtension11TimeSelector = styled.div`
     align-items: center;
     cursor: pointer;
     transition: background 0.4s;
-
     ${props => props.selectedTime === 11 ?
         `background-color: #ffffff;`
         :
@@ -66,7 +65,6 @@ export const ApplyExtension12TimeSelector = styled.div`
     align-items: center;
     cursor: pointer;
     transition: background 0.4s;
-
     ${props => props.selectedTime === 12 ?
         `background-color: #ffffff;`
         :
@@ -90,7 +88,6 @@ export const ApplyExtensionStateWrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     & span {
         font-family: "Noto Sans Kr";
         font-size: 0.8125rem;
@@ -105,8 +102,21 @@ export const ApplyExtensionContentWrapper = styled.div`
 `
 
 export const ApplyExtensionClassWrapper = styled.div`
-    width: 19.875rem;
-    height: 40.625rem;
+    width: 19.375rem;
+    height: 35.625rem;
     border-radius: 1rem;
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.08);
+    padding: 1.875rem 1.875rem 1.25rem 1.875rem;
+    box-sizing: border-box;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        border: none;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background-color: #00be91;
+    }
 `

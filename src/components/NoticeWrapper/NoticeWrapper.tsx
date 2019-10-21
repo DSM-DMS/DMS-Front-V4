@@ -15,7 +15,7 @@ interface NoticeWrapperProps {
 const NoticeWrapper: React.StatelessComponent<NoticeWrapperProps> = ({
   tableType,
 }) => {
-  function renderTable(tableType) {
+  const renderTable = tableType => {
     switch (tableType) {
       case 'posts':
         return <NoticePostsTableContainer />;
@@ -26,7 +26,7 @@ const NoticeWrapper: React.StatelessComponent<NoticeWrapperProps> = ({
       default:
         return null;
     }
-  }
+  };
   return (
     <S.NoticeOuterWrapper>
       <NoticeTagsListContainer />

@@ -2,16 +2,7 @@ import { ThunkAction, ThunkDispatch } from 'redux-thunk';
 import { AnyAction, ActionCreator } from 'redux';
 import { noticeTableStaticData } from '../static/notice';
 
-const SET_SELECTED_TAG = 'SET_SELECTED_TAG';
-
-export interface SetSelectedTag {
-  type: 'SET_SELECTED_TAG';
-  selectedTag: string;
-  tableType: string;
-  tableItems: Array<PostsTable | RulesTable | VolunteerTable>;
-}
-
-export type Action = SetSelectedTag;
+const SET_SELECTED_TAG = 'SET_SELECTED_TAG' as const;
 
 export interface PostsTable {
   date: string;
@@ -30,6 +21,17 @@ export interface VolunteerTable {
   volunteerTitle: string;
   volunteerPoint: string;
 }
+
+export const setSelectedTag = (
+  selectedTag: string,
+  tableType: string,
+  tableItems: Array<PostsTable | RulesTable | VolunteerTable>,
+) => ({
+  type: SET_SELECTED_TAG,
+  payload: { selectedTag, tableType, tableItems },
+});
+
+export type NoticeAction = ReturnType<typeof setSelectedTag>;
 
 export interface NoticeState {
   selectedTag: string;
@@ -65,19 +67,8 @@ const initalState: NoticeState = {
   tableType: 'posts',
 };
 
-export const setSelectedTag = (
-  selectedTag: string,
-  tableType: string,
-  tableItems: Array<PostsTable | RulesTable | VolunteerTable>,
-): SetSelectedTag => ({
-  type: SET_SELECTED_TAG,
-  selectedTag,
-  tableType,
-  tableItems,
-});
-
 export const setSelectedTagThunk: ActionCreator<
-  ThunkAction<Action, NoticeState, void, any>
+  ThunkAction<NoticeAction, NoticeState, void, any>
 > = (
   selectedTag: string,
   tableType: string,
@@ -118,22 +109,17 @@ export const setSelectedTagThunk: ActionCreator<
   return dispatch(setSelectedTag(selectedTag, tableType, postsList));
 };
 
-export const noticeActions = {
-  setSelectedTag,
-  setSelectedTagThunk,
-};
-
 export default function reducer(
   state = initalState,
-  action: Action,
+  action: NoticeAction,
 ): NoticeState {
   switch (action.type) {
     case SET_SELECTED_TAG:
       return {
         ...state,
-        selectedTag: action.selectedTag,
-        tableType: action.tableType,
-        tableItems: action.tableItems,
+        selectedTag: action.payload.selectedTag,
+        tableType: action.payload.tableType,
+        tableItems: action.payload.tableItems,
       };
     default:
       return state;

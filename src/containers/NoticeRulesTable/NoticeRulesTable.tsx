@@ -17,6 +17,7 @@ const NoticeRulesTableContainer: React.FC<NoticeRulesTableProps> = ({
       ruleTitle={data.ruleTitle}
       rulePoint={data.rulePoint}
       selectedTag={selectedTag}
+      key={`notice-rules-${data.ruleTitle}`}
     />
   ));
   return <>{rulesTableItems}</>;

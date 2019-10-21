@@ -25,10 +25,6 @@ time, mark, audio, video, button {
   padding: 0;
   border: 0;
 }
-body {
-  @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap')
-  font-family: 'Noto Sans', sans-serif;
-}
 
 input:focus,
 select:focus,
@@ -44,7 +40,7 @@ button {
 }
 
 * {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
 }
 
 @media screen and (max-width: 1680px) {
