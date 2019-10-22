@@ -54,12 +54,13 @@ const ApplyExtensionContainer: React.FC<ApplyExtensionProps> = () => {
     ]
     
     const [selectedTime, setSelectTime] = React.useState(11);
+    const [selectedClass, setClass] = React.useState('가');
 
     const classList: React.ReactElement[] = React.useMemo(() => Class.map(data => (
-                <ApplyExtensionClassButton {...data}/>
+                <ApplyExtensionClassButton onHandleChangeClass = {setClass} key={data.name} {...data} isSelect={data.initial === selectedClass}/>
             )
         )
-    , [])
+    , [selectedClass])
 
     return (
         <ApplyExtension classList = {classList} selectedTime = {selectedTime} onHandleSelectTime = {setSelectTime}/>
