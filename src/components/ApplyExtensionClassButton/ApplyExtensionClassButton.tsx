@@ -2,15 +2,16 @@ import React from 'react';
 import * as S from './style';
 
 interface ApplyExtensionClassButtonProps {
-  onHandleChangeClass: React.Dispatch<React.SetStateAction<string>>,
+  onHandleChangeClass: React.Dispatch<React.SetStateAction<number>>,
   initial: string,
   name: string,
-  isSelect: boolean
+  id: number
+  isSelect: boolean,
 }
 
-const ApplyExtensionClassButton: React.FC<ApplyExtensionClassButtonProps> = ({onHandleChangeClass, initial, name, isSelect}) => {
+const ApplyExtensionClassButton: React.FC<ApplyExtensionClassButtonProps> = ({onHandleChangeClass, initial, name, id, isSelect}) => {
   const HandleChangeClass = React.useCallback(() => {
-    onHandleChangeClass(initial)
+    onHandleChangeClass(id)
   }, [])
 
   const isLong = React.useMemo(() => {
