@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const ApplyButtonWrapper = styled.div`
-    width: 20.625rem;
-    height: 24.625rem;
+    min-width: 20rem;
+    width: 49.2%;
+    height: 23.9375rem;
     background-color: #ffffff;
     box-shadow: 0 0.1875rem 0.625rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 0.3125rem;
@@ -17,8 +18,13 @@ export const ApplyButtonWrapper = styled.div`
     user-select: none;
 
     &:hover {
-        background-color: #8200a1;
+        background-color: #00be91;
         color: #ffffff;
+        transform: scale(1.01);
+    }
+   
+    &:nth-child(n+3) {
+        margin-top: 1.5625rem;
     }
 `
 
@@ -33,7 +39,8 @@ export const ApplyButtonTitleWrapper = styled.div`
 
 export const ApplyButtonTitle = styled.span`
     font-size: 1.875rem;
-    font-weight: 800;
+    font-family:; 'Noto Sans Kr'
+    font-weight: bold;
 `
 
 export const ApplyButtonIcon = styled.img`
@@ -55,4 +62,5 @@ export const ApplyDescription = styled.div`
     font-size: 1.125rem;
     display: flex;
     justify-content: center;
+    font-family:; 'Noto Sans Kr'
 `
