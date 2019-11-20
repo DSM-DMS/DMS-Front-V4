@@ -29,10 +29,10 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
             linkTitle: '연장신청',
           },
           { path: '/apply/stay', iconImg: transferIcon, linkTitle: '잔류신청' },
-          { path: '/apply/goingOut', iconImg: bikeIcon, linkTitle: '외출신청' },
+          { path: '/apply/goingout', iconImg: bikeIcon, linkTitle: '외출신청' },
           { path: '/apply/music', iconImg: alarmIcon, linkTitle: '기상음악' },
           {
-            path: '/apply/weekendRest',
+            path: '/apply/weekendrest',
             iconImg: bedIcon,
             linkTitle: '호실휴식',
           },

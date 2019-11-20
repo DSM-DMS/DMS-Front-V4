@@ -1,9 +1,10 @@
 import Chatting from './Chatting/Chatting.tsx';
-import Apply from './Apply/Apply.tsx';
 import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
 import ApplyExtension from './ApplyExtension/ApplyExtension.tsx';
 import ApplyExtensionClassButton from './ApplyExtensionClassButton/ApplyExtensionClassButton.tsx';
+import ApplyGoingOut from './ApplyGoingOut/ApplyGoingOut.tsx';
+import ApplyMorningMusic from './ApplyMorningMusic/ApplyMorningMusic.tsx'
 import NoticeWrapper from './NoticeWrapper/NoticeWrapper.tsx';
 import NoticeTagsList from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticeTagItem from './NoticeTagItem/NoticeTagItem.tsx';
@@ -20,11 +21,12 @@ import Header from './Header/Header.tsx';
 
 export {
   Chatting,
-  Apply,
   ApplyStay,
   ApplyStayButton,
   ApplyExtension,
   ApplyExtensionClassButton,
+  ApplyGoingOut,
+  ApplyMorningMusic,
   NoticeWrapper,
   NoticeTagsList,
   NoticeTagItem,

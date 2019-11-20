@@ -1,4 +1,4 @@
-const SET_IS_CHAT_OPENED = 'SET_IS_CHAT_OPENED' as const;
+const SET_IS_CHAT_OPENED = 'SET_IS_CHAT_OPENED' as any;
 
 export const setIsChatOpened = (isChatOpened: boolean) => ({
   type: SET_IS_CHAT_OPENED,
