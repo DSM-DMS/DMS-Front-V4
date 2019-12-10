@@ -11,9 +11,9 @@ export const MealCardContainer = styled.div`
 
 export const MealCardHeader = styled.div`
   display: flex;
-  height: 6.438rem;
+  height: 5.313rem;
   width: 100%;
-  align-items: center;
+  align-items: flex-end;
 `;
 
 export const MealCardIcon = styled.img`
@@ -25,7 +25,8 @@ export const MealCardIcon = styled.img`
 export const MealCardName = styled.span`
   font-size: 1.25rem;
   color: #59545d;
-  font-weight: 500;
+  font-weight: bold;
   margin-left: 1.25rem;
+  align-self: center;
+  margin-top: 1.3em;
 `;
-
