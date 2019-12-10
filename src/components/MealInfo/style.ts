@@ -7,7 +7,8 @@ export const InfoContainer = styled.div`
 `;
 
 export const InfoItem = styled.span`
-  margin-top: 1.1rem;
+  margin-top: 1rem;
   font-size: 1.375rem;
   color: #59545d;
+  font-weight: 400;
 `;
