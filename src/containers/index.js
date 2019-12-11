@@ -11,6 +11,7 @@ import NoticeVolunteerTableContainer from './NoticeVolunteerTable/NoticeVoluntee
 import FooterContainer from './Footer/Footer.tsx';
 import SideBarContainer from './SideBar/SideBar.tsx';
 import HeaderContainer from './Header/Header.tsx';
+import MealContainer from './Meal/Meal.tsx';
 
 export {
   ChattingContainer,
@@ -26,4 +27,5 @@ export {
   FooterContainer,
   SideBarContainer,
   HeaderContainer,
+  MealContainer
 };
