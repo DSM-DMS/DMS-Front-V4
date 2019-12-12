@@ -11,23 +11,17 @@ interface Props {
   dinner: string[];
 }
 
-const Meal: React.StatelessComponent<Props> = ({
-  breakfast,
-  lunch,
-  dinner,
-}) => {
+const Meal: React.FC<Props> = ({ breakfast, lunch, dinner }) => {
   return (
-    <>
-      <S.MealContainer>
-        <MealCard
-          IconSrc={morningIcon}
-          eatingTime={'아침'}
-          mealList={breakfast}
-        />
-        <MealCard IconSrc={lunchIcon} eatingTime={'점심'} mealList={lunch} />
-        <MealCard IconSrc={dinnerIcon} eatingTime={'저녁'} mealList={dinner} />
-      </S.MealContainer>
-    </>
+    <S.MealContainer>
+      <MealCard
+        IconSrc={morningIcon}
+        eatingTime={'아침'}
+        mealList={breakfast}
+      />
+      <MealCard IconSrc={lunchIcon} eatingTime={'점심'} mealList={lunch} />
+      <MealCard IconSrc={dinnerIcon} eatingTime={'저녁'} mealList={dinner} />
+    </S.MealContainer>
   );
 };
 

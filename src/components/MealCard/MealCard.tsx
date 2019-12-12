@@ -10,15 +10,13 @@ interface Props {
 
 const MealCard: React.FC<Props> = ({ IconSrc, eatingTime, mealList }) => {
   return (
-    <>
-      <S.MealCardContainer>
-        <S.MealCardHeader>
-          <S.MealCardIcon src={IconSrc} />
-          <S.MealCardName>{eatingTime}</S.MealCardName>
-        </S.MealCardHeader>
-        <MealInfo mealInfo={mealList}></MealInfo>
-      </S.MealCardContainer>
-    </>
+    <S.MealCardContainer>
+      <S.MealCardHeader>
+        <S.MealCardIcon src={IconSrc} />
+        <S.MealCardName>{eatingTime}</S.MealCardName>
+      </S.MealCardHeader>
+      <MealInfo mealInfo={mealList}></MealInfo>
+    </S.MealCardContainer>
   );
 };
 
