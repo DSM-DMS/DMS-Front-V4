@@ -5,16 +5,15 @@ import {
   MypageContainer,
   ApplyStayContainer,
   ApplyExtensionContainer,
+  MainContainer,
 } from './containers';
-
-import MealContainer from './containers/Meal/Meal';
 
 interface RoutingProps {}
 
 const Routing: React.StatelessComponent<RoutingProps> = () => {
   return (
     <>
-      <Route path="/" component={MealContainer} exact />
+      <Route path="/" component={MainContainer} exact />
       <Route path="/etc/notice" component={NoticeContainer} exact />
       <Route path="/etc/mypage" component={MypageContainer} exact />
       <Route path="/apply/stay" component={ApplyStayContainer} exact />
