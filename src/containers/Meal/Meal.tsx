@@ -27,13 +27,11 @@ const MealContainer: React.FC<Props> = () => {
     dinner: ['흑미밥', '햄에그까스', '부들어묵볶음', '방울토마토'],
   };
   return (
-    <>
-      <Meal
-        breakfast={mealList.breakfast}
-        lunch={mealList.lunch}
-        dinner={mealList.dinner}
-      ></Meal>
-    </>
+    <Meal
+      breakfast={mealList.breakfast}
+      lunch={mealList.lunch}
+      dinner={mealList.dinner}
+    />
   );
 };
 
