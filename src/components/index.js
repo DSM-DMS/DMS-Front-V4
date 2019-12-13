@@ -20,6 +20,8 @@ import Header from './Header/Header.tsx';
 import Meal from './Meal/Meal.tsx';
 import MealCard from './MealCard/MealCard.tsx';
 import MealInfo from './MealInfo/MealInfo.tsx';
+import Calendar from './Calendar/Calendar.tsx';
+import CalendarItem from './CalendarItem/CalendarItem.tsx'
 
 export {
   Chatting,
@@ -43,5 +45,7 @@ export {
   Header,
   Meal,
   MealCard,
-  MealInfo
+  MealInfo,
+  Calendar,
+  CalendarItem
 };

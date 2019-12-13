@@ -11,6 +11,8 @@ import NoticeVolunteerTableContainer from './NoticeVolunteerTable/NoticeVoluntee
 import FooterContainer from './Footer/Footer.tsx';
 import SideBarContainer from './SideBar/SideBar.tsx';
 import HeaderContainer from './Header/Header.tsx';
+import CalendarContainer from './Calendar/Calendar.tsx'
+import MainContainer from './Main/Main.tsx'
 
 export {
   ChattingContainer,
@@ -26,4 +28,6 @@ export {
   FooterContainer,
   SideBarContainer,
   HeaderContainer,
+  CalendarContainer,
+  MainContainer
 };
