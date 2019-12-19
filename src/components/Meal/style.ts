@@ -5,5 +5,5 @@ export const MealContainer = styled.div`
   width: 61.88rem;
   justify-content: space-between;
   margin-left: 7.813rem;
-  margin-top: 5.188rem;
-`
+  // margin-top: 4rem;
+`;
