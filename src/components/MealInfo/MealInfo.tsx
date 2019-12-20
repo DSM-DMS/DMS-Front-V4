@@ -7,11 +7,16 @@ interface Props {
 
 const MealInfo: React.FC<Props> = ({ mealInfo }) => {
   return (
-    <S.InfoContainer>
-      {mealInfo.map(infoItem => (
-        <S.InfoItem>{infoItem}</S.InfoItem>
-      ))}
-    </S.InfoContainer>
+    <>
+      {!mealInfo.length && <S.NoMeal>급식이 없어요</S.NoMeal>}
+      {mealInfo && (
+        <S.InfoContainer>
+          {mealInfo.map(infoItem => (
+            <S.InfoItem>{infoItem}</S.InfoItem>
+          ))}
+        </S.InfoContainer>
+      )}
+    </>
   );
 };
 

@@ -16,3 +16,11 @@ export const InfoItem = styled.span`
   height: 3.3rem;
   flex-shrink: 1;
 `;
+
+export const NoMeal = styled.span`
+  font-size: 1.375rem;
+  color: #59545d;
+  font-weight: 400;
+  margin-left: 2.875rem;
+  margin-top: 1rem;
+`;
