@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface a {
+interface propsType {
   isLong: boolean;
 }
 
@@ -13,15 +13,8 @@ export const InfoContainer = styled.div`
   flex-direction: column;
 `;
 
-export const InfoItem = styled.span<a>`
-  ${props =>
-    props.isLong
-      ? css`
-          font-size: 1.375rem;
-        `
-      : css`
-          font-size: 1.09rem;
-        `}
+export const InfoItem = styled.span<propsType>`
+  font-size: ${props => props.isLong ? "1.375rem": "1.09rem"}
   display: flex;
   align-items: center;
   color: #59545d;
