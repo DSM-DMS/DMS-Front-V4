@@ -17,9 +17,6 @@ import SideBar from './SideBar/SideBar.tsx';
 import SideBarLinkItem from './SideBarLinkItem/SideBarLinkItem.tsx';
 import SideBarLinksList from './SideBarLinksList/SideBarLinksList.tsx';
 import Header from './Header/Header.tsx';
-import Meal from './Meal/Meal.tsx';
-import MealCard from './MealCard/MealCard.tsx';
-import MealInfo from './MealInfo/MealInfo.tsx';
 
 export {
   Chatting,
@@ -41,7 +38,4 @@ export {
   SideBarLinkItem,
   SideBarLinksList,
   Header,
-  Meal,
-  MealCard,
-  MealInfo
 };
