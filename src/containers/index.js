@@ -13,6 +13,7 @@ import SideBarContainer from './SideBar/SideBar.tsx';
 import HeaderContainer from './Header/Header.tsx';
 import CalendarContainer from './Calendar/Calendar.tsx'
 import MainContainer from './Main/Main.tsx'
+import AcademicCalendarContainer from './AcademicCalendar/AcademicCalendar.tsx'
 
 export {
   ChattingContainer,
@@ -29,5 +30,6 @@ export {
   SideBarContainer,
   HeaderContainer,
   CalendarContainer,
-  MainContainer
+  MainContainer,
+  AcademicCalendarContainer
 };

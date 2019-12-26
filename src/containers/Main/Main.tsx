@@ -4,8 +4,8 @@ import React from 'react';
 import Main from '../../components/Main/Main';
 
 interface Props {}
-const MainContainer: React.FC<Props> = () => {
+const MainContainer: React.StatelessComponent<Props> = () => {
   return <Main />;
-}; 
+};
 
 export default MainContainer;
