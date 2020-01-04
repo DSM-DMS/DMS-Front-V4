@@ -36,12 +36,12 @@ const CalendarContainer: React.FC<Props> = () => {
   };
 
   useEffect(() => {
-    week(today);
-  });
+    setWeekDate(week(today));
+  }, []);
 
   return (
     <>
-      <Calendar date={12} />
+      <Calendar date={weekDate} />
     </>
   );
 };
