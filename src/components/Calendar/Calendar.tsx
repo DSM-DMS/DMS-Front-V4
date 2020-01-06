@@ -3,18 +3,28 @@ import * as S from './style';
 import CalendarItem from '../CalendarItem/CalendarItem';
 
 interface Props {
-  date: number;
+  weekDate: string[];
 }
-const Calendar: React.FC<Props> = ({ date }) => {
+const Calendar: React.FC<Props> = ({ weekDate }) => {
+  const week = ['일', '월', '화', '수', '목', '금', '토'];
+  const getDayOfWeek = (dayDate: string): string => {
+    const pivotDay = new Date(dayDate);
+    const dayOfWeek = week[pivotDay.getDay()];
+    return dayOfWeek;
+  };
+  const getDate = (dayDate: string): string => {
+    const day = dayDate.split(' ');
+    console.log(`일은 : ${day[2]}`);
+    return day[2];
+  };
   return (
     <S.CalendarItemWrapper>
-      <CalendarItem day={'월'} date={date}></CalendarItem>
-      <CalendarItem day={'화'} date={date}></CalendarItem>
-      <CalendarItem day={'수'} date={date}></CalendarItem>
-      <CalendarItem day={'목'} date={date}></CalendarItem>
-      <CalendarItem day={'금'} date={date}></CalendarItem>
-      <CalendarItem day={'토'} date={date}></CalendarItem>
-      <CalendarItem day={'일'} date={date}></CalendarItem>
+      {weekDate.map(dayDate => {
+        <CalendarItem
+          dayOfWeek={getDayOfWeek(dayDate)}
+          date={getDate(dayDate)}
+        />;
+      })}
     </S.CalendarItemWrapper>
   );
 };
