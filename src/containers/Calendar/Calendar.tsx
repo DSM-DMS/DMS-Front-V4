@@ -26,9 +26,9 @@ const CalendarContainer: React.FC<Props> = () => {
       )}`,
     );
     while (day <= endOfDay(today)) {
-      day.add(1, 'day');
       console.log(`day : ${day.format('YYYY MM DD')}`);
       newDate.push(day.format('YYYY MM DD'));
+      day.add(1, 'day');
       console.log(newDate);
     }
     console.log(`final newDate : ${newDate}`);
@@ -41,7 +41,7 @@ const CalendarContainer: React.FC<Props> = () => {
 
   return (
     <>
-      <Calendar date={weekDate} />
+      <Calendar weekDate={weekDate} />
     </>
   );
 };
