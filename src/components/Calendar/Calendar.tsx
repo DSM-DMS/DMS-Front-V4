@@ -19,12 +19,12 @@ const Calendar: React.FC<Props> = ({ weekDate }) => {
   };
   return (
     <S.CalendarItemWrapper>
-      {weekDate.map(dayDate => {
+      {weekDate.map(dayDate => (
         <CalendarItem
           dayOfWeek={getDayOfWeek(dayDate)}
           date={getDate(dayDate)}
-        />;
-      })}
+        />
+      ))}
     </S.CalendarItemWrapper>
   );
 };
