@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import { globalColor } from '../../GlobalStyle';
 
-export const CalendarItem = styled.div`
+export const CalendarItem = styled.div<{ isSelected: boolean }>`
   display: flex;
   width: 5.875rem;
   height: 9.688rem;
-  background-color: $fff
+  background-color: ${props => (props.isSelected ? globalColor : 'white')};
   border-radius: 0px 6.25rem 6.25rem / 6.5rem;
   flex-direction: column;
   align-items: center;
-  &:active {
-    background-color: ${globalColor};
-    color: #fff;
-  }
+  // &:active {
+  //   background-color: ${globalColor};
+  //   color: #fff;
+  // }
 `;
 
 export const CalendarInfoWrapper = styled.div`
