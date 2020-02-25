@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import * as S from './style';
 import CalendarItem from '../CalendarItem/CalendarItem';
+import upArrow from '../../assets/icon/up_arrow.png';
+import downArrow from '../../assets/icon/down_arrow.png';
 
 interface Props {
   weekDate: string[];
   handleClick: any;
   selectedDay: string;
 }
+
 const Calendar: React.FC<Props> = ({ weekDate, handleClick, selectedDay }) => {
   const week = ['일', '월', '화', '수', '목', '금', '토'];
   const getDayOfWeek = (dayDate: string): string => {
@@ -31,6 +34,10 @@ const Calendar: React.FC<Props> = ({ weekDate, handleClick, selectedDay }) => {
           selectedDay={selectedDay}
         />
       ))}
+      <S.MoveBtnWrapper>
+        <S.MoveWeekBtn src={upArrow} />
+        <S.MoveWeekBtn src={downArrow} />
+      </S.MoveBtnWrapper>
     </S.CalendarItemWrapper>
   );
 };
