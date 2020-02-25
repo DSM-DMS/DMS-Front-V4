@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 import { globalColor } from '../../GlobalStyle';
 
-export const CalendarItem = styled.div<{ isSelected: boolean }>`
+interface Props {
+  isSelected: boolean;
+}
+export const CalendarItem = styled.div<Props>`
   display: flex;
   width: 5.875rem;
   height: 9.688rem;
@@ -9,10 +12,6 @@ export const CalendarItem = styled.div<{ isSelected: boolean }>`
   border-radius: 0px 6.25rem 6.25rem / 6.5rem;
   flex-direction: column;
   align-items: center;
-  // &:active {
-  //   background-color: ${globalColor};
-  //   color: #fff;
-  // }
 `;
 
 export const CalendarInfoWrapper = styled.div`
@@ -23,7 +22,7 @@ export const CalendarInfoWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const CalendarInfo = styled.p`
+export const CalendarInfo = styled.p<Props>`
   color: #59545d;
   font-size: 1.375rem;
 `;
