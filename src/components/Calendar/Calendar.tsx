@@ -8,9 +8,17 @@ interface Props {
   weekDate: string[];
   handleClick: any;
   selectedDay: string;
+  getLastWeek: () => void;
+  getNextWeek: () => void;
 }
 
-const Calendar: React.FC<Props> = ({ weekDate, handleClick, selectedDay }) => {
+const Calendar: React.FC<Props> = ({
+  weekDate,
+  handleClick,
+  selectedDay,
+  getLastWeek,
+  getNextWeek,
+}) => {
   const week = ['일', '월', '화', '수', '목', '금', '토'];
   const getDayOfWeek = (dayDate: string): string => {
     const pivotDay = new Date(dayDate);
@@ -35,8 +43,18 @@ const Calendar: React.FC<Props> = ({ weekDate, handleClick, selectedDay }) => {
         />
       ))}
       <S.MoveBtnWrapper>
-        <S.MoveWeekBtn src={upArrow} />
-        <S.MoveWeekBtn src={downArrow} />
+        <S.MoveWeekBtn
+          src={upArrow}
+          onClick={(event: React.MouseEvent<HTMLElement>) => {
+            getLastWeek();
+          }}
+        />
+        <S.MoveWeekBtn
+          src={downArrow}
+          onClick={(event: React.MouseEvent<HTMLElement>) => {
+            getNextWeek();
+          }}
+        />
       </S.MoveBtnWrapper>
     </S.CalendarItemWrapper>
   );

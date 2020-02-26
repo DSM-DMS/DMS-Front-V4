@@ -23,6 +23,6 @@ export const CalendarInfoWrapper = styled.div`
 `;
 
 export const CalendarInfo = styled.p<Props>`
-  color: #59545d;
+  color: ${props => (props.isSelected ? 'white' : '#59545d')};
   font-size: 1.375rem;
 `;
