@@ -10,7 +10,9 @@ export const AcademicCalendarWrapper = styled.div`
   background-color: #fefefe;
   align-items: center;
   margin-left: 7.813rem;
+  margin-top: 1.813rem
   overflow: auto;
+  
   &::-webkit-scrollbar {
     width: 5px;
     height: 8px;

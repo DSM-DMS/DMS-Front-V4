@@ -7,6 +7,7 @@ export const CalendarItemWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-left: 7.813rem;
+  margin-top: 2rem;
 `;
 
 export const MoveBtnWrapper = styled.div`
