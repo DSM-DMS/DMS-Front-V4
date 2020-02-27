@@ -1,11 +1,20 @@
 import React from 'react';
-// import CalenderContainer from '../Calendar/Calendar';
-// import MealContainer from '../Meal/Meal';
-import Main from '../../components/Main/Main';
+import {
+  MealContainer,
+  AcademicCalendarContainer,
+  CalendarContainer,
+} from '../../containers';
 
 interface Props {}
-const MainContainer: React.StatelessComponent<Props> = () => {
-  return <Main />;
+
+const MainContainer: React.FC<Props> = () => {
+  return (
+    <>
+      <MealContainer />
+      <CalendarContainer />
+      <AcademicCalendarContainer />
+    </>
+  );
 };
 
 export default MainContainer;
