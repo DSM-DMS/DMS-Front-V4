@@ -19,4 +19,5 @@ export const MoveBtnWrapper = styled.div`
 export const MoveWeekBtn = styled.img`
   width: 1rem;
   height: 0.66rem;
+  cursor: pointer;
 `;

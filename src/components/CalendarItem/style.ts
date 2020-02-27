@@ -12,6 +12,7 @@ export const CalendarItem = styled.div<Props>`
   border-radius: 0px 6.25rem 6.25rem / 6.5rem;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const CalendarInfoWrapper = styled.div`
