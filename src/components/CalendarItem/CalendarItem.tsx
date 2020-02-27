@@ -31,8 +31,8 @@ const CalendarItem: React.FC<Props> = ({
       }}
     >
       <S.CalendarInfoWrapper>
-        <S.CalendarInfo>{dayOfWeek}</S.CalendarInfo>
-        <S.CalendarInfo>{date}</S.CalendarInfo>
+        <S.CalendarInfo isSelected={isSelected}>{dayOfWeek}</S.CalendarInfo>
+        <S.CalendarInfo isSelected={isSelected}>{date}</S.CalendarInfo>
       </S.CalendarInfoWrapper>
     </S.CalendarItem>
   );
