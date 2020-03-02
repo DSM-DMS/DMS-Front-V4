@@ -2,15 +2,15 @@ import React from 'react';
 import * as S from './style';
 
 export interface Props {
-  scadule: string;
+   schedule: string;
   date: string;
   place: string;
 }
 
 const AcademicCalendarItem: React.StatelessComponent<Props> = ({
-  scadule,
+   schedule: scadule,
   date,
-  place,
+  place,   
 }) => {
   return (
     <S.AcademicCalendarItemRow>

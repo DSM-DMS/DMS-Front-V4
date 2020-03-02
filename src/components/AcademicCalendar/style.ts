@@ -23,7 +23,7 @@ export const AcademicCalendarWrapper = styled.div`
   }
 `;
 
-export const AcademicCalendarTabel = styled.table`
+export const AcademicCalendarTable = styled.table`
   width: 53.75rem;
   height: 6rem;
   margin-left: 4.063rem;

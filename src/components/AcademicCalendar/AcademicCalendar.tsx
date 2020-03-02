@@ -3,7 +3,7 @@ import * as S from './style';
 import AcademicCalendarItem from '../AcdemiCalendarItem/AcademicCalendarItem';
 
 interface Props {
-  AcademicCalendarData: { scadule: string; date: string; place: string }[];
+  AcademicCalendarData: { schedule: string; date: string; place: string }[];
 }
 const AcademicCalendar: React.StatelessComponent<Props> = ({
   AcademicCalendarData,
@@ -11,15 +11,15 @@ const AcademicCalendar: React.StatelessComponent<Props> = ({
   return (
     <S.AcademicCalendarWrapper>
       <div style={{ overflow: 'auto' }}>
-        <S.AcademicCalendarTabel>
+        <S.AcademicCalendarTable>
           {AcademicCalendarData.map(dataItem => (
             <AcademicCalendarItem
-              scadule={dataItem.scadule}
+              schedule={dataItem.schedule}
               date={dataItem.date}
               place={dataItem.place}
             />
           ))}
-        </S.AcademicCalendarTabel>
+        </S.AcademicCalendarTable>
       </div>
     </S.AcademicCalendarWrapper>
   );
