@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import * as S from './style';
-import moment from 'moment';
 
 interface Props {
   day: string;
