@@ -15,49 +15,9 @@ const AcademicCalendarContainer: React.StatelessComponent = () => {
         date: '오전 09:30 ~ 오전 09:30',
         place: '새롬홀',
       },
-      {
-        scadule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',
-      },
-      {
-        scadule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',
-      },
-      {
-        scadule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',  
-      },
-      {
-        scadule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',
-      },
-      {
-        scadule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',
-      },
-      {
-        scadule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',
-      },
-      {
-        scadule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',
-      },
-      {
-        scadule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',
-      },
     ],
   };
-
+  
   return (
     <>
       <AcademicCalendar AcademicCalendarData={dummy.AcademicCalendar} />
