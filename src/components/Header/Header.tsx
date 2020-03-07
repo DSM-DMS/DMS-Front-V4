@@ -12,11 +12,11 @@ const Header: React.StatelessComponent<HeaderProps> = ({ currentRoute }) => {
   return (
     <S.HeaderWrapper>
       <S.HeaderLeftWrapper>
-        <S.HeaderLeftFont className = "main">{sectionTitle}</S.HeaderLeftFont>
->
+        <S.HeaderLeftFont className="main">{sectionTitle}</S.HeaderLeftFont>
         <S.HeaderLeftFont>{menuTitle}</S.HeaderLeftFont>
       </S.HeaderLeftWrapper>
       <S.HeaderRightButton>
+        <S.OpenLoginModalButton>로그인</S.OpenLoginModalButton>
         <S.HeaderRightButtonImg src={alertImg} />
       </S.HeaderRightButton>
     </S.HeaderWrapper>
