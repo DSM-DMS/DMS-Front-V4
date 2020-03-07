@@ -31,10 +31,11 @@ const ApplyStayContainer: React.FC<ApplyStayProps> = () => {
         }
     ]
 
-    const ButtonsList: React.ReactElement[] = Buttons.map(data => (
-            <ApplyStayButton {...data} key = {data.kind}/>
+    const ButtonsList: React.ReactElement[] = React.useMemo(() => Buttons.map(data => (
+                <ApplyStayButton {...data} key = {data.kind}/>
+            )
         )
-    )
+    , [])
 
     return (
         <ApplyStay button = {ButtonsList} />

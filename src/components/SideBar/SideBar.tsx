@@ -68,7 +68,7 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
         setCurrentPath={setCurrentPath}
       />
       {sideBarLinkSections}
-      <S.SideBarButton onClick={toggleIsChatOpened}>
+      <S.SideBarButton>
         <S.SideBarButtonImg src={chatIcon} />
         1:1 채팅
       </S.SideBarButton>

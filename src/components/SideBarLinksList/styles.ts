@@ -8,7 +8,7 @@ export const SideBarLinkListSection = styled.section`
 
 export const SideBarLinkSectionTitle = styled.p`
   font-size: 1.125rem;
-  font-weight: bold;
+  font-weight: normal;
   margin-bottom: 0.5rem;
   margin-left: 1.7375rem;
   color: #59545d;

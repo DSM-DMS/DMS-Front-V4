@@ -2,7 +2,8 @@ import Chatting from './Chatting/Chatting.tsx';
 import Apply from './Apply/Apply.tsx';
 import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
-import ApplyState from './ApplyState/ApplyState.tsx';
+import ApplyExtension from './ApplyExtension/ApplyExtension.tsx';
+import ApplyExtensionClassButton from './ApplyExtensionClassButton/ApplyExtensionClassButton.tsx';
 import NoticeWrapper from './NoticeWrapper/NoticeWrapper.tsx';
 import NoticeTagsList from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticeTagItem from './NoticeTagItem/NoticeTagItem.tsx';
@@ -16,13 +17,21 @@ import SideBar from './SideBar/SideBar.tsx';
 import SideBarLinkItem from './SideBarLinkItem/SideBarLinkItem.tsx';
 import SideBarLinksList from './SideBarLinksList/SideBarLinksList.tsx';
 import Header from './Header/Header.tsx';
+import Meal from './Meal/Meal.tsx';
+import MealCard from './MealCard/MealCard.tsx';
+import MealInfo from './MealInfo/MealInfo.tsx';
+import Calendar from './Calendar/Calendar.tsx';
+import CalendarItem from './CalendarItem/CalendarItem.tsx'
+import AcademicCalendar from './AcademicCalendar/AcademicCalendar.tsx'
+import AcademicCalendarItem from './AcdemiCalendarItem/AcademicCalendarItem.tsx'
 
 export {
   Chatting,
   Apply,
   ApplyStay,
   ApplyStayButton,
-  ApplyState,
+  ApplyExtension,
+  ApplyExtensionClassButton,
   NoticeWrapper,
   NoticeTagsList,
   NoticeTagItem,
@@ -36,4 +45,11 @@ export {
   SideBarLinkItem,
   SideBarLinksList,
   Header,
+  Meal,
+  MealCard,
+  MealInfo,
+  Calendar,
+  CalendarItem,
+  AcademicCalendar,
+  AcademicCalendarItem
 };

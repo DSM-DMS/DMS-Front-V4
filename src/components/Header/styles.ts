@@ -8,6 +8,7 @@ export const HeaderWrapper = styled.header`
   align-items: flex-end;
   justify-content: space-between;
   box-sizing: border-box;
+  font-family: 'Noto Sans Kr';
 `;
 
 export const HeaderLeftWrapper = styled.div`
