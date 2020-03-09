@@ -5,18 +5,17 @@ import SignIn from './SignIn';
 import ChangePW from './ChangePW';
 import BugReport from './BugReport';
 
-interface Props {
-}
+interface Props {}
 
 const Modal: React.StatelessComponent<Props> = () => {
-  return(
+  return (
     <>
-      <S.ModalOverlay/>
+      <S.ModalOverlay />
       <S.ModalContainer>
-        <SignIn/>
+        <SignIn />
       </S.ModalContainer>
     </>
   );
-}
+};
 
 export default Modal;
