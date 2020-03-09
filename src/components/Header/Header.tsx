@@ -2,7 +2,7 @@ import React from 'react';
 
 import * as S from './styles';
 import alertImg from '../../assets/icon/alert.png';
-
+import HeaderLoginButton from '../HeaderLoginButton/HeaderLoginButton';
 interface HeaderProps {
   currentRoute: string;
 }
@@ -16,7 +16,7 @@ const Header: React.StatelessComponent<HeaderProps> = ({ currentRoute }) => {
         <S.HeaderLeftFont>{menuTitle}</S.HeaderLeftFont>
       </S.HeaderLeftWrapper>
       <S.HeaderRightButton>
-        <S.OpenLoginModalButton>로그인</S.OpenLoginModalButton>
+        <HeaderLoginButton />
         <S.HeaderRightButtonImg src={alertImg} />
       </S.HeaderRightButton>
     </S.HeaderWrapper>

@@ -30,13 +30,6 @@ export const HeaderRightButton = styled.button`
   border: none;
 `;
 
-export const OpenLoginModalButton = styled.button`
-  font-size: 1.25rem;
-  color: #59545d;
-  background-color: transparent;
-  margin-right: 3.063rem;
-`;
-
 export const HeaderRightButtonImg = styled.img`
   height: 1.875rem;
   width: auto;
