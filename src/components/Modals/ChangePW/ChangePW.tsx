@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ModalCloseImg from '../../assets/icon/black-close-button.png';
-import * as S from './style';
+import * as S from '../style';
 
 interface Props {}
 
