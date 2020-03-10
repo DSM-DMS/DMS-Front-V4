@@ -1,17 +1,13 @@
 import * as React from 'react';
-import CloseImg from '../../assets/icon/black-close-button.png';
+import CloseImg from '../../../assets/icon/black-close-button.png';
 import * as S from '../style';
+import ModalWrapper from '../ModalWrapper';
 
 interface Props {}
 
 const LogIn: React.StatelessComponent<Props> = () => {
   return (
-    <>
-      <S.ModalNameWrapper>
-        <S.ModalName>로그인</S.ModalName>
-        <S.ModalClosebtn src={CloseImg} />
-      </S.ModalNameWrapper>
-
+    <ModalWrapper modalName={'로그인'}>
       <S.LogInContnetWrapper>
         <S.ModalInput placeholder="아이디" />
         <S.ModalInput placeholder="비밀번호" type="password" />
@@ -29,7 +25,7 @@ const LogIn: React.StatelessComponent<Props> = () => {
         <span>아직 DMS 회원이 아니시라면?</span>
         <S.SignInLink>회원가입</S.SignInLink>
       </S.SignInLinkWrapper>
-    </>
+    </ModalWrapper>
   );
 };
 
