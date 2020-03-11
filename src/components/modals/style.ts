@@ -137,7 +137,7 @@ export const ModalSubmitBtn = styled.button`
   font-size: 0.9375rem;
   color: #fff;
   cursor: pointer;
-  margin-bottom: 2.063rem;
+  margin-bottom: 3rem;
 `;
 
 export const SignInLinkWrapper = styled.div`
