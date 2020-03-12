@@ -29,7 +29,7 @@ export const ModalContainer = styled.div`
 export const ModalNameWrapper = styled.div`
   display: flex;
   width: 24.56rem;
-  height: 4.063rem;
+  height: 5rem;
   align-items: center;
   justify-content: space-between;
   align-items: flex-end;
@@ -43,6 +43,7 @@ export const ModalName = styled.span`
 export const ModalClosebtn = styled.img`
   width: 1.25rem;
   height: 1.25rem;
+  margin-bottom: 0.8rem;
   cursor: pointer;
 `;
 
