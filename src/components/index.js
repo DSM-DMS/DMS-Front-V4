@@ -29,7 +29,9 @@ import SignIn from './Modals/SignIn/SignIn.tsx';
 import BugReport from './Modals/BugReport/BugReport.tsx';
 import ChangePW from './Modals/ChangePW/ChangePW.tsx';
 import LogIn from "./Modals/Login/Login.tsx";
-import ModalWrapper from "./Modals/ModalWrapper.tsx";
+import ModalWrapper from "./Modals/ModalWrapper/ModalWrapper.tsx";
+import ModalInput from "./Modals/ModalInput/ModalInput.tsx";
+import ModalButton from "./Modals/ModalButton/ModalButton.tsx";
 
 export {
   Chatting,
@@ -63,5 +65,7 @@ export {
   BugReport,
   ChangePW,
   LogIn,
-  ModalWrapper
+  ModalWrapper,
+  ModalInput,
+  ModalButton
 };
