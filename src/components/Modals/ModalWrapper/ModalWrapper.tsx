@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import * as S from './style';
-import CloseImg from '../../assets/icon/black-close-button.png';
+import CloseImg from '../../../assets/icon/black-close-button.png';
 
 interface Props {
   modalName: string;
