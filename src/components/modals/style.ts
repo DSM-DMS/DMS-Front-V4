@@ -54,24 +54,6 @@ export const BugIcon = styled.img`
   margin-right: 1rem;
 `;
 
-export const ModalContentWrapper = styled.div`
-  display: flex;
-  width: 24.75rem;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-export const LogInContnetWrapper = styled(ModalContentWrapper)`
-  height: 11rem;
-`;
-
-export const SignInContentWrapper = styled(ModalContentWrapper)`
-  height: 16.5rem;
-`;
-export const FindPWContentWrapper = styled(ModalContentWrapper)`
-  margin-bottom: 5rem;
-  height: 12.38rem;
-`;
-
 export const ModalInput = styled.input`
   height: 3.125rem;
   border-radius: 0.9375rem;
@@ -80,51 +62,6 @@ export const ModalInput = styled.input`
   line-height: normal;
   padding-left: 1.125rem;
   font-size: 1rem;
-`;
-
-export const LoginBottom = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-export const AutoLoginWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const AutoLoginCheckbtn = styled.input`
-  display: flex
-  width: 2.25rem;
-  height: 1.188rem;
-  margin-right: 0.4375rem;
-  appearance: none;
-  align-items: center;
-  background-color:#DCDCDC;
-  box-shadow: 0 0.1875rem 0.375rem 0 rgba(0, 0, 0, 0.16);
-  border-radius: 1rem;
-  cursor: pointer;
-  &:checked{
-    background-color: ${globalColor} ;
-    &::after{
-      margin-left:1.25rem;
-    } 
-  }
-  &::after{
-    content: "";  
-    margin-left: 0.1875rem;
-    display: block;
-    width: 0.8125rem;
-    height: 0.8125rem;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0.1875rem 0.375rem 0 rgba(0, 0, 0, 0.16);   
-    transition: 0.5s;
-  } 
-`;
-
-export const ForgetPWLink = styled.span`
-  cursor: pointer;
 `;
 
 export const ModalSubmitBtn = styled.button`
@@ -138,34 +75,4 @@ export const ModalSubmitBtn = styled.button`
   color: #fff;
   cursor: pointer;
   margin-bottom: 3rem;
-`;
-
-export const SignInLinkWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  height: 3.75rem
-  border-radius: 0 0 1.455rem 1.455rem;
-  font-size: 0.875rem;
-  background-color: #eeefe7;  
-  justify-content: center;
-  align-items: center;
-`;
-
-export const SignInLink = styled.span`
-  margin-left: 0.7rem;
-  font-weight: bold;
-  cursor: pointer;
-`;
-
-export const BugreportInput = styled.textarea`
-  resize: none;
-  width: 23rem;
-  height: 19.94rem;
-  -webkit-appearance: none;
-  border: 0.0625rem solid #bbbbb;
-  border-radius: 0.9375rem;
-  font-family: inherit;
-  font-size: inherit;
-  padding-top: 1.5rem;
-  padding-left: 1.438rem;
 `;
