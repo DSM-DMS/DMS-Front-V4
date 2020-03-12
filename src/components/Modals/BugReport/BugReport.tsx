@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as S from './style';
-import ModalWrapper from '../ModalWrapper';
-import ModalButton from '../ModalButton';
+import { ModalWrapper, ModalButton } from '../../../components';
 
 interface Props {}
 

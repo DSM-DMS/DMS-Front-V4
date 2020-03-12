@@ -1,9 +1,6 @@
 import * as React from 'react';
-import CloseImg from '../../../assets/icon/black-close-button.png';
 import * as S from './style';
-import ModalWrapper from '../ModalWrapper';
-import ModalButton from '../ModalButton';
-import ModalInput from '../ModalInput';
+import { ModalWrapper, ModalButton, ModalInput } from '../../../components';
 interface Props {}
 
 const SignIn: React.StatelessComponent<Props> = () => {
