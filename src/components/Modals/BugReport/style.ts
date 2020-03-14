@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { globalColor } from '../../../GlobalStyle';
 
 export const BugreportInput = styled.textarea`
   resize: none;
@@ -12,4 +13,7 @@ export const BugreportInput = styled.textarea`
   padding-top: 1.5rem;
   padding-left: 1.438rem;
   padding-right: 1.438rem;
+  &:focus {
+    border-color: ${globalColor};
+  }
 `;
