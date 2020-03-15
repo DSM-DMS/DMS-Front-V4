@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-
+interface Props {
+  isVisible: boolean;
+}
 export const ModalWrapper = styled.div`
-  visibility: none;
+  visibility: ${(props: Props) => (props.isVisible ? 'visible' : 'hidden')};
 `;
 
 export const ModalOverlay = styled.div`
