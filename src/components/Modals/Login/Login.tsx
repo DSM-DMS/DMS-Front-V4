@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as S from './style';
 import { ModalWrapper, ModalButton, ModalInput } from '../../../components';
-
+import { ModalWrapperContainer } from '../../../containers';
 interface Props {}
 
 const LogIn: React.StatelessComponent<Props> = () => {
   return (
-    <ModalWrapper modalName="로그인">
+    <ModalWrapperContainer modalName="로그인">
       <S.LogInContnetWrapper>
         <ModalInput placeholder="아이디" />
         <ModalInput placeholder="비밀번호" inputType="password" />
@@ -23,7 +23,7 @@ const LogIn: React.StatelessComponent<Props> = () => {
         <span>아직 DMS 회원이 아니시라면?</span>
         <S.SignInLink>회원가입</S.SignInLink>
       </S.SignInLinkWrapper>
-    </ModalWrapper>
+    </ModalWrapperContainer>
   );
 };
 
