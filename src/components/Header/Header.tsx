@@ -3,11 +3,16 @@ import React from 'react';
 import * as S from './styles';
 import alertImg from '../../assets/icon/alert.png';
 import HeaderLoginButton from '../HeaderLoginButton/HeaderLoginButton';
+import { modalTypes } from '../../modules/modal';
 interface HeaderProps {
   currentRoute: string;
+  changeModalType: (modalType: modalTypes) => void;
 }
 
-const Header: React.StatelessComponent<HeaderProps> = ({ currentRoute }) => {
+const Header: React.StatelessComponent<HeaderProps> = ({
+  currentRoute,
+  changeModalType,
+}) => {
   const [sectionTitle, menuTitle] = currentRoute.split('/');
   return (
     <S.HeaderWrapper>
@@ -16,7 +21,7 @@ const Header: React.StatelessComponent<HeaderProps> = ({ currentRoute }) => {
         <S.HeaderLeftFont>{menuTitle}</S.HeaderLeftFont>
       </S.HeaderLeftWrapper>
       <S.HeaderRightButton>
-        <HeaderLoginButton />
+        <HeaderLoginButton changeModalType={changeModalType} />
         <S.HeaderRightButtonImg src={alertImg} />
       </S.HeaderRightButton>
     </S.HeaderWrapper>
