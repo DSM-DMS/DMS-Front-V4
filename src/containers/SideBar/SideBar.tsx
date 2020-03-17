@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { SideBar } from '../../components';
 import { StoreState } from '../../modules';
 import { setIsChatOpened } from '../../modules/chat';
-import { modalTypes, changeModal } from '../../modules/modal';
+import { ModalTypes, changeModal } from '../../modules/modal';
 
 interface SideBarProps {}
 
@@ -13,7 +13,7 @@ const SideBarContainer: React.FC<SideBarProps> = ({}) => {
     (state: StoreState) => state.chat.isChatOpened,
   );
   const modalType = useSelector((state: StoreState) => state.modal.modalType);
-  const changeModalType = (modalType: modalTypes) => {
+  const changeModalType = (modalType: ModalTypes) => {
     dispatch(changeModal(modalType));
   };
   const toggleIsChatOpened = () => {

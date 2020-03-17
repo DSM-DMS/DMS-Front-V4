@@ -3,10 +3,10 @@ import React from 'react';
 import * as S from './styles';
 import alertImg from '../../assets/icon/alert.png';
 import HeaderLoginButton from '../HeaderLoginButton/HeaderLoginButton';
-import { modalTypes } from '../../modules/modal';
+import { ModalTypes } from '../../modules/modal';
 interface HeaderProps {
   currentRoute: string;
-  changeModalType: (modalType: modalTypes) => void;
+  changeModalType: (modalType: ModalTypes) => void;
 }
 
 const Header: React.StatelessComponent<HeaderProps> = ({

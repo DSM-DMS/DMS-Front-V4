@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreState } from '../../modules';
 import { changeModal } from '../../modules/modal';
-import { modalTypes } from 'modules/modal';
+import { ModalTypes } from 'modules/modal';
 import { withRouter } from 'react-router-dom';
 import { Header } from '../../components';
 
@@ -10,7 +10,7 @@ interface HeaderProps {
   match: any;
   location: any;
   history: any;
-  changeModal: (modalType: modalTypes) => void;
+  changeModal: (modalType: ModalTypes) => void;
 }
 
 function getCurrentRouteString(pathname) {
@@ -36,7 +36,7 @@ const HeaderContainer: React.FC<HeaderProps> = ({
   const [currentRoute, setCurrentRoute] = useState('HOME/급식메뉴');
   const dispatch = useDispatch();
   const modalType = useSelector((state: StoreState) => state.modal.modalType);
-  const changeModalType = (modalType: modalTypes) => {
+  const changeModalType = (modalType: ModalTypes) => {
     dispatch(changeModal(modalType));
   };
   useEffect(() => {

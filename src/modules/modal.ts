@@ -1,7 +1,7 @@
 const SHOW = 'modal/SHOW' as const;
 const HIDE = 'modal/HIDE' as const;
 const CHANGE_MODAL = 'modal/CHANGE_MODAL' as const;
-export enum modalTypes {
+export enum ModalTypes {
   none = 'none',
   LogIn = 'LogIn',
   SignIn = 'SignIn',
@@ -15,7 +15,7 @@ export const hideModal = () => ({
   type: HIDE,
 });
 
-export const changeModal = (modalType: modalTypes) => ({
+export const changeModal = (modalType: ModalTypes) => ({
   type: CHANGE_MODAL,
   payload: modalType,
 });
@@ -27,12 +27,12 @@ type ModalAction =
 
 export interface ModalState {
   isVisible: boolean;
-  modalType: modalTypes;
+  modalType: ModalTypes;
 }
 
 const initialState: ModalState = {
   isVisible: false,
-  modalType: modalTypes.none,
+  modalType: ModalTypes.none,
 };
 
 function modal(state: ModalState = initialState, action: ModalAction) {
