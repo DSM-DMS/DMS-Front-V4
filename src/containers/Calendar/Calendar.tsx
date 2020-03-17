@@ -22,17 +22,10 @@ const CalendarContainer: React.FC<Props> = () => {
   const getWeek = (pivotDay: string): string[] => {
     const newDate: string[] = [];
     const day = startOfDay(pivotDay);
-    console.log(
-      `day : ${day.format('YYYY MM DD')} endDay : ${getEndOfDay(
-        pivotDay,
-      ).format(`YYYY MM DD`)}`,
-    );
     while (day <= getEndOfDay(pivotDay)) {
-      console.log(`day : ${day.format('YYYY MM DD')}`);
       newDate.push(day.format('YYYY MM DD'));
       day.add(1, 'day');
     }
-    console.log(`final newDate : ${newDate}`);
     return newDate;
   };
 
@@ -53,8 +46,7 @@ const CalendarContainer: React.FC<Props> = () => {
     setWeek(NextWeek);
   };
 
-  const handleClick = (selectedDay: string): void => {
-    console.log(selectedDay);
+  const handleClick = (selectedDay: string): void => {;
     setSelectedDay(selectedDay);
   };
   useEffect(() => {
