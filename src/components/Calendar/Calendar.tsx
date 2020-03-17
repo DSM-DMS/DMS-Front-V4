@@ -27,8 +27,11 @@ const Calendar: React.FC<Props> = ({
   };
   const getDate = (dayDate: string): string => {
     const day = dayDate.split(' ');
-    console.log(`일은 : ${day[2]}`);
     return day[2];
+  };
+  const getSelectedMonth = (selectedDay: string): string => {
+    const day = selectedDay.split(' ');
+    return day[1];
   };
   return (
     <S.CalendarItemWrapper>
@@ -49,6 +52,7 @@ const Calendar: React.FC<Props> = ({
             getLastWeek();
           }}
         />
+        <S.Month>{getSelectedMonth(selectedDay)}</S.Month>
         <S.MoveWeekBtn
           src={downArrow}
           onClick={(event: React.MouseEvent<HTMLElement>) => {
