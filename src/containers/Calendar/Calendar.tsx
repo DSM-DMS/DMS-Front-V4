@@ -46,7 +46,7 @@ const CalendarContainer: React.FC<Props> = () => {
     setWeek(NextWeek);
   };
 
-  const handleClick = (selectedDay: string): void => {;
+  const handleClick = (selectedDay: string): void => {
     setSelectedDay(selectedDay);
   };
   useEffect(() => {
@@ -56,6 +56,7 @@ const CalendarContainer: React.FC<Props> = () => {
   return (
     <>
       <Calendar
+        today={today}
         weekDate={week}
         handleClick={handleClick}
         selectedDay={selectedDay}

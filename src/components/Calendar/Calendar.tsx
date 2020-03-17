@@ -5,6 +5,7 @@ import upArrow from '../../assets/icon/up_arrow.png';
 import downArrow from '../../assets/icon/down_arrow.png';
 
 interface Props {
+  today: string;
   weekDate: string[];
   handleClick: any;
   selectedDay: string;
@@ -18,6 +19,7 @@ const Calendar: React.FC<Props> = ({
   selectedDay,
   getLastWeek,
   getNextWeek,
+  today
 }) => {
   const week = ['일', '월', '화', '수', '목', '금', '토'];
   const getDayOfWeek = (dayDate: string): string => {
@@ -43,6 +45,7 @@ const Calendar: React.FC<Props> = ({
           date={getDate(dayDate)}
           handleClick={handleClick}
           selectedDay={selectedDay}
+          today={today}
         />
       ))}
       <S.MoveBtnWrapper>
