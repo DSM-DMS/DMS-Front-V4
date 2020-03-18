@@ -18,11 +18,7 @@ const AcademicCalendarContainer: React.StatelessComponent = () => {
     ],
   };
 
-  return (
-    <>
-      <AcademicCalendar AcademicCalendarData={dummy.AcademicCalendar} />
-    </>
-  );
+  return <AcademicCalendar AcademicCalendarData={dummy.AcademicCalendar} />;
 };
 
 export default AcademicCalendarContainer;
