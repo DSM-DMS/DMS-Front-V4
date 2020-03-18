@@ -4,21 +4,19 @@ import MealInfo from '..//MealInfo/MealInfo';
 
 interface Props {
   IconSrc: any;
-  eatingTime: String;
+  eatingTime: string;
   mealList: string[];
 }
 
-const MealCard: React.StatelessComponent<Props> = ({ IconSrc, eatingTime, mealList }) => {
+const MealCard: React.FC<Props> = ({ IconSrc, eatingTime, mealList }) => {
   return (
-    <>
-      <S.MealCardContainer>
-        <S.MealCardHeader>
-          <S.MealCardIcon src={IconSrc} />
-          <S.MealCardName>{eatingTime}</S.MealCardName>
-        </S.MealCardHeader>
-        <MealInfo mealInfo={mealList}></MealInfo>
-      </S.MealCardContainer>
-    </>
+    <S.MealCardContainer>
+      <S.MealCardHeader>
+        <S.MealCardIcon src={IconSrc} />
+        <S.MealCardName>{eatingTime}</S.MealCardName>
+      </S.MealCardHeader>
+      <MealInfo mealInfo={mealList}></MealInfo>
+    </S.MealCardContainer>
   );
 };
 

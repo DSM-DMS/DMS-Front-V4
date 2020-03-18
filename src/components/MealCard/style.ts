@@ -24,9 +24,9 @@ export const MealCardIcon = styled.img`
 
 export const MealCardName = styled.span`
   font-size: 1.25rem;
-  color: #59545d;
   font-weight: bold;
+  color: #59545d;
   margin-left: 1.25rem;
-  align-self: center;
   margin-top: 1.3em;
+  align-self: center;
 `;
