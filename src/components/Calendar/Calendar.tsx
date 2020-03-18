@@ -19,7 +19,7 @@ const Calendar: React.FC<Props> = ({
   selectedDay,
   getLastWeek,
   getNextWeek,
-  today
+  today,
 }) => {
   const week = ['일', '월', '화', '수', '목', '금', '토'];
   const getDayOfWeek = (dayDate: string): string => {
@@ -49,19 +49,9 @@ const Calendar: React.FC<Props> = ({
         />
       ))}
       <S.MoveBtnWrapper>
-        <S.MoveWeekBtn
-          src={upArrow}
-          onClick={(event: React.MouseEvent<HTMLElement>) => {
-            getLastWeek();
-          }}
-        />
+        <S.MoveWeekBtn src={upArrow} onClick={getLastWeek} />
         <S.Month>{getSelectedMonth(selectedDay)}</S.Month>
-        <S.MoveWeekBtn
-          src={downArrow}
-          onClick={(event: React.MouseEvent<HTMLElement>) => {
-            getNextWeek();
-          }}
-        />
+        <S.MoveWeekBtn src={downArrow} onClick={getNextWeek} />
       </S.MoveBtnWrapper>
     </S.CalendarItemWrapper>
   );

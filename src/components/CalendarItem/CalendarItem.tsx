@@ -32,7 +32,7 @@ const CalendarItem: React.FC<Props> = ({
     <S.CalendarItem
       isToday={isToday(today)}
       isSelected={isSelected}
-      onClick={(event: React.MouseEvent<HTMLElement>) => {
+      onClick={() => {
         handleClick(day);
       }}
     >
