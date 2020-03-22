@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import * as S from './style';
 
 interface Props {
@@ -18,16 +18,19 @@ const CalendarItem: React.FC<Props> = ({
   today,
 }) => {
   const [isSelected, setIsSelected] = useState<boolean>(false);
-  const checkDay = (selectedDay: string): void => {
-    selectedDay === day ? setIsSelected(true) : setIsSelected(false);
-  };
+  const checkDay = useCallback(
+    (selectedDay: string): void => {
+      selectedDay === day ? setIsSelected(true) : setIsSelected(false);
+    },
+    [day, setIsSelected],
+  );
   const isToday = (today: string): boolean => {
     if (today === day) return true;
     else false;
   };
   useEffect(() => {
     checkDay(selectedDay);
-  });
+  }, [selectedDay]);
   return (
     <S.CalendarItem
       isToday={isToday(today)}
