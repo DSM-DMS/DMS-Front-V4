@@ -51,7 +51,7 @@ const CalendarContainer: React.FC<Props> = () => {
     (selectedDay: string): void => {
       setSelectedDay(selectedDay);
     },
-    [pivotDay],
+    [setSelectedDay],
   );
 
   useEffect(() => {
