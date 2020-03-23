@@ -11,7 +11,10 @@ import NoticeVolunteerTableContainer from './NoticeVolunteerTable/NoticeVoluntee
 import FooterContainer from './Footer/Footer.tsx';
 import SideBarContainer from './SideBar/SideBar.tsx';
 import HeaderContainer from './Header/Header.tsx';
-import MealContainer from './Meal/Meal.tsx';
+import MealContainer from './Meal/Meal.tsx'
+import CalendarContainer from './Calendar/Calendar.tsx'
+import MainContainer from './Main/Main.tsx';
+import AcademicCalendarContainer from './AcademicCalendar/AcademicCalendar.tsx';
 
 export {
   ChattingContainer,
@@ -27,5 +30,8 @@ export {
   FooterContainer,
   SideBarContainer,
   HeaderContainer,
-  MealContainer
+  MealContainer,
+  CalendarContainer,
+  MainContainer,
+  AcademicCalendarContainer
 };
