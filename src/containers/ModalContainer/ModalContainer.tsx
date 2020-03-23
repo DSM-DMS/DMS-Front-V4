@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreState } from '../../modules';
-import { showModal, ModalTypes } from '../../modules/modal';
+import { ModalTypes } from '../../modules/modal';
 import { SignIn, BugReport, ChangePW } from '../../components';
 import { LogInContainer } from '../../containers';
 interface Props {}
@@ -11,12 +11,6 @@ const ModalContainer: React.FC<Props> = () => {
     (state: StoreState) => state.modal.modalType,
   );
 
-  const isModalVisible = useSelector(
-    (state: StoreState) => state.modal.isVisible,
-  );
-  const setModalShow = () => {
-    dispatch(showModal);
-  };
   const switchShowModal = (modalType: ModalTypes): ReactNode => {
     switch (modalType) {
       case ModalTypes.LogIn:
@@ -33,9 +27,7 @@ const ModalContainer: React.FC<Props> = () => {
         return null;
     }
   };
-  useEffect(() => {
-    console.log('a : ' + modalType);
-  });
+
   return <div>{switchShowModal(modalType)}</div>;
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { StoreState } from '../../modules';
 import { changeModal } from '../../modules/modal';
 import { ModalTypes } from 'modules/modal';
