@@ -25,10 +25,13 @@ type ModalAction =
   | ReturnType<typeof hideModal>
   | ReturnType<typeof changeModal>;
 
-export interface ModalState {
+export interface ModalVisibleState {
   isVisible: boolean;
+}
+export interface ModalTypeState {
   modalType: ModalTypes;
 }
+export type ModalState = ModalVisibleState | ModalTypeState;
 
 const initialState: ModalState = {
   isVisible: false,
