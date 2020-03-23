@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Calendar from '../../components/Calendar/Calendar';
 import moment, { weekdays, Moment } from 'moment';
 
@@ -10,60 +10,57 @@ const CalendarContainer: React.FC<Props> = () => {
   const [selectedDay, setSelectedDay] = useState<string>(today);
   const [pivotDay, setPivotDay] = useState<string>(today);
 
-  const startOfDay = (date: string): Moment => {
+  const startOfDay = useCallback((date: string): Moment => {
     const startDate: Moment = moment(date).startOf('week');
     return startDate;
-  };
-  const getEndOfDay = (date: string): Moment => {
+  }, []);
+  const getEndOfDay = useCallback((date: string): Moment => {
     const endDate: Moment = moment(date).endOf('week');
     return endDate;
-  };
+  }, []);
 
-  const getWeek = (pivotDay: string): string[] => {
+  const getWeek = useCallback((pivotDay: string): string[] => {
     const newDate: string[] = [];
     const day = startOfDay(pivotDay);
-    console.log(
-      `day : ${day.format('YYYY MM DD')} endDay : ${getEndOfDay(
-        pivotDay,
-      ).format(`YYYY MM DD`)}`,
-    );
     while (day <= getEndOfDay(pivotDay)) {
-      console.log(`day : ${day.format('YYYY MM DD')}`);
       newDate.push(day.format('YYYY MM DD'));
       day.add(1, 'day');
     }
-    console.log(`final newDate : ${newDate}`);
     return newDate;
-  };
+  }, []);
 
-  const getLastWeek = (): void => {
+  const getLastWeek = useCallback((): void => {
     const lastMonday: string = startOfDay(pivotDay)
       .subtract(1, 'weeks')
       .format('YYYY MM DD');
     setPivotDay(lastMonday);
     const lastWeek: string[] = getWeek(lastMonday);
     setWeek(lastWeek);
-  };
-  const getNextWeek = (): void => {
+  }, [week]);
+
+  const getNextWeek = useCallback((): void => {
     const NextMonday: string = startOfDay(pivotDay)
       .add(1, 'weeks')
       .format('YYYY MM DD');
     setPivotDay(NextMonday);
     const NextWeek: string[] = getWeek(NextMonday);
     setWeek(NextWeek);
-  };
+  }, [week]);
 
-  const handleClick = (selectedDay: string): void => {
-    console.log(selectedDay);
-    setSelectedDay(selectedDay);
-  };
+  const handleClick = useCallback(
+    (selectedDay: string): void => {
+      setSelectedDay(selectedDay);
+    },
+    [setSelectedDay],
+  );
+
   useEffect(() => {
     setWeek(getWeek(today));
   }, []);
-
   return (
     <>
       <Calendar
+        today={today}
         weekDate={week}
         handleClick={handleClick}
         selectedDay={selectedDay}

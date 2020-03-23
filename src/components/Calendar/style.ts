@@ -13,7 +13,7 @@ export const CalendarItemWrapper = styled.div`
 export const MoveBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 4rem;
+  height: 5.8rem;
   justify-content: space-between;
 `;
 
@@ -21,4 +21,8 @@ export const MoveWeekBtn = styled.img`
   width: 1rem;
   height: 0.66rem;
   cursor: pointer;
+`;
+
+export const Month = styled.p`
+  font-size: 1.05rem;
 `;
