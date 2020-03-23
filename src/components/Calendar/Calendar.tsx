@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import * as S from './style';
 import CalendarItem from '../CalendarItem/CalendarItem';
 import upArrow from '../../assets/icon/up_arrow.png';
@@ -21,16 +21,6 @@ const Calendar: React.FC<Props> = ({
   getNextWeek,
   today,
 }) => {
-  const week = ['일', '월', '화', '수', '목', '금', '토'];
-  const getDayOfWeek = (dayDate: string): string => {
-    const pivotDay = new Date(dayDate);
-    const dayOfWeek = week[pivotDay.getDay()];
-    return dayOfWeek;
-  };
-  const getDate = (dayDate: string): string => {
-    const day = dayDate.split(' ');
-    return day[2];
-  };
   const getSelectedMonth = (selectedDay: string): string => {
     const day = selectedDay.split(' ');
     return day[1];
@@ -41,8 +31,6 @@ const Calendar: React.FC<Props> = ({
         <CalendarItem
           key={dayDate}
           day={dayDate}
-          dayOfWeek={getDayOfWeek(dayDate)}
-          date={getDate(dayDate)}
           handleClick={handleClick}
           selectedDay={selectedDay}
           today={today}
