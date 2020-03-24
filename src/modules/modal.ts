@@ -25,27 +25,24 @@ type ModalAction =
   | ReturnType<typeof hideModal>
   | ReturnType<typeof changeModal>;
 
-export interface ModalVisibleState {
+export interface ModalState {
   isVisible: boolean;
-}
-export interface ModalTypeState {
   modalType: ModalTypes;
 }
-export type ModalState = ModalVisibleState | ModalTypeState;
 
 const initialState: ModalState = {
   isVisible: false,
   modalType: ModalTypes.none,
 };
 
-function modal(state: ModalState = initialState, action: ModalAction) {
+function modal(state = initialState, action: ModalAction): ModalState {
   switch (action.type) {
     case SHOW:
-      return { isVisible: true };
+      return { ...state, isVisible: true };
     case HIDE:
-      return { isVisible: false };
+      return { ...state, isVisible: false };
     case CHANGE_MODAL:
-      return { modalType: action.payload, isVisible: true };
+      return { ...state, modalType: action.payload, isVisible: true };
     default:
       return state;
   }
