@@ -6,22 +6,22 @@ interface Props {
   isVisible: boolean;
   modalName: string;
   children: ReactNode;
-  setModalHide: () => void;
+  setToggleModal: () => void;
 }
 
 const ModalWrapper: React.StatelessComponent<Props> = ({
   modalName,
   children,
   isVisible,
-  setModalHide,
+  setToggleModal,
 }) => {
   return (
     <S.ModalWrapper isVisible={isVisible}>
-      <S.ModalOverlay onClick={setModalHide} />
+      <S.ModalOverlay onClick={setToggleModal} />
       <S.ModalContainer>
         <S.ModalNameWrapper>
           <S.ModalName>{modalName}</S.ModalName>
-          <S.ModalClosebtn src={CloseImg} onClick={setModalHide} />
+          <S.ModalClosebtn src={CloseImg} onClick={setToggleModal} />
         </S.ModalNameWrapper>
         {children}
       </S.ModalContainer>

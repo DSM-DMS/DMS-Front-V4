@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreState } from '../../modules';
-import { hideModal } from '../../modules/modal';
+import { toggleModal } from '../../modules/modal';
 import { ModalWrapper } from '../../components';
 
 interface Props {
@@ -14,13 +14,13 @@ const ModalWrapperContainer: React.FC<Props> = ({ modalName, children }) => {
   const isModalVisible = useSelector(
     (state: StoreState) => state.modal.isVisible,
   );
-  const setModalHide = () => {
-    dispatch(hideModal());
+  const setToggleModal = () => {
+    dispatch(toggleModal());
   };
   return (
     <ModalWrapper
       isVisible={isModalVisible}
-      setModalHide={setModalHide}
+      setToggleModal={setToggleModal}
       modalName={modalName}
       children={children}
     />
