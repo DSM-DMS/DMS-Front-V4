@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreState } from '../../modules';
-import { changeModal } from '../../modules/modal';
+import { changeModal, toggleModal } from '../../modules/modal';
 import { ModalTypes } from 'modules/modal';
 import { withRouter } from 'react-router-dom';
 import { Header } from '../../components';
@@ -39,6 +39,9 @@ const HeaderContainer: React.FC<HeaderProps> = ({
   const changeModalType = (modalType: ModalTypes) => {
     dispatch(changeModal(modalType));
   };
+  const setToggleModal = () => {
+    dispatch(toggleModal());
+  };
   useEffect(() => {
     if (location.pathname === '/') {
       setCurrentRoute('HOME/급식메뉴');
@@ -47,7 +50,11 @@ const HeaderContainer: React.FC<HeaderProps> = ({
     }
   }, [location.pathname]);
   return (
-    <Header currentRoute={currentRoute} changeModalType={changeModalType} />
+    <Header
+      currentRoute={currentRoute}
+      changeModalType={changeModalType}
+      setToggleModal={setToggleModal}
+    />
   );
 };
 
