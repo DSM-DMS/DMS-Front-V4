@@ -1,5 +1,4 @@
-const SHOW = 'modal/SHOW' as const;
-const HIDE = 'modal/HIDE' as const;
+const TOGGLE_MODAL = 'modla/TOGGLE_MODAL' as const;
 const CHANGE_MODAL = 'modal/CHANGE_MODAL' as const;
 export enum ModalTypes {
   none = 'none',
@@ -8,11 +7,8 @@ export enum ModalTypes {
   BugReport = 'BugReport',
   ChangePW = 'ChangePW',
 }
-export const showModal = () => ({
-  type: SHOW,
-});
-export const hideModal = () => ({
-  type: HIDE,
+export const toggleModal = () => ({
+  type: TOGGLE_MODAL,
 });
 
 export const changeModal = (modalType: ModalTypes) => ({
@@ -21,8 +17,7 @@ export const changeModal = (modalType: ModalTypes) => ({
 });
 
 type ModalAction =
-  | ReturnType<typeof showModal>
-  | ReturnType<typeof hideModal>
+  | ReturnType<typeof toggleModal>
   | ReturnType<typeof changeModal>;
 
 export interface ModalState {
@@ -37,12 +32,10 @@ const initialState: ModalState = {
 
 function modal(state = initialState, action: ModalAction): ModalState {
   switch (action.type) {
-    case SHOW:
-      return { ...state, isVisible: true };
-    case HIDE:
-      return { ...state, isVisible: false };
+    case TOGGLE_MODAL:
+      return { ...state, isVisible: !state.isVisible };
     case CHANGE_MODAL:
-      return { ...state, modalType: action.payload, isVisible: true };
+      return { ...state, modalType: action.payload };
     default:
       return state;
   }
