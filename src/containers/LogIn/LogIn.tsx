@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { StoreState } from '../../modules';
 import { changeModal } from '../../modules/modal';
@@ -9,9 +9,9 @@ interface LogInProps {}
 
 const LogInContainer: React.FC<LogInProps> = () => {
   const dispatch = useDispatch();
-  const changeModalType = (modalType: ModalTypes) => {
+  const changeModalType = useCallback((modalType: ModalTypes) => {
     dispatch(changeModal(modalType));
-  };
+  }, []);
   return <LogIn changeModalType={changeModalType} />;
 };
 

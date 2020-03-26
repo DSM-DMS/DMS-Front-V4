@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreState } from '../../modules';
 import { toggleModal } from '../../modules/modal';
@@ -14,9 +14,9 @@ const ModalWrapperContainer: React.FC<Props> = ({ modalName, children }) => {
   const isModalVisible = useSelector(
     (state: StoreState) => state.modal.isVisible,
   );
-  const setToggleModal = () => {
+  const setToggleModal = useCallback(() => {
     dispatch(toggleModal());
-  };
+  }, []);
   return (
     <ModalWrapper
       isVisible={isModalVisible}
