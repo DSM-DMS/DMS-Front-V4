@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { globalColor } from '../../../GlobalStyle';
 
-const Centerize = css`
+const VerticalCenter = css`
   display: flex;
   align-items: center;
 `;
@@ -14,16 +14,16 @@ export const LogInContnetWrapper = styled.div`
 `;
 
 export const LoginBottom = styled.div`
-  ${Centerize}
+  ${VerticalCenter}
   justify-content: space-between;
 `;
 export const AutoLoginWrapper = styled.div`
-  ${Centerize}
+  ${VerticalCenter}
   justify-content: space-between;
 `;
 
-export const AutoLoginCheckbtn = styled.input` 
-  ${Centerize}
+export const AutoLoginCheckbtn = styled.input`
+  ${VerticalCenter}
   width: 2.25rem;
   height: 1.188rem;
   margin-right: 0.4375rem;
@@ -56,7 +56,7 @@ export const ForgetPWLink = styled.span`
 `;
 
 export const SignInLinkWrapper = styled.div`
-  ${Centerize}
+  ${VerticalCenter}
   width: 100%;
   height: 3.75rem
   border-radius: 0 0 1.455rem 1.455rem;
