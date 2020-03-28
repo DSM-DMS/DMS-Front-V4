@@ -7,15 +7,14 @@ import downArrow from '../../assets/icon/down_arrow.png';
 interface Props {
   today: string;
   weekDate: string[];
-  handleClick: any;
+  setSelectedDay: (day: string) => void;
   selectedDay: string;
   getLastWeek: () => void;
   getNextWeek: () => void;
 }
-
 const Calendar: React.FC<Props> = ({
   weekDate,
-  handleClick,
+  setSelectedDay,
   selectedDay,
   getLastWeek,
   getNextWeek,
@@ -25,13 +24,14 @@ const Calendar: React.FC<Props> = ({
     const day = selectedDay.split(' ');
     return day[1];
   };
+
   return (
     <S.CalendarItemWrapper>
       {weekDate.map(dayDate => (
         <CalendarItem
           key={dayDate}
           day={dayDate}
-          handleClick={handleClick}
+          setSelectedDay={setSelectedDay}
           selectedDay={selectedDay}
           today={today}
         />
