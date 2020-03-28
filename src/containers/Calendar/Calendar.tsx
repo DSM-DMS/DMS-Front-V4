@@ -1,15 +1,20 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Calendar from '../../components/Calendar/Calendar';
 import moment, { weekdays, Moment } from 'moment';
+import { StoreState } from 'modules';
+import { changeSelectedDay } from '../../modules/calendar';
 
 interface Props {}
 
 const CalendarContainer: React.FC<Props> = () => {
+  const dispatch = useDispatch();
   const today: string = moment().format('YYYY MM DD');
   const [week, setWeek] = useState<string[]>([]);
-  const [selectedDay, setSelectedDay] = useState<string>(today);
   const [pivotDay, setPivotDay] = useState<string>(today);
-
+  const selectedDay = useSelector(
+    (state: StoreState) => state.calendar.selectedDay,
+  );
   const startOfDay = useCallback((date: string): Moment => {
     const startDate: Moment = moment(date).startOf('week');
     return startDate;
@@ -47,12 +52,9 @@ const CalendarContainer: React.FC<Props> = () => {
     setWeek(NextWeek);
   }, [week]);
 
-  const handleClick = useCallback(
-    (selectedDay: string): void => {
-      setSelectedDay(selectedDay);
-    },
-    [setSelectedDay],
-  );
+  const setSelectedDay = useCallback((day: string) => {
+    dispatch(changeSelectedDay(day));
+  }, []);
 
   useEffect(() => {
     setWeek(getWeek(today));
@@ -62,7 +64,7 @@ const CalendarContainer: React.FC<Props> = () => {
       <Calendar
         today={today}
         weekDate={week}
-        handleClick={handleClick}
+        setSelectedDay={setSelectedDay}
         selectedDay={selectedDay}
         getLastWeek={getLastWeek}
         getNextWeek={getNextWeek}
