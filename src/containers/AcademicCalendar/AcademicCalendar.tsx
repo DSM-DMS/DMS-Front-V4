@@ -4,21 +4,21 @@ import AcademicCalendarItem from 'components/AcdemiCalendarItem/AcademicCalendar
 
 const AcademicCalendarContainer: React.StatelessComponent = () => {
   const dummy = {
-    AcademicCalendar: [
+    schedule: [
       {
-        schedule: '정보보안과 대전교육정보원 체험학습',
-        date: '오전 09:00 ~ 오후 12:00',
+        name: '정보보안과 대전교육정보원 체험학습',
+        time: '오전 09:00 ~ 오후 12:00',
         place: '대전교육정보원',
       },
       {
-        schedule: '전체 학생 아침 조회',
-        date: '오전 09:30 ~ 오전 09:30',
+        name: '전체 학생 아침 조회',
+        time: '오전 09:30 ~ 오전 09:30',
         place: '새롬홀',
       },
     ],
   };
 
-  return <AcademicCalendar AcademicCalendarData={dummy.AcademicCalendar} />;
+  return <AcademicCalendar AcademicCalendarData={dummy.schedule} />;
 };
 
 export default AcademicCalendarContainer;
