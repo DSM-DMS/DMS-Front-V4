@@ -24,6 +24,8 @@ export const HeaderLeftFont = styled.span`
 `;
 
 export const HeaderRightButton = styled.button`
+  display: flex;
+  flex-direction: row;
   background-color: transparent;
   border: none;
 `;
