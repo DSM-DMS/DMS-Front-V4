@@ -67,6 +67,10 @@ button {
   }
 }
 
+html {
+  font-size: 14.36px;
+}
+
 
 `;
 

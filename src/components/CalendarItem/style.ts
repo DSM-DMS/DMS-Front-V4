@@ -18,6 +18,15 @@ export const CalendarItem = styled.div<CalendarItemProps>`
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  transition: background-color .4s;
+
+  &:hover {
+    background-color: ${globalColor};
+  }
+
+  &:hover > div > p {
+    color: #ffffff;
+  }
 `;
 
 export const CalendarInfoWrapper = styled.div`
@@ -30,6 +39,7 @@ export const CalendarInfoWrapper = styled.div`
 
 export const CalendarInfo = styled.p<CalendarInfoProps>`
   color: ${props => (props.isSelected ? 'white' : '#59545d')};
+  transition: color .4s;
 
   font-size: 1.375rem;
 `;
