@@ -43,7 +43,7 @@ const SideBar: React.FC<SideBarProps> = ({
           { path: '/apply/goingout', iconImg: bikeIcon, linkTitle: '외출신청' },
           { path: '/apply/music', iconImg: alarmIcon, linkTitle: '기상음악' },
           {
-            path: '/apply/weekendRest',
+            path: '/apply/weekendrest',
             iconImg: bedIcon,
             linkTitle: '호실휴식',
           },

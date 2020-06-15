@@ -4,7 +4,7 @@ export const ApplyExtensionWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     height: calc(100% - 5.8125rem);
-    padding: 4.375rem 7.8175rem 10rem; 
+    padding: 4.375rem 7.8175rem 8rem; 
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
@@ -51,6 +51,10 @@ export const ApplyExtension11TimeSelector = styled.div`
         :
         `background-color: #f8f8f8;`
     }
+
+    &:hover {
+        background-color: #ffffff;
+    }
 `
 
 export const ApplyExtension12TimeSelector = styled.div`
@@ -69,6 +73,10 @@ export const ApplyExtension12TimeSelector = styled.div`
         `background-color: #ffffff;`
         :
         `background-color: #f8f8f8;`
+    }
+
+    &:hover {
+        background-color: #ffffff;
     }
 `
 

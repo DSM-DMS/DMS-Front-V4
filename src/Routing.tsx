@@ -7,6 +7,7 @@ import {
   ApplyExtensionContainer,
   ApplyGoingoutContainer,
   MainContainer,
+  ApplyMorningMusicContainer
 } from './containers';
 
 interface RoutingProps {}
@@ -28,6 +29,7 @@ const Routing: React.StatelessComponent<RoutingProps> = () => {
         component={ApplyGoingoutContainer}
         exact
       />
+      <Route path="/apply/music" component={ApplyMorningMusicContainer} exact />
     </>
   );
 };

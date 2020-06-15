@@ -1,15 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { ApplyGoingout } from '../../components';
+import { ApplyGoingout } from '../../components'
 
-interface ApplyGoingoutContainerProps {
+interface ApplyGoingoutProps {}
 
-}
-
-const ApplyGoingoutContainer: React.FC<ApplyGoingoutContainerProps> = ({}) => {
-  return (
-    <ApplyGoingout />
-  );
+const ApplyGoingoutContainer : React.FC<ApplyGoingoutProps> = ({}) => {
+    return (
+        <ApplyGoingout />
+    )
 };
 
 export default ApplyGoingoutContainer;
