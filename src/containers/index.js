@@ -3,6 +3,8 @@ import ApplyContainer from './Apply/Apply.tsx'
 import ApplyStayContainer from './ApplyStay/ApplyStay.tsx'
 import ApplyStateContainer from './ApplyState/ApplyState.tsx';
 import ApplyExtensionContainer from './ApplyExtension/ApplyExtension.tsx'
+import ApplyGoingoutContainer from './ApplyGoingout/ApplyGoingout.tsx'
+import ApplyGoingoutCalendarContainer from './ApplyGoingoutCalendar/ApplyGoingoutCalendar.tsx';
 import NoticeContainer from './Notice/Notice.tsx';
 import NoticeTagsListContainer from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
@@ -25,6 +27,8 @@ export {
   ApplyStayContainer,
   ApplyStateContainer,
   ApplyExtensionContainer,
+  ApplyGoingoutContainer,
+  ApplyGoingoutCalendarContainer,
   NoticeContainer,
   NoticeTagsListContainer,
   NoticePostsTableContainer,

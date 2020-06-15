@@ -4,6 +4,8 @@ import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
 import ApplyExtension from './ApplyExtension/ApplyExtension.tsx';
 import ApplyExtensionClassButton from './ApplyExtensionClassButton/ApplyExtensionClassButton.tsx';
+import ApplyGoingout from './ApplyGoingout/ApplyGoingout.tsx';
+import ApplyGoingoutCalendar from './ApplyGoingoutCalendar/ApplyGoingoutCalendar.tsx'
 import AcademicCalendar from './AcademicCalendar/AcademicCalendar.tsx'
 import AcademicCalendarItem from './AcdemiCalendarItem/AcademicCalendarItem.tsx'
 import Calendar from './Calendar/Calendar.tsx';
@@ -40,6 +42,8 @@ export {
   ApplyStayButton,
   ApplyExtension,
   ApplyExtensionClassButton,
+  ApplyGoingout,
+  ApplyGoingoutCalendar,
   NoticeWrapper,
   NoticeTagsList,
   NoticeTagItem,

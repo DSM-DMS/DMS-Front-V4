@@ -5,6 +5,7 @@ import {
   MypageContainer,
   ApplyStayContainer,
   ApplyExtensionContainer,
+  ApplyGoingoutContainer,
   MainContainer,
 } from './containers';
 
@@ -20,6 +21,11 @@ const Routing: React.StatelessComponent<RoutingProps> = () => {
       <Route
         path="/apply/extension"
         component={ApplyExtensionContainer}
+        exact
+      />
+      <Route
+        path="/apply/goingout"
+        component={ApplyGoingoutContainer}
         exact
       />
     </>

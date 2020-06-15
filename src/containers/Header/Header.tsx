@@ -20,7 +20,7 @@ function getCurrentRouteString(pathname) {
     .replace('etc', '부가기능')
     .replace('extension', '연장신청')
     .replace('stay', '잔류신청')
-    .replace('goingOut', '외출신청')
+    .replace('goingout', '외출신청')
     .replace('music', '기상음악')
     .replace('weekendRest', '호실휴식')
     .replace('mypage', '내 정보')
