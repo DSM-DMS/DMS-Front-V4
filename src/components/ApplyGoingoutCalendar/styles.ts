@@ -40,3 +40,56 @@ export const ApplyGoingoutCalendarWrapper = styled.div`
   bottom: -20.125rem;
   padding: 1.875rem;
 `
+
+export const ApplyGoingoutCalendarHeaderWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
+
+export const ApplyGoingoutCalendarContentWrapper = styled.div`
+  & .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11px;
+
+    & .none {
+      width: 30px;
+      height: 20px;
+    }
+
+    & .date {
+      width: 30px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 7px;
+      box-sizing: border-box;
+      border-radius: 15px;
+      transition: background-color .4s, color .4s;
+      cursor: pointer;
+
+      &.selected {
+        background-color: #00be91;
+        color: #ffffff;
+      }
+
+      &:hover {
+        background-color: #00be91;
+        color: #ffffff;
+      }
+    }
+
+    & .bold {
+      font-weight bold;
+      width: 30px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 7px;
+      box-sizing: border-box;
+    }
+  }
+`

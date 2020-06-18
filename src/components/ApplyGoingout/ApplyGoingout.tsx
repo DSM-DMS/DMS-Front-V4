@@ -1,4 +1,6 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useContext } from 'react';
+
+import { C } from '../../utils'
 
 import * as S from './styles'
 
@@ -8,30 +10,32 @@ interface ApplyGoingoutProps {
   a: number
 }
 
-interface InputState {
-  calendar: Boolean,
-  time: Boolean
-}
-
 const ApplyGoingout: React.FC<ApplyGoingoutProps> = ({}) => {
-  const [inputState, setInputState] = useState<InputState>({
-    calendar: false,
-    time: false,
-  })
+  const [selectedDate] = useContext(C.ApplyGoingoutContext);
+  const [calendarState, setCalendarState] = useState(false);
+  const [timeState, setTimeState] = useState(false);
+
+  const HandleCalendarState = () => {
+    setCalendarState(prev => !prev);
+  }
+
+  const HandleTimeState = () => {
+    setTimeState(prev => !prev);
+  }
 
   return (
     <S.ApplyGoingoutWrapper>
       <S.ApplyGoingoutInfoWrapper>
         <S.ApplyGoingoutInputWrapper>
-          <input readOnly value = "2020년" onClick={() => {setInputState({...inputState, calendar: !inputState.calendar})}}/>
-          <ApplyGoingoutCalendarContainer show={inputState.calendar}/>
+          <input readOnly value = {`${selectedDate.year}년 ${selectedDate.month}월 ${selectedDate.date}일`} onClick={HandleCalendarState}/>
+          <ApplyGoingoutCalendarContainer show={calendarState} HandleCalendarState = {HandleCalendarState}/>
         </S.ApplyGoingoutInputWrapper>
         <S.ApplyGoingoutInputWrapper>
-          <input readOnly value = "2020년"onClick={() => {setInputState({...inputState, time: !inputState.time})}}/>
-          <ApplyGoingoutCalendarContainer show={inputState.time}/>
+          <input readOnly value = "2020년" onClick={HandleTimeState}/>
+          <ApplyGoingoutCalendarContainer show={timeState} />
         </S.ApplyGoingoutInputWrapper>
         <S.ApplyGoingoutInputWrapper>
-          <input readOnly value = "2020년"/>
+          <input value = "2020년"/>
         </S.ApplyGoingoutInputWrapper>
       </S.ApplyGoingoutInfoWrapper>
     </S.ApplyGoingoutWrapper>
