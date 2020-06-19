@@ -42,9 +42,10 @@ export const ApplyGoingoutCalendarWrapper = styled.div`
 `
 
 export const ApplyGoingoutCalendarHeaderWrapper = styled.div`
-  width: 100%;
+  width: 40%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
 `
 
 export const ApplyGoingoutCalendarContentWrapper = styled.div`

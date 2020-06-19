@@ -38,10 +38,9 @@ const StartDay: StartDay = (year, month) => {
 const date: Date = new Date();
 const todayYear: number = date.getFullYear();
 const todayMonth: number = date.getMonth() + 1;
-const today: number = date.getDate();
 
 const ApplyGoingoutCalendarContainer: React.FC<ApplyGoingoutCalendarContainerProps> = ({show, HandleCalendarState}) => {
-  const [selectedDate, setSelectedDate] = useContext(C.ApplyGoingoutContext);
+  const [, setSelectedDate] = useContext(C.ApplyGoingoutContext);
 
   const [curDate, setDate] = useState<IDate>({
     year: todayYear,

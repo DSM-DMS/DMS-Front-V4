@@ -38,9 +38,16 @@ const ApplyGoingoutCalendar: React.FC<ApplyGoingoutCalendarProps> = ({show, hand
       let weekElement: React.ReactElement[] = [];
       for(let j = 0; j < 7; j++) { 
         let className = (selectedDate.year === curDate.year && selectedDate.month === curDate.month && selectedDate.date === i) ? " selected" : "";
-        if(j < startDay)  weekElement.push(<span className="none"></span>);
-        else if(i <= monthDays) weekElement.push(<span data-month={curDate.month} data-year={curDate.year} data-date={i} className={`date${className}`} onClick={handleChoiceDate}>{i++}</span>);
-        else weekElement.push(<span className="none"></span>)
+        if(j < startDay)  weekElement.push(<span className="none" key={(i+30)*j}></span>);
+        else if(i <= monthDays) weekElement.push(
+        <span 
+          data-month={curDate.month} 
+          data-year={curDate.year} 
+          data-date={i} className={`date${className}`} 
+          onClick={handleChoiceDate} 
+          key={i}>{i++}
+        </span>);
+        else weekElement.push(<span className="none" key={(i+30)*j}></span>)
       }
       monthElement.push(weekElement)
       startDay = 0
@@ -66,7 +73,7 @@ const ApplyGoingoutCalendar: React.FC<ApplyGoingoutCalendarProps> = ({show, hand
         </label>
       </S.ApplyGoingoutCalendarHeaderWrapper>
       <S.ApplyGoingoutCalendarContentWrapper>
-        <div className="row">
+        <div className="row" key='week'>
           <span className="bold">일</span>
           <span className="bold">월</span>
           <span className="bold">화</span>
@@ -76,8 +83,8 @@ const ApplyGoingoutCalendar: React.FC<ApplyGoingoutCalendarProps> = ({show, hand
           <span className="bold">토</span>
         </div>
         {
-          month.map(el => 
-            <div className="row">
+          month.map((el, idx) => 
+            <div className="row" key={idx}>
               {el}
             </div>
           )

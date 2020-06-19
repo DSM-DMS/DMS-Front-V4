@@ -4,6 +4,7 @@ import ApplyMorningMusicContainer from './ApplyMorningMusic/ApplyMorningMusic.ts
 import ApplyExtensionContainer from './ApplyExtension/ApplyExtension.tsx'
 import ApplyGoingoutContainer from './ApplyGoingout/ApplyGoingout.tsx'
 import ApplyGoingoutCalendarContainer from './ApplyGoingoutCalendar/ApplyGoingoutCalendar.tsx';
+import ApplyGoingoutTimeContainer from './ApplyGoingoutTime/ApplyGoingoutTime.tsx';
 import NoticeContainer from './Notice/Notice.tsx';
 import NoticeTagsListContainer from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticePostsTableContainer from './NoticePostsTable/NoticePostsTable.tsx';
@@ -27,6 +28,7 @@ export {
   ApplyExtensionContainer,
   ApplyGoingoutContainer,
   ApplyGoingoutCalendarContainer,
+  ApplyGoingoutTimeContainer,
   NoticeContainer,
   NoticeTagsListContainer,
   NoticePostsTableContainer,

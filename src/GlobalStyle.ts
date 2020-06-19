@@ -24,6 +24,7 @@ time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
+  user-select: none;
 }
 
 input:focus,

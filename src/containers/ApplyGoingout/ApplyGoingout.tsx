@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 
 import { ApplyGoingout } from '../../components'
 
@@ -26,7 +26,7 @@ const ApplyGoingoutContainer : React.FC<ApplyGoingoutProps> = ({}) => {
 
     return (
         <C.ApplyGoingoutContext.Provider value={[selectedDate, setSelectedDate]}>
-            <ApplyGoingout />
+            <ApplyGoingout {...selectedDate}/>
         </C.ApplyGoingoutContext.Provider>
     )
 };

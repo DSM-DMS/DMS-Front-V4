@@ -1,17 +1,16 @@
-import React, { useState, useContext } from 'react';
-
-import { C } from '../../utils'
+import React, { useState } from 'react';
 
 import * as S from './styles'
 
-import { ApplyGoingoutCalendarContainer } from '../../containers'
+import { ApplyGoingoutCalendarContainer, ApplyGoingoutTimeContainer } from '../../containers'
 
 interface ApplyGoingoutProps {
-  a: number
+  year: number,
+  month: number,
+  date: number
 }
 
-const ApplyGoingout: React.FC<ApplyGoingoutProps> = ({}) => {
-  const [selectedDate] = useContext(C.ApplyGoingoutContext);
+const ApplyGoingout: React.FC<ApplyGoingoutProps> = ({year, month, date}) => {
   const [calendarState, setCalendarState] = useState(false);
   const [timeState, setTimeState] = useState(false);
 
@@ -27,12 +26,12 @@ const ApplyGoingout: React.FC<ApplyGoingoutProps> = ({}) => {
     <S.ApplyGoingoutWrapper>
       <S.ApplyGoingoutInfoWrapper>
         <S.ApplyGoingoutInputWrapper>
-          <input readOnly value = {`${selectedDate.year}년 ${selectedDate.month}월 ${selectedDate.date}일`} onClick={HandleCalendarState}/>
+          <input readOnly value = {`${year}년 ${month}월 ${date}일`} onClick={HandleCalendarState}/>
           <ApplyGoingoutCalendarContainer show={calendarState} HandleCalendarState = {HandleCalendarState}/>
         </S.ApplyGoingoutInputWrapper>
         <S.ApplyGoingoutInputWrapper>
           <input readOnly value = "2020년" onClick={HandleTimeState}/>
-          <ApplyGoingoutCalendarContainer show={timeState} />
+          <ApplyGoingoutTimeContainer show={timeState} HandleTimeState = {HandleTimeState}/>
         </S.ApplyGoingoutInputWrapper>
         <S.ApplyGoingoutInputWrapper>
           <input value = "2020년"/>
