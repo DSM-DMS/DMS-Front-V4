@@ -8,8 +8,8 @@ export const NoticePostsTableHeaderWrapper = styled.div`
   background-color: #e1e1e1;
 `;
 
-export const NoticePostsTableHeaderItem = styled.span`
-  width: ${props => props.itemSize}rem;
+export const NoticePostsTableHeaderItem = styled.span<{ itemSize: string }>`
+  width: ${(props) => props.itemSize}rem;
   color: #59545d;
   font-size: 1.375rem;
 `;

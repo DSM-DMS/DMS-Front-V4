@@ -9,7 +9,7 @@ const leftToRightAnimation = keyframes`
   }
 `;
 
-export const ChattingWrapper = styled.div`
+export const ChattingWrapper = styled.div<{ isChatOpened: string }>`
   display: inline-block;
   position: absolute;
   width: 28.09375rem;
@@ -19,7 +19,7 @@ export const ChattingWrapper = styled.div`
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.21);
   overflow: hidden;
   bottom: 1.75rem;
-  left: ${props => (props.isChatOpened ? '22.2875rem' : '-10rem')};
+  left: ${(props) => (props.isChatOpened ? '22.2875rem' : '-10rem')};
   transition: left 0.5s;
 `;
 

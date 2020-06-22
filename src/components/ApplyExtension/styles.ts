@@ -34,7 +34,7 @@ export const ApplyExtensionRightSideWrapper = styled.div`
     border-radius: 0.625rem;
 `
 
-export const ApplyExtension11TimeSelector = styled.div`
+export const ApplyExtension11TimeSelector = styled.div<{selectedTime: number}>`
     width: 6.9375rem;
     height: 2.375rem;
     border-radius: 0.625rem;
@@ -53,7 +53,7 @@ export const ApplyExtension11TimeSelector = styled.div`
     }
 `
 
-export const ApplyExtension12TimeSelector = styled.div`
+export const ApplyExtension12TimeSelector = styled.div<{selectedTime: number}>`
     width: 6.9375rem;
     height: 2.375rem;
     border-radius: 0.625rem;
