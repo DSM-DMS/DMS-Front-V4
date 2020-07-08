@@ -4,7 +4,7 @@ import * as S from './styles';
 
 export interface SideBarLinkItemProps {
   path: string;
-  iconImg: React.ReactNode;
+  iconImg: string;
   linkTitle: string;
   currentPath: string;
   setCurrentPath: (currentPath: string) => void;
