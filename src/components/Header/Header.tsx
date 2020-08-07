@@ -12,8 +12,7 @@ const Header: React.StatelessComponent<HeaderProps> = ({ currentRoute }) => {
   return (
     <S.HeaderWrapper>
       <S.HeaderLeftWrapper>
-        <S.HeaderLeftFont className = "main">{sectionTitle}</S.HeaderLeftFont>
->
+        <S.HeaderLeftFont className="main">{sectionTitle}</S.HeaderLeftFont>
         <S.HeaderLeftFont>{menuTitle}</S.HeaderLeftFont>
       </S.HeaderLeftWrapper>
       <S.HeaderRightButton>
