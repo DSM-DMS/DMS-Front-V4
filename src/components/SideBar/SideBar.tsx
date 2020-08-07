@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import * as S from './styles';
 import { SideBarLinkItem, SideBarLinksList } from '..';
 import HomeIcon from '../../assets/icon/home.png';
@@ -11,13 +11,24 @@ import personIcon from '../../assets/icon/person.png';
 import chatIcon from '../../assets/icon/chat.png';
 import noticeICon from '../../assets/icon/notice.png';
 import bugIcon from '../../assets/icon/bug.png';
+import { ModalTypes } from '../../modules/modal';
 
 interface SideBarProps {
   toggleIsChatOpened: () => void;
+  changeModalType: (modalType: ModalTypes) => void;
+  setToggleModal: () => void;
 }
 
-const SideBar: React.FC<SideBarProps> = ({}) => {
+const SideBar: React.FC<SideBarProps> = ({
+  toggleIsChatOpened,
+  changeModalType,
+  setToggleModal,
+}) => {
   const [currentPath, setCurrentPath] = useState('/');
+  const changeToggleModal = useCallback(() => {
+    changeModalType(ModalTypes.BugReport);
+    setToggleModal();
+  }, []);
   const sideBarLinkSections = useMemo(() => {
     const sideBarLinkSectionsData = [
       {
@@ -72,7 +83,7 @@ const SideBar: React.FC<SideBarProps> = ({}) => {
         <S.SideBarButtonImg src={chatIcon} />
         1:1 채팅
       </S.SideBarButton>
-      <S.SideBarButton>
+      <S.SideBarButton onClick={changeToggleModal}>
         <S.SideBarButtonImg src={bugIcon} />
         버그신고
       </S.SideBarButton>

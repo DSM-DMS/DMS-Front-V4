@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { StoreState } from '../../modules';
+import { changeModal, toggleModal } from '../../modules/modal';
+import { ModalTypes } from 'modules/modal';
 import { withRouter } from 'react-router-dom';
 import { Header } from '../../components';
 
@@ -6,6 +10,7 @@ interface HeaderProps {
   match: any;
   location: any;
   history: any;
+  changeModal: (modalType: ModalTypes) => void;
 }
 
 function getCurrentRouteString(pathname) {
@@ -29,6 +34,17 @@ const HeaderContainer: React.FC<HeaderProps> = ({
   history,
 }) => {
   const [currentRoute, setCurrentRoute] = useState('HOME/급식메뉴');
+  const dispatch = useDispatch();
+  const modalType = useSelector((state: StoreState) => state.modal.modalType);
+  const changeModalType = useCallback(
+    (modalType: ModalTypes) => {
+      dispatch(changeModal(modalType));
+    },
+    [modalType],
+  );
+  const setToggleModal = useCallback(() => {
+    dispatch(toggleModal());
+  }, []);
   useEffect(() => {
     if (location.pathname === '/') {
       setCurrentRoute('HOME/급식메뉴');
@@ -36,7 +52,13 @@ const HeaderContainer: React.FC<HeaderProps> = ({
       setCurrentRoute(getCurrentRouteString(location.pathname));
     }
   }, [location.pathname]);
-  return <Header currentRoute={currentRoute} />;
+  return (
+    <Header
+      currentRoute={currentRoute}
+      changeModalType={changeModalType}
+      setToggleModal={setToggleModal}
+    />
+  );
 };
 
 export default withRouter(HeaderContainer);

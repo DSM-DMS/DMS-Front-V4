@@ -11,7 +11,9 @@ export const NoticeVolunteerTableItemWrapper = styled.p`
   }
 `;
 
-export const NoticeVolunteerTableItemContent = styled.span`
-  width: ${props => props.contentSize}rem;
+export const NoticeVolunteerTableItemContent = styled.span<{
+  contentSize: string;
+}>`
+  width: ${(props) => props.contentSize}rem;
   font-size: 1.375rem;
 `;

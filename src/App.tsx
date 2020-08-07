@@ -5,6 +5,7 @@ import {
   ChattingContainer,
   SideBarContainer,
   HeaderContainer,
+  ModalContainer,
 } from './containers';
 import Routing from './Routing';
 
@@ -17,6 +18,7 @@ function App() {
         <ChattingContainer />
         <ContentWrapper>
           <HeaderContainer />
+          <ModalContainer />
           <Routing />
         </ContentWrapper>
       </MainWrapper>

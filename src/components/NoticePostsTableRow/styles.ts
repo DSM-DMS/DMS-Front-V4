@@ -8,10 +8,13 @@ export const NoticePostsTableRowWrapper = styled.div`
   cursor: pointer;
 `;
 
-export const NoticePostsTableRowItem = styled.span`
-  width: ${props => props.itemSize}rem;
+export const NoticePostsTableRowItem = styled.span<{
+  itemSize: string;
+  isCenter?: boolean;
+}>`
+  width: ${(props) => props.itemSize}rem;
   font-size: 1.375rem;
-  text-align: ${props => (props.isCenter ? 'center' : null)};
+  text-align: ${(props) => (props.isCenter ? 'center' : null)};
 `;
 export const NoticePostsTableRowItemContent = styled.p`
   padding: 2.34375rem 1.875rem;

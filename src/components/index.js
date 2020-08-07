@@ -4,6 +4,10 @@ import ApplyStay from './ApplyStay/ApplyStay.tsx';
 import ApplyStayButton from './ApplyStayButton/ApplyStayButton.tsx';
 import ApplyExtension from './ApplyExtension/ApplyExtension.tsx';
 import ApplyExtensionClassButton from './ApplyExtensionClassButton/ApplyExtensionClassButton.tsx';
+import AcademicCalendar from './AcademicCalendar/AcademicCalendar.tsx'
+import AcademicCalendarItem from './AcdemiCalendarItem/AcademicCalendarItem.tsx'
+import Calendar from './Calendar/Calendar.tsx';
+import CalendarItem from './CalendarItem/CalendarItem.tsx'
 import NoticeWrapper from './NoticeWrapper/NoticeWrapper.tsx';
 import NoticeTagsList from './NoticeTagsList/NoticeTagsList.tsx';
 import NoticeTagItem from './NoticeTagItem/NoticeTagItem.tsx';
@@ -17,13 +21,17 @@ import SideBar from './SideBar/SideBar.tsx';
 import SideBarLinkItem from './SideBarLinkItem/SideBarLinkItem.tsx';
 import SideBarLinksList from './SideBarLinksList/SideBarLinksList.tsx';
 import Header from './Header/Header.tsx';
+import HeaderLoginButton from './HeaderLoginButton/HeaderLoginButton.tsx';
 import Meal from './Meal/Meal.tsx';
 import MealCard from './MealCard/MealCard.tsx';
 import MealInfo from './MealInfo/MealInfo.tsx';
-import Calendar from './Calendar/Calendar.tsx';
-import CalendarItem from './CalendarItem/CalendarItem.tsx'
-import AcademicCalendar from './AcademicCalendar/AcademicCalendar.tsx'
-import AcademicCalendarItem from './AcdemiCalendarItem/AcademicCalendarItem.tsx'
+import SignIn from './Modals/SignIn/SignIn.tsx';
+import BugReport from './Modals/BugReport/BugReport.tsx';
+import ChangePW from './Modals/ChangePW/ChangePW.tsx';
+import LogIn from "./Modals/Login/Login.tsx";
+import ModalWrapper from "./Modals/ModalWrapper/ModalWrapper.tsx";
+import ModalInput from "./Modals/ModalInput/ModalInput.tsx";
+import ModalButton from "./Modals/ModalButton/ModalButton.tsx";
 
 export {
   Chatting,
@@ -51,5 +59,13 @@ export {
   Calendar,
   CalendarItem,
   AcademicCalendar,
-  AcademicCalendarItem
+  AcademicCalendarItem,
+  HeaderLoginButton,
+  SignIn,
+  BugReport,
+  ChangePW,
+  LogIn,
+  ModalWrapper,
+  ModalInput,
+  ModalButton
 };

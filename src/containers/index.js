@@ -15,6 +15,9 @@ import MealContainer from './Meal/Meal.tsx'
 import CalendarContainer from './Calendar/Calendar.tsx'
 import MainContainer from './Main/Main.tsx';
 import AcademicCalendarContainer from './AcademicCalendar/AcademicCalendar.tsx';
+import ModalWrapperContainer from './ModalWrapper/ModalWrapper.tsx'
+import ModalContainer from './ModalContainer/ModalContainer.tsx'
+import LogInContainer from './LogIn/LogIn.tsx'
 
 export {
   ChattingContainer,
@@ -33,5 +36,8 @@ export {
   MealContainer,
   CalendarContainer,
   MainContainer,
-  AcademicCalendarContainer
+  AcademicCalendarContainer,
+  ModalWrapperContainer,
+  ModalContainer,
+  LogInContainer
 };
