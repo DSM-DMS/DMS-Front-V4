@@ -1,21 +1,23 @@
 import { ThunkAction } from 'redux-thunk';
-import { getRequest } from '../util/api/api';
+import { getScheduleReq } from '../util/api/api';
 import { AxiosError } from 'axios';
+import * as apiTypes from '../util/api/apiTypes';
+import * as api from '../util/api/api';
 
 const GET_SCHEDULE = 'GET_SCHEDULE' as const;
 const GET_SCHEDULE_SUCCESS = 'GET_SCHEDULE_SUCCESS' as const;
-const GET_SCHEDULE_ERROR = 'GET_SCHEDULE_ERROR' as const;
+const GET_SCHEDULE_FAILURE = 'GET_SCHEDULE_FAILURE' as const;
 
 const getSchedule = () => ({
   type: GET_SCHEDULE,
 });
-const getScheduleSuccess = (schedule: {}) => ({
+const getScheduleSuccess = (schedule: apiTypes.scheduleType) => ({
   type: GET_SCHEDULE_SUCCESS,
   payload: schedule,
 });
 
 const getScheduleError = (err: AxiosError) => ({
-  type: GET_SCHEDULE_ERROR,
+  type: GET_SCHEDULE_FAILURE,
   payload: err,
 });
 
@@ -24,37 +26,35 @@ type AcademicCalendarAction =
   | ReturnType<typeof getScheduleSuccess>
   | ReturnType<typeof getScheduleError>;
 
-export function getScheduleThunk(
-  day: string,
-): ThunkAction<
-  Promise<void>,
-  AcademicCalendarState,
-  null,
-  AcademicCalendarAction
-> {
-  return async dispatch => {
-    dispatch({ type: GET_SCHEDULE });
-    try {
-      const response = await getRequest('/info/schedule/', day);
-      dispatch(getScheduleSuccess(response.data));
-    } catch (e) {
-      dispatch(getScheduleError(e));
-    }
-  };
-}
+// export function getScheduleThunk(
+//   day: string,
+// ): ThunkAction<
+//   Promise<void>,
+//   AcademicCalendarState,
+//   null,
+//   AcademicCalendarAction
+// > {
+//   return async dispatch => {
+//     dispatch({ type: GET_SCHEDULE });
+//     try {
+//       const response = await getRequest('/info/schedule/', day);
+//       dispatch(getScheduleSuccess(response.data));
+//     } catch (e) {
+//       dispatch(getScheduleError(e));
+//     }
+//   };
+// }
 
-export type scheduleType = {
-  schedule: [
-    {
-      name: string;
-      time: string;
-      place: string;
-    },
-  ];
+export const getScheduleThunk = (date: string) => (dispatch) => {
+  dispatch({ type: GET_SCHEDULE });
+  const scheduleData = api
+    .getScheduleReq(date)
+    .then(() => dispatch(getScheduleSuccess(scheduleData)))
+    .catch(() => dispatch(getScheduleError));
 };
 
 export interface AcademicCalendarState {
-  data: any | null;
+  data: apiTypes.scheduleType | null;
   error: any | null;
 }
 
@@ -85,7 +85,7 @@ function academicCalendar(
         ...state,
         data: action.payload,
       };
-    case GET_SCHEDULE_ERROR:
+    case GET_SCHEDULE_FAILURE:
       return {
         ...state,
         error: action.payload,
