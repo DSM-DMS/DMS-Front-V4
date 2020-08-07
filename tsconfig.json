@@ -8,6 +8,7 @@
     "target": "es5",
     "sourceMap": true,
     "baseUrl": "src",
+    "lib": ["es2018", "DOM"],
     "typeRoots": ["/node_modules/@types", "@types"]
   },
   "include": ["./src/**/*"],
