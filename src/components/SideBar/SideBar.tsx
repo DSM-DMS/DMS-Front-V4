@@ -58,7 +58,7 @@ const SideBar: React.FC<SideBarProps> = ({
       },
     ];
 
-    return sideBarLinkSectionsData.map(sectionData => (
+    return sideBarLinkSectionsData.map((sectionData) => (
       <SideBarLinksList
         sectionName={sectionData.sectionName}
         linkItemLists={sectionData.linkItemsList}
@@ -79,7 +79,7 @@ const SideBar: React.FC<SideBarProps> = ({
         setCurrentPath={setCurrentPath}
       />
       {sideBarLinkSections}
-      <S.SideBarButton>
+      <S.SideBarButton onClick={toggleIsChatOpened}>
         <S.SideBarButtonImg src={chatIcon} />
         1:1 채팅
       </S.SideBarButton>
