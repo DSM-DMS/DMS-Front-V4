@@ -1,5 +1,6 @@
 import React from 'react';
 import * as S from './styles';
+import ChattingMessagesWrapper from '../ChattingMessagesWrapper/ChattingMessagesWrapper';
 import sendMessageImg from '../../assets/icon/send-message.png';
 import crossMarkImg from '../../assets/icon/cross-mark.png';
 
@@ -19,7 +20,7 @@ const Chatting: React.FC<ChattingProps> = ({
         onClick={() => setCloseChatting(false)}
       />
       <S.ChattingHeader>사감실</S.ChattingHeader>
-      <S.ChattingMessageWrapper></S.ChattingMessageWrapper>
+      {<ChattingMessagesWrapper />}
       <S.ChattingInputWrapper>
         <S.ChattingMessageInput placeholder="메시지를 입력해주세요" />
         <S.SendMessageButton src={sendMessageImg} />

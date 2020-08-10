@@ -43,10 +43,6 @@ export const ChattingHeader = styled.p`
   border-bottom: 1px solid #e9e9e9;
 `;
 
-export const ChattingMessageWrapper = styled.div`
-  height: 30.13rem;
-`;
-
 export const ChattingInputWrapper = styled.div`
   width: 28.09375rem;
   height: 6.063rem;
