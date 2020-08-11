@@ -25,9 +25,22 @@ export const ChattingMessage = styled.div<{ isSentMessage: boolean }>`
   font-size: 1.125rem;
 `;
 
-export const ChattingSentTime = styled.span<{ isSentMessage: boolean }>`
+export const MessageInfoWrapper = styled.span<{ isSentMessage: boolean }>`
+  display: inline-flex;
+  ${(props) =>
+    props.isSentMessage
+      ? `margin-right: 0.4375rem`
+      : `margin-left: 0.4375rem;`};
+  vertical-align: bottom;
+  flex-direction: column;
+`;
+
+export const MessageSentTime = styled.span`
   font-size: 0.8125rem;
   color: #686868;
-  ${(props) =>
-    props.isSentMessage ? `margin-right: 0.4375rem` : `margin-left: 0.4375rem;`}
+`;
+
+export const MessageIsReadNumber = styled.span`
+  font-size: 0.9375rem;
+  color: #000;
 `;
