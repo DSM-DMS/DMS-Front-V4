@@ -5,3 +5,9 @@ export interface scheduleType {
     place: string;
   }[];
 }
+
+export interface mealType {
+  breakfast: string[];
+  lunch: string[];
+  dinner: string[];
+}
