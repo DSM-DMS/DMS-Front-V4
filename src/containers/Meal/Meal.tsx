@@ -1,32 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import Meal from '../../components/Meal/Meal';
+import { StoreState } from 'modules';
+import { getMealThunk } from '../../modules/meal';
+import addHyphenInDate from '../../util/addHyphenInDate';
 
 interface Props {}
 
 const MealContainer: React.FC<Props> = () => {
-  const mealList = {
-    breakfast: [
-      '현미밥',
-      '카래감자볶음',
-      '배추김치',
-      '맑은미역국',
-      '사과',
-      '쥬스',
-      '옥수수치즈닭불구이',
-      '치즈달걀스파게티소스오븐구이',
-      '치킨',
-    ],
-    lunch: [
-      '기장밥',
-      '콩비지찌개',
-      '돈육콩불이',
-      '해물볶음우동',
-      '열무김치',
-      '우리밀애그타르트',
-    ],
-    dinner: [],
-  };
+  const dispatch = useDispatch();
+  const selectedDate = useSelector(
+    (state: StoreState) => state.calendar.selectedDay,
+  );
+  const mealList = useSelector((state: StoreState) => state.meal.meal);
   const { breakfast, lunch, dinner } = mealList;
+
+  useEffect(() => {
+    console.log(addHyphenInDate(selectedDate));
+    dispatch(getMealThunk(addHyphenInDate(selectedDate)));
+  }, [selectedDate]);
   return <Meal breakfast={breakfast} lunch={lunch} dinner={dinner} />;
 };
 
