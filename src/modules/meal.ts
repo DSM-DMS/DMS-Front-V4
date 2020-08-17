@@ -46,9 +46,9 @@ export interface MealState {
 
 const initialState: MealState = {
   meal: {
-    breakfast: [],
-    lunch: [],
-    dinner: [],
+    breakfast: null,
+    lunch: null,
+    dinner: null,
   },
   errorStatus: null,
 };
