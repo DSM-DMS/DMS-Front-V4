@@ -4,6 +4,7 @@ import chat, { ChatState } from './chat';
 import calendar, { CalendarState } from './calendar';
 import modal, { ModalState } from './modal';
 import meal, { MealState } from './meal';
+import academicCalendar, { AcademicCalendarState } from './academicCalendar';
 
 export interface StoreState {
   notice: NoticeState;
@@ -11,6 +12,7 @@ export interface StoreState {
   calendar: CalendarState;
   modal: ModalState;
   meal: MealState;
+  academicCalendar: AcademicCalendarState;
 }
 
 export default combineReducers<StoreState>({
@@ -19,4 +21,5 @@ export default combineReducers<StoreState>({
   modal,
   calendar,
   meal,
+  academicCalendar,
 });
