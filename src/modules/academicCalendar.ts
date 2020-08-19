@@ -26,48 +26,37 @@ type AcademicCalendarAction =
   | ReturnType<typeof getScheduleSuccess>
   | ReturnType<typeof getScheduleError>;
 
-// export function getScheduleThunk(
-//   day: string,
-// ): ThunkAction<
-//   Promise<void>,
-//   AcademicCalendarState,
-//   null,
-//   AcademicCalendarAction
-// > {
-//   return async dispatch => {
-//     dispatch({ type: GET_SCHEDULE });
-//     try {
-//       const response = await getRequest('/info/schedule/', day);
-//       dispatch(getScheduleSuccess(response.data));
-//     } catch (e) {
-//       dispatch(getScheduleError(e));
-//     }
-//   };
-// }
-
-export const getScheduleThunk = (date: string) => (dispatch) => {
+export const getScheduleThunk = (
+  day: string,
+): ThunkAction<
+  void,
+  AcademicCalendarState,
+  null,
+  AcademicCalendarAction
+> => async (dispatch) => {
   dispatch({ type: GET_SCHEDULE });
-  const scheduleData = api
-    .getScheduleReq(date)
-    .then(() => dispatch(getScheduleSuccess(scheduleData)))
-    .catch(() => dispatch(getScheduleError));
+  try {
+    const response = await api.getScheduleReq(day);
+    dispatch(getScheduleSuccess(response));
+  } catch (e) {
+    dispatch(getScheduleError(e.status));
+  }
 };
 
 export interface AcademicCalendarState {
-  data: apiTypes.scheduleType | null;
+  schedule: apiTypes.scheduleType[] | null;
   error: any | null;
 }
 
 const initialState: AcademicCalendarState = {
-  data: {
-    schedule: [
-      {
-        name: '정보보안과 대전교육정보원 체험학습',
-        time: '오전 09:00 ~ 오후 12:00',
-        place: '대전교육정보원',
-      },
-    ],
-  },
+  schedule: [
+    {
+      name: '정보보안과 대전교육정보원 체험학습',
+      time: '오전 09:00 ~ 오후 12:00',
+      place: '대전교육정보원',
+    },
+  ],
+
   error: null,
 };
 
@@ -89,6 +78,10 @@ function academicCalendar(
       return {
         ...state,
         error: action.payload,
+      };
+    default:
+      return {
+        ...state,
       };
   }
 }
