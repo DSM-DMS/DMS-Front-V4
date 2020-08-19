@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import AcademicCalendar from '../../components/AcademicCalendar/AcademicCalendar';
-import AcademicCalendarItem from 'components/AcdemiCalendarItem/AcademicCalendarItem';
+import { StoreState } from 'modules';
+import { getScheduleThunk } from '../../modules/academicCalendar';
+import addHyphenInDate from '../../util/addHyphenInDate';
 
 const AcademicCalendarContainer: React.StatelessComponent = () => {
-  const dummy = {
-    schedule: [
-      {
-        name: '정보보안과 대전교육정보원 체험학습',
-        time: '오전 09:00 ~ 오후 12:00',
-        place: '대전교육정보원',
-      },
-      {
-        name: '전체 학생 아침 조회',
-        time: '오전 09:30 ~ 오전 09:30',
-        place: '새롬홀',
-      },
-    ],
-  };
+  const dispatch = useDispatch();
+  const schedule = useSelector(
+    (state: StoreState) => state.academicCalendar.schedule,
+  );
+  const selectedDate = useSelector(
+    (state: StoreState) => state.calendar.selectedDay,
+  );
 
-  return <AcademicCalendar AcademicCalendarData={dummy.schedule} />;
+  useEffect(() => {
+    dispatch(getScheduleThunk(addHyphenInDate(selectedDate)));
+  }, [selectedDate]);
+  return <AcademicCalendar AcademicCalendarData={schedule} />;
 };
 
 export default AcademicCalendarContainer;
