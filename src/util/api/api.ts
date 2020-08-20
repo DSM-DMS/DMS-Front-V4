@@ -8,7 +8,7 @@ const instanceAxios = axios.create({
 
 export const getScheduleReq = async (
   date: string,
-): Promise<apiTypes.scheduleType> => {
+): Promise<apiTypes.scheduleType[]> => {
   const response = await instanceAxios.get(`/schedule/${date}`);
   return response.data;
 };

@@ -11,7 +11,7 @@ const GET_SCHEDULE_FAILURE = 'GET_SCHEDULE_FAILURE' as const;
 const getSchedule = () => ({
   type: GET_SCHEDULE,
 });
-const getScheduleSuccess = (schedule: apiTypes.scheduleType) => ({
+const getScheduleSuccess = (schedule: apiTypes.scheduleType[]) => ({
   type: GET_SCHEDULE_SUCCESS,
   payload: schedule,
 });
@@ -52,11 +52,10 @@ const initialState: AcademicCalendarState = {
   schedule: [
     {
       name: '정보보안과 대전교육정보원 체험학습',
-      time: '오전 09:00 ~ 오후 12:00',
+      time: null,
       place: '대전교육정보원',
     },
   ],
-
   error: null,
 };
 
@@ -72,7 +71,7 @@ function academicCalendar(
     case GET_SCHEDULE_SUCCESS:
       return {
         ...state,
-        data: action.payload,
+        schedule: action.payload,
       };
     case GET_SCHEDULE_FAILURE:
       return {
