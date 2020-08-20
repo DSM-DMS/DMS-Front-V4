@@ -49,13 +49,7 @@ export interface AcademicCalendarState {
 }
 
 const initialState: AcademicCalendarState = {
-  schedule: [
-    {
-      name: '정보보안과 대전교육정보원 체험학습',
-      time: null,
-      place: '대전교육정보원',
-    },
-  ],
+  schedule: [],
   error: null,
 };
 
