@@ -15,8 +15,16 @@ const AcademicCalendarItem: React.StatelessComponent<Props> = ({
   return (
     <S.AcademicCalendarItemRow>
       <S.AcademicCalendarItemData>{name}</S.AcademicCalendarItemData>
-      <S.AcademicCalendarItemData>{time}</S.AcademicCalendarItemData>
-      <S.AcademicCalendarItemData>{place}</S.AcademicCalendarItemData>
+      {time !== null ? (
+        <S.AcademicCalendarItemData>{time}</S.AcademicCalendarItemData>
+      ) : (
+        <S.AcademicCalendarItemData>시간이 없어요</S.AcademicCalendarItemData>
+      )}
+      {place !== null ? (
+        <S.AcademicCalendarItemData>{place}</S.AcademicCalendarItemData>
+      ) : (
+        <S.AcademicCalendarItemData>장소가 없어요</S.AcademicCalendarItemData>
+      )}
     </S.AcademicCalendarItemRow>
   );
 };
