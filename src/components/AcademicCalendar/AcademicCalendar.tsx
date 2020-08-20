@@ -13,16 +13,20 @@ const AcademicCalendar: React.StatelessComponent<Props> = ({
   return (
     <S.AcademicCalendarWrapper>
       <div style={{ overflow: 'auto' }}>
-        <S.AcademicCalendarTable>
-          {AcademicCalendarData.map((dataItem) => (
-            <AcademicCalendarItem
-              key={dataItem.name}
-              name={dataItem.name}
-              time={dataItem.time}
-              place={dataItem.place}
-            />
-          ))}
-        </S.AcademicCalendarTable>
+        {AcademicCalendarData.length > 0 ? (
+          <S.AcademicCalendarTable>
+            {AcademicCalendarData.map((dataItem) => (
+              <AcademicCalendarItem
+                key={dataItem.name}
+                name={dataItem.name}
+                time={dataItem.time}
+                place={dataItem.place}
+              />
+            ))}
+          </S.AcademicCalendarTable>
+        ) : (
+          <S.AcademicCalendarIsNone>학사일정이 없어요</S.AcademicCalendarIsNone>
+        )}
       </div>
     </S.AcademicCalendarWrapper>
   );

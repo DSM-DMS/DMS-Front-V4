@@ -9,10 +9,10 @@ export const AcademicCalendarWrapper = styled.div`
   border-radius: 3.125rem 3.125rem 0 3.125rem;
   background-color: #fefefe;
   align-items: center;
+  justify-content: center;
   margin-left: 7.813rem;
   margin-top: 1.813rem
   overflow: auto;
-  
   &::-webkit-scrollbar {
     width: 5px;
     height: 8px;
@@ -29,4 +29,9 @@ export const AcademicCalendarTable = styled.table`
   margin-left: 4.063rem;
   font-size: 1.25rem;
   color: #59545d;
+`;
+
+export const AcademicCalendarIsNone = styled.div`
+  font-size: 1.25rem;
+  color: #59546d;
 `;
