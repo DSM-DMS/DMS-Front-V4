@@ -3,7 +3,7 @@ import * as apiTypes from './apiTypes';
 
 const instanceAxios = axios.create({
   baseURL: 'https://dev-api.dsm-dms.com',
-  // headers: { ' X-Device-Type ': 'WEB' },
+  headers: { 'X-Device-Type': 'WEB' },
 });
 
 export const getScheduleReq = async (
@@ -17,6 +17,5 @@ export const getMealReq = async (
   date: string,
 ): Promise<[apiTypes.mealType, number]> => {
   const response = await instanceAxios.get(`/meal/${date}`);
-  console.log(response.data);
   return [response.data, response.status];
 };
