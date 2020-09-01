@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { globalColor } from '../../../GlobalStyle';
 
-export const SignInContentWrapper = styled.div`
+export const SignUpContentWrapper = styled.div`
   display: flex;
   width: 24.75rem;
   flex-direction: column;

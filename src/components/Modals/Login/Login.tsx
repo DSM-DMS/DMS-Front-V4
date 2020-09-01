@@ -24,12 +24,12 @@ const LogIn: React.StatelessComponent<Props> = ({ changeModalType }) => {
         </S.LoginBottom>
       </S.LogInContnetWrapper>
       <ModalButton buttonName={'로그인'} />
-      <S.SignInLinkWrapper>
+      <S.SignUpLinkWrapper>
         <span>아직 DMS 회원이 아니시라면?</span>
-        <S.SignInLink onClick={() => changeModalType(ModalTypes.SignIn)}>
+        <S.SignUpLink onClick={() => changeModalType(ModalTypes.SignUp)}>
           회원가입
-        </S.SignInLink>
-      </S.SignInLinkWrapper>
+        </S.SignUpLink>
+      </S.SignUpLinkWrapper>
     </ModalWrapperContainer>
   );
 };

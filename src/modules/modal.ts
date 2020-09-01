@@ -3,7 +3,7 @@ const CHANGE_MODAL = 'modal/CHANGE_MODAL' as const;
 export enum ModalTypes {
   none = 'none',
   LogIn = 'LogIn',
-  SignIn = 'SignIn',
+  SignUp = 'SignUp',
   BugReport = 'BugReport',
   ChangePW = 'ChangePW',
 }

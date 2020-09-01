@@ -55,7 +55,7 @@ export const ForgetPWLink = styled.span`
   cursor: pointer;
 `;
 
-export const SignInLinkWrapper = styled.div`
+export const SignUpLinkWrapper = styled.div`
   ${VerticalCenter}
   width: 100%;
   height: 3.75rem
@@ -65,7 +65,7 @@ export const SignInLinkWrapper = styled.div`
   justify-content: center;
 `;
 
-export const SignInLink = styled.span`
+export const SignUpLink = styled.span`
   margin-left: 0.7rem;
   font-weight: bold;
   cursor: pointer;

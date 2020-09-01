@@ -2,8 +2,8 @@ import React, { ReactNode, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { StoreState } from '../../modules';
 import { ModalTypes } from '../../modules/modal';
-import { SignIn, BugReport, ChangePW } from '../../components';
-import { LogInContainer } from '../../containers';
+import { BugReport, ChangePW } from '../../components';
+import { LogInContainer, SignUpContainer } from '../../containers';
 interface Props {}
 const ModalContainer: React.FC<Props> = () => {
   const dispatch = useDispatch();
@@ -15,8 +15,8 @@ const ModalContainer: React.FC<Props> = () => {
     switch (modalType) {
       case ModalTypes.LogIn:
         return <LogInContainer />;
-      case ModalTypes.SignIn:
-        return <SignIn />;
+      case ModalTypes.SignUp:
+        return <SignUpContainer />;
       case ModalTypes.BugReport:
         return <BugReport />;
       case ModalTypes.ChangePW:

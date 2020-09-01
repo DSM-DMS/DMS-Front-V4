@@ -25,7 +25,7 @@ import HeaderLoginButton from './HeaderLoginButton/HeaderLoginButton.tsx';
 import Meal from './Meal/Meal.tsx';
 import MealCard from './MealCard/MealCard.tsx';
 import MealInfo from './MealInfo/MealInfo.tsx';
-import SignIn from './Modals/SignIn/SignIn.tsx';
+import SignUp from './Modals/SignUp/SignUp.tsx';
 import BugReport from './Modals/BugReport/BugReport.tsx';
 import ChangePW from './Modals/ChangePW/ChangePW.tsx';
 import LogIn from "./Modals/Login/Login.tsx";
@@ -61,7 +61,7 @@ export {
   AcademicCalendar,
   AcademicCalendarItem,
   HeaderLoginButton,
-  SignIn,
+  SignUp,
   BugReport,
   ChangePW,
   LogIn,
