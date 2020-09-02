@@ -8,14 +8,41 @@ interface Props {
 }
 
 const LogIn: React.StatelessComponent<Props> = ({ changeModalType }) => {
+  const [loginInput, setLoginInput] = React.useReducer(
+    (state, newState) => ({ ...state, ...newState }),
+    { id: '', password: '', isAutoLogin: false },
+  );
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const name = e.target.name;
+    const newValue = e.target.value;
+    console.log(e.target.value, e.target.name);
+    setLoginInput({ [name]: newValue });
+  };
+
+  const handleCheck = (e: React.MouseEvent<HTMLInputElement>) => {
+    setLoginInput({ isAutoLogin: e.currentTarget.checked });
+  };
+
   return (
     <ModalWrapperContainer modalName="로그인">
       <S.LogInContnetWrapper>
-        <ModalInput placeholder="아이디" />
-        <ModalInput placeholder="비밀번호" inputType="password" />
+        <ModalInput
+          placeholder="아이디"
+          inputName="id"
+          value={loginInput.id}
+          changeEvent={handleChange}
+        />
+        <ModalInput
+          placeholder="비밀번호"
+          inputType="password"
+          inputName="password"
+          value={loginInput.password}
+          changeEvent={handleChange}
+        />
         <S.LoginBottom>
           <S.AutoLoginWrapper>
-            <S.AutoLoginCheckbtn type="checkbox" />
+            <S.AutoLoginCheckbtn type="checkbox" onClick={handleCheck} />
             <span>자동 로그인</span>
           </S.AutoLoginWrapper>
           <S.ForgetPWLink onClick={() => changeModalType(ModalTypes.ChangePW)}>
