@@ -8,7 +8,8 @@
     "target": "es5",
     "sourceMap": true,
     "baseUrl": "src",
-    "typeRoots": ["/node_modules/@types", "@types"]
+    "typeRoots": ["/node_modules/@types", "@types"],
+    "lib": ["es2015", "ES6", "dom"]
   },
   "include": ["./src/**/*"],
   "exclude": ["./node_modules"]
