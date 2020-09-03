@@ -14,4 +14,3 @@ const ModalButton: React.StatelessComponent<Props> = ({
 };
 
 export default ModalButton;
- 
