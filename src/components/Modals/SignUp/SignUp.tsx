@@ -1,15 +1,16 @@
 import * as React from 'react';
 
 import * as S from './style';
-import * as apiTypes from '../../../util/apiTypes';
-import { ModalInput, ModalWrapper, ModalButton } from '../../';
+import * as apiTypes from '../../../util/api/apiTypes';
+import { ModalInput, ModalButton } from '../../';
 import { ModalWrapperContainer } from '../../../containers';
 
 interface Props {
-  handleSignUp: (signUpParams: apiTypes.signUpParamType) => void;
+  handleSignUp: (signUpParams: apiTypes.authParamType) => void;
+  handleVerifyCode: (verifyCode: string) => void;
 }
 
-const SignUp: React.FC<Props> = ({ handleSignUp }) => {
+const SignUp: React.FC<Props> = ({ handleSignUp, handleVerifyCode }) => {
   const [signUpInput, setSignUpInput] = React.useReducer(
     (state, newState) => ({ ...state, ...newState }),
     { verifyCode: '', id: '', password: '', checkPassword: '' },
@@ -23,10 +24,14 @@ const SignUp: React.FC<Props> = ({ handleSignUp }) => {
   };
 
   const confiirmPassword = () => {
-    if (signUpInput.password === SignUpInput.checkPassword) {
-      handleSignUp({ id: signUpInput.id, password: signUpInput.password });
+    if (signUpInput.id.length > 0 && signUpInput.password.length > 0) {
+      if (signUpInput.password === signUpInput.checkPassword) {
+        handleSignUp({ id: signUpInput.id, password: signUpInput.password });
+      } else {
+        alert('비밀번호가 일치하지 않습니다');
+      }
     } else {
-      alert('비밀번호가 일치하지 않습니다');
+      alert('공백이 없는지 확인해주세요');
     }
   };
 
@@ -41,7 +46,7 @@ const SignUp: React.FC<Props> = ({ handleSignUp }) => {
             onChange={handleChange}
           />
           <S.VerifyCodeButton
-            onClick={() => console.log(signUpInput.verifyCode)}
+            onClick={() => handleVerifyCode(signUpInput.verifyCode)}
           >
             인증
           </S.VerifyCodeButton>
