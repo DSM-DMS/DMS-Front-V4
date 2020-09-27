@@ -1,13 +1,23 @@
 import * as React from 'react';
+
 import * as S from './style';
-import { ModalWrapper, ModalButton, ModalInput } from '../../../components';
+import * as apiType from '../../../util/api/apiTypes';
+import { ModalButton, ModalInput } from '../../../components';
 import { ModalWrapperContainer } from '../../../containers';
 import { ModalTypes } from '../../../modules/modal';
+
 interface Props {
   changeModalType: (modalType: ModalTypes) => void;
+  handleLogin: (
+    loginParams: apiType.authParamType,
+    isAutoLogin: string,
+  ) => void;
 }
 
-const LogIn: React.StatelessComponent<Props> = ({ changeModalType }) => {
+const LogIn: React.StatelessComponent<Props> = ({
+  changeModalType,
+  handleLogin,
+}) => {
   const [loginInput, setLoginInput] = React.useReducer(
     (state, newState) => ({ ...state, ...newState }),
     { id: '', password: '', isAutoLogin: false },
@@ -20,8 +30,19 @@ const LogIn: React.StatelessComponent<Props> = ({ changeModalType }) => {
     setLoginInput({ [name]: newValue });
   };
 
-  const handleCheck = (e: React.MouseEvent<HTMLInputElement>) => {
+  const handleToggle = (e: React.MouseEvent<HTMLInputElement>) => {
     setLoginInput({ isAutoLogin: e.currentTarget.checked });
+  };
+
+  const checkInput = () => {
+    if (loginInput.id.length > 0 && loginInput.password.length > 0) {
+      handleLogin(
+        { id: loginInput.id, password: loginInput.password },
+        loginInput.isAutoLogin,
+      );
+    } else {
+      alert('공백이 있는지 확인해주세요');
+    }
   };
 
   return (
@@ -42,7 +63,7 @@ const LogIn: React.StatelessComponent<Props> = ({ changeModalType }) => {
         />
         <S.LoginBottom>
           <S.AutoLoginWrapper>
-            <S.AutoLoginCheckbtn type="checkbox" onClick={handleCheck} />
+            <S.AutoLoginCheckbtn type="checkbox" onClick={handleToggle} />
             <span>자동 로그인</span>
           </S.AutoLoginWrapper>
           <S.ForgetPWLink onClick={() => changeModalType(ModalTypes.ChangePW)}>
@@ -50,7 +71,7 @@ const LogIn: React.StatelessComponent<Props> = ({ changeModalType }) => {
           </S.ForgetPWLink>
         </S.LoginBottom>
       </S.LogInContnetWrapper>
-      <ModalButton buttonName={'로그인'} />
+      <ModalButton buttonName="로그인" clickEvent={checkInput} />
       <S.SignUpLinkWrapper>
         <span>아직 DMS 회원이 아니시라면?</span>
         <S.SignUpLink onClick={() => changeModalType(ModalTypes.SignUp)}>
