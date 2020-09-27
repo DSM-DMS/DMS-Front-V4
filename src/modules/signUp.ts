@@ -1,11 +1,29 @@
-import * as apiTypes from '../util/apiTypes';
-import * as api from '../util/api';
+import * as apiTypes from '../util/api/apiTypes';
+import * as api from '../util/api/api';
 import { ThunkAction } from 'redux-thunk';
 import { StoreState } from 'modules';
+
+// verifyCode
+export const CHECK_VERIFY_CODE = 'CHECK_VERIFY_CODE' as const;
+export const CHECK_VERIFY_CODE_SUCCESS = 'CHECK_VERIFY_CODE_SUCCESS' as const;
+export const CHECK_VERIFY_CODE_FAILURE = 'CHECK_VERIFY_CODE_FAILURE' as const;
 
 export const SIGN_UP = 'SIGN_UP' as const;
 export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS' as const;
 export const SIGN_UP_FAILURE = 'SIGN_UP_FAILURE' as const;
+
+export const checkVerifyCode = () => ({
+  type: CHECK_VERIFY_CODE,
+})
+
+export const checkVerifyCodeSuccess = () => ({
+  type :  CHECK_VERIFY_CODE_SUCCESS,
+})
+
+
+export const checkVerifyCodeFailure = () => ({
+  type: CHECK_VERIFY_CODE_FAILURE,
+})
 
 export const signUp = () => ({
   type: SIGN_UP,
@@ -32,8 +50,7 @@ export const signUpThunk = (
   } catch (e) {
     dispatch(signUpFailure(e.status));
   }
-};
-
+};  
 type SignUpAction =
   | ReturnType<typeof signUp>
   | ReturnType<typeof signUpSuccess>
